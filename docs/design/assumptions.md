@@ -1,11 +1,11 @@
 ## A-001
 
-Människan tänker bättre i berättelser än i grafer.
+Humans think better in stories than in graphs.
 
-Status: Hypotes
+Status: Hypothesis
 
 ## A-002
 
-Visionen förändras långsammare än vägen dit.
+The vision changes more slowly than the path to reach it.
 
-Status: Troligen sann
+Status: Likely true

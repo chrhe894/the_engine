@@ -1,14 +1,14 @@
 ## P-001
 
-Den interna modellen får vara komplex.
-Den externa modellen måste vara intuitiv.
+The internal model may be complex.
+The external model must be intuitive.
 
 ## P-002
 
-Systemet ska alltid hjälpa användaren med nästa steg,
-inte presentera hela lösningen.
+The system should always help the user with the next step,
+not present the entire solution.
 
 ## P-003
 
-Implementationen ska aldrig styra informationsmodellen.
-Informationsmodellen styr implementationen.
+The implementation must never define the information model.
+The information model defines the implementation.
