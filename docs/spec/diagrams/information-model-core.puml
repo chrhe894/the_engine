@@ -1,0 +1,399 @@
+@startuml
+title Generic Information Model — Semantic Core
+
+hide circle
+skinparam linetype ortho
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+
+' ============================================================
+' SEMANTIC CORE
+' ============================================================
+
+package "Semantic Core" {
+
+  class Thing {
+    --
+    something that participates
+    in the model
+  }
+
+  class Assertion {
+    --
+    information about Things,
+    relationships, configurations
+    or possible conditions
+    --
+    epistemic status
+    provenance
+    temporal scope
+  }
+
+  class Context {
+    --
+    circumstances in which
+    information is interpreted
+    --
+    time
+    place
+    purpose
+    perspective
+    scale
+  }
+
+  class Configuration {
+    --
+    coherent, referable view of
+    relevant information as a state
+    or arrangement
+  }
+
+  class Transition {
+    --
+    meaningful change involving
+    one or more Configurations
+    --
+    may be candidate, selected,
+    intended, planned or performed
+  }
+}
+
+' ============================================================
+' INFORMATION ABOUT REALITY
+' ============================================================
+
+package "Information" {
+
+  class Relationship {
+    --
+    semantic relationship between
+    Things or other relevant elements
+  }
+
+  class Observation {
+    --
+    an Assertion grounded in
+    observed or reported reality
+  }
+
+  class Projection {
+    --
+    an Assertion about a possible
+    future Configuration or Transition
+    under stated assumptions
+  }
+}
+
+' ============================================================
+' REASONING / INTERPRETATION
+' ============================================================
+
+package "Interpretation" {
+
+  class Identity <<interpretation>> {
+    --
+    interpretation of a Configuration
+    relative to a Thing and Context
+  }
+
+  class Intention <<relationship>> {
+    --
+    Thing intends Configuration
+  }
+
+  class Opportunity <<interpretation>> {
+    --
+    information interpreted as
+    enabling a useful Transition
+  }
+
+  class Constraint <<interpretation>> {
+    --
+    information interpreted as
+    limiting a contemplated Transition
+  }
+
+  class Vision <<interpretation>> {
+    --
+    strategically relevant desired
+    Configuration
+  }
+
+  class Goal <<interpretation>> {
+    --
+    desired Configuration or
+    criterion for change
+  }
+}
+
+' ============================================================
+' OPERATIONAL / DECISION LAYER
+' ============================================================
+
+package "Action & Decision" {
+
+  class Decision <<operation>> {
+    --
+    selection or commitment
+    concerning a possible way forward
+  }
+
+  class Mission <<mechanism>> {
+    --
+    operational mechanism for
+    inducing or testing a Transition
+  }
+}
+
+' ============================================================
+' CORE RELATIONSHIPS
+' ============================================================
+
+Thing "0..*" -- "0..*" Relationship : participates in >
+
+Relationship "1" --> "1..*" Thing : relates >
+
+Assertion "0..*" --> "0..*" Thing : concerns >
+
+Assertion "0..*" --> "0..*" Context : interpreted within >
+
+Configuration "1" o-- "1..*" Assertion : coherent view of >
+
+Configuration "0..*" --> "0..*" Context : interpreted within >
+
+Transition "0..*" --> "1..*" Configuration : from >
+
+Transition "0..*" --> "1..*" Configuration : toward >
+
+Transition "0..*" --> "0..*" Thing : involves >
+
+Transition "0..*" --> "0..*" Context : occurs within >
+
+' ============================================================
+' OBSERVATION / PROJECTION
+' ============================================================
+
+Observation --|> Assertion
+Projection --|> Assertion
+
+Observation "0..*" --> "0..1" Transition : provides evidence about >
+
+Observation "0..*" --> "0..*" Configuration : provides evidence about >
+
+Projection "0..*" --> "1" Configuration : projects from >
+
+Projection "0..*" --> "0..*" Configuration : projects toward >
+
+Projection "0..*" --> "0..*" Transition : assumes / evaluates >
+
+Projection "0..*" --> "0..*" Assertion : based on >
+
+' ============================================================
+' IDENTITY
+' ============================================================
+
+Identity "0..*" --> "1" Thing : describes >
+
+Identity "0..*" --> "1" Configuration : interpreted from >
+
+Identity "0..*" --> "0..1" Context : meaningful within >
+
+' ============================================================
+' INTENTION
+' ============================================================
+
+Intention "0..*" --> "1" Thing : held by >
+
+Intention "0..*" --> "1" Configuration : intends >
+
+Intention "0..*" --> "0..1" Context : applies within >
+
+' ============================================================
+' OPPORTUNITIES / CONSTRAINTS
+' ============================================================
+
+Opportunity "0..*" --> "0..*" Assertion : based on >
+
+Opportunity "0..*" --> "0..*" Transition : enables >
+
+Constraint "0..*" --> "0..*" Assertion : based on >
+
+Constraint "0..*" --> "0..*" Transition : constrains >
+
+' ============================================================
+' STRATEGIC / TACTICAL INTERPRETATIONS
+' ============================================================
+
+Vision "0..*" --> "1" Configuration : describes desired >
+
+Vision "0..*" --> "0..1" Context : applies within >
+
+Goal "0..*" --> "0..*" Configuration : concerns >
+
+Goal "0..*" --> "0..*" Transition : concerns >
+
+' ============================================================
+' DECISION / ACTION
+' ============================================================
+
+Decision "0..*" --> "0..*" Transition : selects / commits to >
+
+Decision "0..*" --> "0..*" Configuration : selects >
+
+Decision "0..*" --> "0..1" Context : made within >
+
+Mission "0..*" --> "1..*" Transition : induces / tests >
+
+Mission "0..*" --> "0..*" Thing : assigned to / involves >
+
+' ============================================================
+' CONTINUATION / INACTION
+' ============================================================
+
+note right of Projection
+  A continuation projection represents
+  what may happen if prevailing dynamics
+  continue.
+
+  "Do nothing" is therefore not a
+  special Action.
+
+  It is a projection of the
+  continuation trajectory.
+end note
+
+note right of Configuration
+  Configuration is NOT necessarily
+  a database entity with fixed fields.
+
+  It is a coherent, referable view
+  over Assertions within Context.
+
+  Identity, Vision and Goal are
+  interpretations of Configurations.
+end note
+
+note right of Assertion
+  Assertions may differ in epistemic
+  status without requiring separate
+  primitive structures:
+
+    observed
+    reported
+    inferred
+    intended
+    projected
+
+  Provenance and modality matter.
+end note
+
+note right of Transition
+  A Transition may be:
+
+    possible
+    selected
+    intended
+    planned
+    performed
+    partially successful
+    unsuccessful
+
+  These are semantic states/claims
+  about a Transition, not necessarily
+  separate types.
+end note
+
+' ============================================================
+' REASONING OPERATIONS
+' ============================================================
+
+package "Reasoning Operations" {
+
+  class Analysis <<operation>> {
+    --
+    decompose information
+    into relevant parts
+  }
+
+  class Synthesis <<operation>> {
+    --
+    combine information into
+    candidate wholes
+  }
+
+  class Evaluation <<operation>> {
+    --
+    compare possible Transitions
+    and their Projections
+  }
+
+  class Selection <<operation>> {
+    --
+    choose a way forward
+  }
+}
+
+Analysis --> Configuration : analyses >
+Analysis --> Assertion : decomposes >
+
+Synthesis --> Assertion : combines >
+Synthesis --> Configuration : proposes >
+Synthesis --> Transition : proposes >
+
+Evaluation --> Configuration : compares >
+Evaluation --> Transition : compares >
+Evaluation --> Projection : evaluates >
+
+Selection --> Transition : selects >
+Selection --> Configuration : selects >
+
+' ============================================================
+' HIGH-LEVEL LOOP
+' ============================================================
+
+note right of Transition
+  SEMANTIC LOOP
+
+  REALITY
+      |
+      v
+  OBSERVATIONS / ASSERTIONS
+      |
+      v
+  CONFIGURATION
+      |
+      +---- continuation ----> PROJECTION
+      |
+      +---- candidate --------> TRANSITION
+      |                           |
+      |                           v
+      |                       PROJECTION
+      |
+      +---- intention --------> DESIRED CONFIGURATION
+      |
+      v
+  EVALUATION
+      |
+      v
+  DECISION / SELECTION
+      |
+      v
+  TRANSITION
+      |
+      v
+  REALITY
+      |
+      v
+  NEW OBSERVATIONS
+      |
+      +------------------------> loop
+
+  AI may generate Assertions,
+  Projections and candidate Transitions.
+
+  The user remains the authority
+  for Selection / Decision.
+end note
+
+@enduml
+@enduml

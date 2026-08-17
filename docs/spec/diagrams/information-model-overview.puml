@@ -1,0 +1,130 @@
+@startuml
+title Generic Information Model — Overview
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+
+package "Reality" {
+  class "REALITY" as Reality
+}
+
+package "Semantic Core" {
+  class Thing
+  class Assertion
+  class Configuration
+  class Transition
+  class Context
+}
+
+package "Reasoning & Interpretation" {
+  class Observation
+  class Projection
+  class Identity
+  class Intention
+  class Opportunity
+  class Constraint
+  class Decision
+}
+
+package "Operations" {
+  class Analysis
+  class Synthesis
+  class Evaluation
+  class Selection
+  class Mission
+}
+
+Reality --> Assertion : observed / reported
+Assertion --> Configuration : forms / informs
+Context --> Assertion : gives meaning
+Context --> Configuration : scopes
+
+Configuration --> Transition : may change through
+Transition --> Configuration : produces / approaches
+
+Observation ..> Assertion : evidence about
+Projection ..> Configuration : possible future
+Projection ..> Transition : possible consequence
+
+Identity ..> Configuration : interpretation
+Intention ..> Configuration : desired
+Intention ..> Thing : held by
+
+Opportunity ..> Assertion : enabling interpretation
+Opportunity ..> Transition : enables
+
+Constraint ..> Assertion : limiting interpretation
+Constraint ..> Transition : constrains
+
+Decision ..> Transition : selects / commits
+Decision ..> Configuration : selects
+
+Analysis ..> Assertion : decomposes
+Analysis ..> Configuration : analyses
+
+Synthesis ..> Assertion : combines
+Synthesis ..> Configuration : proposes
+Synthesis ..> Transition : proposes
+
+Evaluation ..> Projection : compares
+Evaluation ..> Transition : evaluates
+
+Selection ..> Transition : selects
+
+Mission ..> Transition : induces / tests
+
+note right of Assertion
+  Information about reality.
+
+  May be:
+  observed
+  reported
+  inferred
+  intended
+  projected
+
+  Provenance, time and context
+  distinguish these meanings.
+end note
+
+note right of Configuration
+  A coherent, referable view
+  of relevant information
+  understood as a state or
+  arrangement.
+
+  Not necessarily a database
+  entity with fixed fields.
+end note
+
+note right of Transition
+  Meaningful change involving
+  one or more Configurations.
+
+  May be possible, selected,
+  planned or performed.
+end note
+
+note bottom of Projection
+  "What might happen?"
+
+  Includes continuation:
+  what may happen if prevailing
+  dynamics continue.
+
+  Therefore "do nothing" is not
+  a special action.
+end note
+
+note bottom of Identity
+  Higher-level concepts such as
+  Identity, Vision, Goal,
+  Opportunity and Obstacle are
+  interpretations or views over
+  the semantic core rather than
+  mandatory primitive types.
+end note
+
+@enduml

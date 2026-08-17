@@ -1,0 +1,104 @@
+@startuml
+title Generic Information Model — Working Concept
+
+skinparam shadowing false
+skinparam roundcorner 12
+
+rectangle "THING" as Thing
+rectangle "STATEMENT" as Statement
+rectangle "OBSERVATION" as Observation
+rectangle "INTENTION" as Intention
+rectangle "RELATIONSHIP" as Relationship
+rectangle "CONTEXT" as Context
+rectangle "TRANSITION" as Transition
+rectangle "MISSION" as Mission
+
+Thing --> Statement : described by
+Statement --> Context : interpreted within
+
+Observation --> Statement : observes
+Intention --> Statement : expresses desired state / change
+
+Relationship --> Thing : connects
+Transition --> Thing : changes / involves
+Mission --> Transition : may induce
+
+note right of Thing
+  Something the system can refer to.
+
+  Examples:
+  person, organisation, business,
+  place, event, community, resource.
+
+  No fixed universal taxonomy
+  is assumed.
+end note
+
+note right of Statement
+  Meaningful information about
+  a Thing or relationship.
+
+  Example:
+
+  Student
+    seeks
+  software experience
+end note
+
+note right of Observation
+  An observation at a point in
+  time and context.
+
+  May include source,
+  confidence and other
+  provenance information.
+end note
+
+note right of Intention
+  Desired direction, future state,
+  outcome or change.
+
+  May be explicit, partial,
+  uncertain or emerging.
+end note
+
+note right of Context
+  Time, place, situation,
+  perspective, domain, source
+  or other conditions.
+
+  Context gives information
+  meaning.
+end note
+
+note right of Transition
+  Meaningful change from one
+  configuration to another.
+
+  May involve one or many
+  Things simultaneously.
+
+  A decision may itself be
+  a meaningful Transition.
+end note
+
+note bottom of Statement
+  Identity is a contextual
+  projection of relevant
+  information about a Thing.
+
+  A "Brick" is a relevant
+  aspect of Identity, not
+  necessarily a universal type.
+end note
+
+note bottom of Transition
+  Higher-level concepts such as
+  Identity, Opportunity, Goal,
+  Vision, Obstacle and Constraint
+  are currently treated as
+  interpretations or projections
+  rather than mandatory primitives.
+end note
+
+@enduml

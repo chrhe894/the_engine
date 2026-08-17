@@ -1,0 +1,93 @@
+@startuml
+title Adaptive Change — Working Model
+
+skinparam shadowing false
+skinparam roundcorner 12
+
+rectangle "CURRENT\nIDENTITY" as CI
+
+rectangle "OBSTACLES\n\nWhat constrains or blocks\nthe transition?" as O
+
+rectangle "OPPORTUNITIES\n\nWhat makes new possibilities\nvisible or possible?" as OP
+
+rectangle "TRANSITION\n\nWhat actually changes\nIdentity?" as T
+
+rectangle "NEW\nIDENTITY" as NI
+
+rectangle "MOTIVATION\n\nWhy is this transition\nworth making?" as M
+
+rectangle "FEEDBACK\n\nWhat tells us what\nchanged?" as F
+
+CI --> T : transition
+O --> T : constrains
+OP --> T : enables
+M --> T : drives
+T --> NI : changes
+
+NI --> F : observe change
+F --> M : affects motivation
+F --> CI : becomes current reality
+
+note right of CI
+Candidate primitive.
+
+Questions:
+- What constitutes Identity?
+- Is Identity a state?
+- Is Identity individual, collective,
+  organizational, systemic?
+- Which properties matter?
+end note
+
+note right of T
+Candidate primitive.
+
+Questions:
+- Is Transition the fundamental
+  mechanism of change?
+- Can Transition contain many
+  smaller transitions?
+- Is Action a sub-brick of Transition?
+- Is learning a type of Transition?
+end note
+
+note right of O
+Candidate concept.
+
+Questions:
+- Is an Obstacle a thing,
+  a relationship, or an interpretation?
+- Can an obstacle become an opportunity?
+end note
+
+note right of OP
+Candidate concept.
+
+Questions:
+- Can opportunities exist between actors?
+- Is cooperation an opportunity,
+  a mechanism, or an emergent capability?
+end note
+
+note right of NI
+Potentially the same type as
+CURRENT IDENTITY.
+
+Hypothesis:
+
+Identity₀ → Identity₁
+
+rather than:
+
+Current State → Ideal State
+end note
+
+note bottom of M
+Important hypothesis:
+
+Motivation may not be an object being
+"managed". It may be an emergent property
+of meaningful, appropriately sized transitions.
+end note
+
+@enduml

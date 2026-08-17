@@ -1,0 +1,23 @@
+@startuml adaptive-loop
+title Adaptive Loop
+
+start
+
+repeat
+
+  :Identity;
+
+  fork
+    :Opportunities;
+  fork again
+    :Obstacles;
+  end fork
+
+  :Ideal State;
+
+repeat while (not reached?) is (yes)
+-> no;
+
+stop
+
+@enduml
