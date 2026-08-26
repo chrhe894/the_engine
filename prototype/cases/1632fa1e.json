@@ -1,0 +1,850 @@
+{
+  "id": "1632fa1e",
+  "context": {
+    "description": "Development of the Adaptive Navigation Engine",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "\"Build a minimal web interface instead of CLI\"",
+  "goals": [
+    {
+      "id": "ca6d4a30",
+      "desired_direction": "Build the smallest executable loop that demonstrates Case File continuity, multiple goals with independent lifecycles, and Engine proposals that reflect accumulated observations. Use Python. Optimise for clarity and reversibility, not production architecture.",
+      "status": "ACTIVE",
+      "missions": [
+        "dc317a25",
+        "3b777864",
+        "7c9c713a",
+        "2d5dc0f5",
+        "f5a021d4",
+        "a81f7883",
+        "2a94cbf5",
+        "17e1d799",
+        "06ad04a2",
+        "6b0120af",
+        "f58b712c"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T14:17:28.591733"
+    }
+  ],
+  "missions": [
+    {
+      "id": "dc317a25",
+      "name": "Build Core Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "To establish the smallest runnable experiment for testing Case File continuity, independent goal lifecycles, and observation-informed Engine behavior.",
+      "description": "Create a minimal Python module using plain classes or dataclasses for CaseFile, Goal, Observation, Proposal, and Engine. Support adding goals, recording observations against a specific goal or the case, generating a proposal, and marking a goal active, paused, or complete. Add a script or test that creates two goals, records observations for them in interleaved order, requests proposals after each update, and prints or asserts that the proposal reflects the latest relevant accumulated observations while preserving both goals.",
+      "definition_of_done": [
+        "A fresh Python run creates one CaseFile containing two distinct goals.",
+        "Observations can be added without losing prior Case File, goal, or observation state.",
+        "Each goal has an independently inspectable lifecycle state.",
+        "The Engine returns a concrete next-step proposal from the current CaseFile state.",
+        "At least one proposal changes, or its stated rationale changes, after a new relevant observation is added.",
+        "An observation for one goal does not alter the stored lifecycle or observation history of the other goal.",
+        "The scripted scenario or tests run successfully using only the Python standard library."
+      ],
+      "status": "COMPLETED",
+      "result": "Implemented Case File, Goal, Mission, Observation, Decision dataclasses with JSON persistence. Created a rule-based Engine stub. Built a CLI loop and a non-interactive test.",
+      "observations": [
+        "a3d92d45"
+      ],
+      "timestamp": "2026-08-26T14:17:36.719733"
+    },
+    {
+      "id": "3b777864",
+      "name": "Add Proposal Rules",
+      "goal_id": "ca6d4a30",
+      "purpose": "Demonstrate that the Engine can derive a context-sensitive next proposal from accumulated observations while keeping goal lifecycles independent and the behavior easy to inspect and revise.",
+      "description": "Define two or three transparent rules over observation text, such as treating words indicating blockage or uncertainty as a prompt to clarify, and words indicating completion as a prompt to verify or move on. Implement these rules in the Engine, include the relevant goal and accumulated observations in the proposal, and add scripted tests covering interleaved observations for two goals plus at least one case-level observation.",
+      "definition_of_done": [
+        "The proposal policy is documented in code as a small, explicit set of rules.",
+        "At least one proposal changes based on a recognized observation signal rather than only repeating observation text.",
+        "A blocked or uncertain observation produces a clarification-oriented proposal.",
+        "A completion-oriented observation produces a verification or next-step proposal.",
+        "Tests show that each goal's proposal uses its own observations and does not incorrectly incorporate another goal's observations.",
+        "Tests show that case-level observations remain available without changing goal-local lifecycle state.",
+        "The existing scripted loop and persistence behavior continue to pass unchanged."
+      ],
+      "status": "COMPLETED",
+      "result": "Replaced the rule-based Engine reasoning with GPT-5.6 Luna. Ran the Skördefesten case as an A/B comparison against the v0.1 baseline.",
+      "observations": [
+        "60dec17a"
+      ],
+      "timestamp": "2026-08-26T14:17:47.368166"
+    },
+    {
+      "id": "7c9c713a",
+      "name": "Regression Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "To turn the current successful demonstration into a repeatable regression loop that checks continuity and lifecycle isolation while leaving proposal wording open for human evaluation.",
+      "description": "Create one deterministic Python script or test fixture that initializes a case with two goals, records interleaved goal-level and case-level observations, requests a proposal after each update, and writes the proposal sequence to a readable JSON or text artifact. Add assertions that each proposal identifies the relevant goal, includes or reflects prior relevant state, preserves both goals, and does not mark a goal complete unless the stored state explicitly says it is complete.",
+      "definition_of_done": [
+        "A single command runs the complete two-goal, interleaved-observation scenario from a fresh in-memory case.",
+        "The scenario includes at least one case-level observation and observations assigned separately to both goals.",
+        "A proposal is generated after each observation update.",
+        "Automated checks confirm that both goals remain present and independently tracked throughout the run.",
+        "Automated checks confirm that each proposal is associated with the intended current goal and has access to relevant accumulated observations.",
+        "Automated checks fail if a proposal claims completion that is not represented in the stored goal state.",
+        "The generated proposal sequence is saved in a human-readable artifact for inspection.",
+        "The test does not require exact AI wording and does not claim that any proposal is accepted or that a mission is completed."
+      ],
+      "status": "COMPLETED",
+      "result": "Extracted scenario configuration from hardcoded Python into JSON files. Created a generic simulation runner with a three-layer model: scenario (starting conditions), simulation (repeatable participant responses), case file (accumulated state).",
+      "observations": [
+        "2251d7d5"
+      ],
+      "timestamp": "2026-08-26T14:17:56.903373"
+    },
+    {
+      "id": "2d5dc0f5",
+      "name": "Add Proposal Gate",
+      "goal_id": "ca6d4a30",
+      "purpose": "To enforce that the Engine proposes and the participant decides, while demonstrating that Case File continuity and independent goal lifecycles still work through the confirmation boundary.",
+      "description": "Implement a pending-proposal flow in Python. Keep Engine output separate from persisted Goal state. Add a decision function or runner step that accepts a proposal unchanged, modifies it with participant-provided text, or rejects it; only ACCEPT or MODIFY may create or update a Goal, while REJECT leaves goals unchanged. Extend the existing two-goal regression scenario with at least one unaccepted proposal and one accepted or modified proposal, then save the resulting proposal and goal-state sequence for review.",
+      "definition_of_done": [
+        "Requesting a proposal does not create, update, activate, pause, or complete any Goal.",
+        "An explicit ACCEPT decision can persist the proposed goal or goal update.",
+        "An explicit MODIFY decision persists only the participant-modified version.",
+        "A REJECT decision leaves the stored CaseFile and all existing Goals unchanged.",
+        "The regression scenario covers at least two goals with interleaved observations and includes a pending proposal that is not accepted.",
+        "The generated artifact records the proposal, participant decision, and resulting goal state after each step.",
+        "Assertions verify that no goal is marked complete unless its stored state explicitly says it is complete."
+      ],
+      "status": "COMPLETED",
+      "result": "Added an interpret-and-confirm step. The participant can now accept, correct, or reject the Engine's interpretation before a Goal is created. Tested with a correction that narrowed the direction from broad entrepreneurship to small practical income tasks.",
+      "observations": [
+        "b4b4c4ad"
+      ],
+      "timestamp": "2026-08-26T14:18:05.742734"
+    },
+    {
+      "id": "f5a021d4",
+      "name": "Verify Confirmation",
+      "goal_id": "ca6d4a30",
+      "purpose": "Demonstrate that participant decisions—not pending Engine interpretations—control durable state and shape subsequent proposals while independent goal lifecycles remain intact.",
+      "description": "Create one Python regression script using the existing CaseFile, Goal, Observation, Proposal, and Engine interfaces. Initialize two active goals, record interleaved observations, request proposals, reject one proposal, modify another with explicit participant text, save and reload the case, then request later proposals. Write the proposal and goal-state sequence to a readable JSON artifact and assert that rejection leaves the relevant goal unchanged, modification stores only the confirmed participant direction, both goals remain present, and later proposals identify the correct goal and reflect the confirmed direction.",
+      "definition_of_done": [
+        "A deterministic script or test covers ACCEPT, MODIFY, and REJECT decisions.",
+        "At least one rejected proposal produces no change to the corresponding persisted goal.",
+        "At least one modified proposal stores the participant's correction separately from or in place of the unconfirmed Engine interpretation.",
+        "The case can be saved and reloaded without losing both goals, observations, or confirmed direction.",
+        "A later proposal reflects the confirmed correction and identifies the relevant goal.",
+        "An unrelated goal remains unchanged and independently addressable.",
+        "The generated proposal and goal-state sequence is saved as a readable artifact for review."
+      ],
+      "status": "COMPLETED",
+      "result": "Created a four-part regression test for the interpret-and-confirm boundary. Tests verify: correction changes goal direction, rejection leaves Case File unchanged, goal isolation holds, and continuity works after correction + mission + observation.",
+      "observations": [
+        "c2db2555"
+      ],
+      "timestamp": "2026-08-26T14:18:14.977278"
+    },
+    {
+      "id": "a81f7883",
+      "name": "Audit State Flow",
+      "goal_id": "ca6d4a30",
+      "purpose": "To verify that proposals are pending interpretations rather than state mutations, that participant decisions have distinct and correctly scoped effects, and that the confirmed lifecycle survives persistence.",
+      "description": "In Python, extend the existing two-goal regression test or create a small companion test that: records a serialized CaseFile snapshot before requesting a proposal; verifies proposal generation leaves stored goals and observations unchanged; rejects one proposal and asserts the full case state is unchanged; modifies another proposal and asserts only the confirmed participant direction changes; accepts a proposal for the remaining goal and asserts the expected goal update; saves and reloads after each decision; and compares the reloaded state with the in-memory state. Write the transition snapshots to a readable JSON artifact.",
+      "definition_of_done": [
+        "Proposal generation produces no change to persisted goals or observations.",
+        "REJECT leaves the relevant goal and the rest of the CaseFile unchanged.",
+        "MODIFY stores the participant-confirmed direction rather than the unconfirmed Engine text.",
+        "ACCEPT applies only the intended proposal-derived update to the relevant goal.",
+        "Both goals remain present and independently unchanged where appropriate.",
+        "Saving and reloading after each decision preserves the same observable CaseFile state.",
+        "The regression test passes and writes a readable transition artifact."
+      ],
+      "status": "ACCEPTED",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T14:18:24.199794"
+    },
+    {
+      "id": "2a94cbf5",
+      "name": "Replay the Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "To prove that the complete continuity and confirmation loop is reproducible, inspectable, and safe to extend before adding more Engine behavior or domain-specific features.",
+      "description": "Create or document one command that runs the deterministic two-goal scenario from a clean temporary case directory. Capture snapshots before proposal generation, after REJECT, after MODIFY, after ACCEPT, after reload, and after later observations and proposals. Assert that proposal generation is state-pure, REJECT changes nothing, MODIFY changes only confirmed participant direction, ACCEPT applies only the intended goal update, both goals persist, and later proposals use the reloaded confirmed state. Write the full sequence to a readable JSON artifact.",
+      "definition_of_done": [
+        "A single documented command runs the full scenario from configuration to final artifact.",
+        "The scenario executes successfully from a clean temporary case directory.",
+        "Snapshots exist before and after proposal generation and every decision type.",
+        "Assertions verify that proposal generation does not mutate persisted state.",
+        "Assertions verify that REJECT leaves the complete CaseFile unchanged.",
+        "Assertions verify that MODIFY changes only the confirmed participant direction.",
+        "Assertions verify that ACCEPT updates only the intended goal.",
+        "The CaseFile is saved and reloaded at each required transition.",
+        "The reloaded state matches the in-memory state at each persistence checkpoint.",
+        "Both goals remain present and independently addressable throughout the replay.",
+        "Later proposals identify the correct goal and reflect the confirmed direction.",
+        "The generated JSON artifact is readable enough for a human to audit the transition sequence."
+      ],
+      "status": "COMPLETED",
+      "result": "6 of 12 Definition of Done items are verified by existing tests. The core behavioral assertions pass (proposal doesn't mutate state, reject leaves case unchanged, modify stores correction, accept updates only intended goal, goals are independent, proposals reflect corrected direction). Missing: persistence round-trip at each step, running from config file, clean temp directory.",
+      "observations": [
+        "c6d4b7d5"
+      ],
+      "timestamp": "2026-08-26T14:31:41.951838"
+    },
+    {
+      "id": "17e1d799",
+      "name": "Clean Replay",
+      "goal_id": "ca6d4a30",
+      "purpose": "To provide a reproducible, auditable end-to-end demonstration that proposal generation is separate from state mutation, participant decisions control updates, multiple goals remain isolated, and confirmed state survives persistence and shapes later proposals.",
+      "description": "Add or document a Python command such as `python -m ... --clean-temp --scenario <file> --artifact <file>` that creates an empty temporary case directory, runs the deterministic two-goal scenario, and records snapshots before proposal generation, after REJECT, after MODIFY, after ACCEPT, after each reload, and after later observations and proposals. Assert state purity during proposal generation, no state change after REJECT, only the confirmed participant direction changing after MODIFY, only the intended goal changing after ACCEPT, persistence of both goals, and correct later proposals after reload. Execute the command from a clean environment and inspect the generated JSON artifact.",
+      "definition_of_done": [
+        "A single documented Python command runs the scenario from a clean temporary case directory.",
+        "The command writes a readable JSON artifact containing the complete ordered snapshot sequence.",
+        "The artifact includes snapshots before proposal generation, after REJECT, after MODIFY, after ACCEPT, after reload, and after later observations and proposals.",
+        "Assertions verify that proposal generation does not mutate stored goals or observations.",
+        "Assertions verify that REJECT leaves the full case state unchanged.",
+        "Assertions verify that MODIFY changes only the confirmed participant direction.",
+        "Assertions verify that ACCEPT updates only the intended goal.",
+        "Assertions verify that both goals persist through every save and reload.",
+        "Assertions verify that later proposals identify the correct goal and use the reloaded confirmed direction.",
+        "The command succeeds when run against an empty temporary directory without relying on prior case files or in-memory state."
+      ],
+      "status": "COMPLETED",
+      "result": "This mission has not been started yet. I just arrived here.",
+      "observations": [],
+      "timestamp": "2026-08-26T14:32:43.967096"
+    },
+    {
+      "id": "06ad04a2",
+      "name": "Clean Replay",
+      "goal_id": "ca6d4a30",
+      "purpose": "Demonstrate that the confirmed behavioral contract survives a deterministic, configuration-driven persistence round trip.",
+      "description": "Run a command such as `python -m <module> --clean-temp --scenario <file> --artifact <file>`. It must create a fresh temporary case directory, load the scenario configuration, replay interleaved observations and proposal decisions for two goals, save and reload the CaseFile after each required transition, and write readable JSON snapshots before proposal generation, after REJECT, MODIFY, ACCEPT, reloads, later observations, and later proposals. Assert state purity during proposal generation, no change after REJECT, only the confirmed direction changing after MODIFY, only the intended goal changing after ACCEPT, persistence of both goals, and correct later proposals after reload.",
+      "definition_of_done": [
+        "The command runs successfully from a clean temporary directory using only the scenario file and artifact path.",
+        "The JSON artifact contains snapshots for every required proposal, decision, save, reload, later observation, and later proposal transition.",
+        "Assertions pass for proposal state purity, REJECT, MODIFY, ACCEPT, goal independence, and persistence of both goals.",
+        "The final reloaded state and later proposals reflect the confirmed direction and accumulated observations."
+      ],
+      "status": "COMPLETED",
+      "result": "\"The Engine keeps proposing regression tests. I want to decide the next direction myself.\"",
+      "observations": [],
+      "timestamp": "2026-08-26T14:44:03.933361"
+    },
+    {
+      "id": "6b0120af",
+      "name": "Choose Direction",
+      "goal_id": "ca6d4a30",
+      "purpose": "To replace the default regression-testing trajectory with an explicit participant-chosen development direction grounded in the current evidence.",
+      "description": "Inspect the current implementation, test results, and latest JSON artifact if present. Write down one selected next direction, one rejected alternative, and a scope limited to a single small experiment or implementation change.",
+      "definition_of_done": [
+        "The current status of the clean replay command and its artifact is recorded as verified, incomplete, or unknown.",
+        "One next direction is explicitly selected.",
+        "At least one plausible alternative is explicitly deferred or rejected.",
+        "The selected direction has a concrete first action small enough to complete in one focused iteration."
+      ],
+      "status": "COMPLETED",
+      "result": "\"Build a minimal web interface instead of CLI\"",
+      "observations": [],
+      "timestamp": "2026-08-26T14:53:22.623072"
+    },
+    {
+      "id": "f58b712c",
+      "name": "Web Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "Demonstrate the smallest participant-facing executable loop while preserving CaseFile continuity, independent goals, and the Engine-proposes/participant-decides boundary.",
+      "description": "Create a minimal Python web server, preferably using an already available lightweight framework or the standard library if sufficient. Render the current case state and pending proposal in one page. Add handlers or forms for recording a goal-level or case-level observation, requesting a proposal for a selected goal, and deciding on that proposal with ACCEPT, MODIFY plus participant text, or REJECT. Run one local two-goal interaction that records interleaved observations and saves the CaseFile through the existing persistence mechanism.",
+      "definition_of_done": [
+        "A documented Python command starts the local web interface from a clean case directory.",
+        "The page displays both goals, their current states, relevant observations, and any pending proposal.",
+        "A user can submit an observation, request a proposal for a selected goal, and accept, modify, or reject that proposal.",
+        "Rejecting a proposal leaves persisted goals and observations unchanged; accepting or modifying changes only the intended goal according to the existing decision rules.",
+        "A short manual or scripted walkthrough demonstrates two goals with interleaved observations and a later proposal that reflects prior confirmed state."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T14:58:03.255522"
+    }
+  ],
+  "observations": [
+    {
+      "id": "a3d92d45",
+      "text": "The complete loop executes mechanically. Continuity works at the data level — the next proposal contains the previous observation text. Multiple goals coexist and GIVE UP is locally scoped. But the Engine adds no domain intelligence. All meaningful content came from the participant, not the Engine.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:17:36.720849",
+      "mission_id": "dc317a25"
+    },
+    {
+      "id": "60dec17a",
+      "text": "The AI Engine produced proposals that a participant could plausibly ACCEPT without modification. It used geographic and time context, generated specific missions with verifiable definitions of done, and built on previous observations with reasoning rather than verbatim quotation. The rule-based engine required MODIFY every time. The AI constraint held: it did not fabricate evidence or claim mission completion.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:17:47.369297",
+      "mission_id": "3b777864"
+    },
+    {
+      "id": "2251d7d5",
+      "text": "The same Engine handles radically different domains without code changes. The three-layer separation makes experiments reproducible. But the runner had a structural flaw: the Goal was created directly from the AI's interpretation without participant confirmation. This diverges from the documented principle that the Engine proposes and the user decides.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:17:56.904633",
+      "mission_id": "7c9c713a"
+    },
+    {
+      "id": "b4b4c4ad",
+      "text": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:18:05.744076",
+      "mission_id": "2d5dc0f5"
+    },
+    {
+      "id": "c2db2555",
+      "text": "All four regression tests pass with AI-generated proposals. The boundary between Engine interpretation and participant decision is now structurally enforced and observable. The tests do not depend on exact AI wording — only on structural properties. This means the Engine can change how it reasons without breaking the confirmed contract.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:18:14.978277",
+      "mission_id": "f5a021d4"
+    },
+    {
+      "id": "c6d4b7d5",
+      "text": "The behavioral contract (propose/decide boundary) is tested and solid. The persistence and configuration-driven aspects are not yet tested. The Definition of Done was too detailed for this stage — 12 items is a production spec, not a prototype checkpoint. Simpler missions with 3-5 items would have been easier to verify and complete.",
+      "source": "participant",
+      "timestamp": "2026-08-26T14:43:40.495470",
+      "mission_id": "2a94cbf5"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "8dda7a46",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Implement one in-memory vertical slice with a CaseFile, two independently tracked Goals, recorded Observations, and an Engine that produces the next proposal from the current accumulated state. Drive it with a short scripted scenario and inspect the proposal after each step.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:17:36.719684"
+    },
+    {
+      "id": "c16f93a3",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Add a small, explicit rule-based proposal policy that interprets a few recognizable observation patterns and converts them into actionable next steps, while preserving the existing data model and allowing the rules to be replaced later.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:17:47.368122"
+    },
+    {
+      "id": "fc72e257",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Build a small end-to-end regression scenario around the existing AI Engine. Use fixed observations for two goals, request proposals after each update, assert structural invariants, and save the generated proposals for human review rather than asserting exact wording.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:17:56.903320"
+    },
+    {
+      "id": "9dc467c1",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Add a minimal proposal-confirmation gate to the in-memory runner. Have the Engine return a pending Proposal first; require an explicit ACCEPT, MODIFY, or REJECT decision before creating or updating a Goal, and add a regression scenario proving that an unaccepted proposal does not alter stored goals.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:18:05.742678"
+    },
+    {
+      "id": "33a8c530",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Add a deterministic end-to-end regression test for the confirmation lifecycle. Use a scripted two-goal scenario with interleaved observations, include one rejected proposal and one participant-modified proposal, persist the case after each decision, reload it, and verify that subsequent proposals use the confirmed direction while unrelated goals remain unchanged.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:18:14.977233"
+    },
+    {
+      "id": "f680b3e4",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Add a focused state-transition audit to the existing deterministic regression scenario. Capture the case state before and after proposal generation and after each decision type, then assert the allowed changes and persistence behavior.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:18:24.199731"
+    },
+    {
+      "id": "d-142003",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "In Python, extend the existing two-goal regression test or create a small companion test that: recor",
+      "reason": null,
+      "timestamp": "2026-08-26T14:20:03.999568"
+    },
+    {
+      "id": "231a113f",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Run a clean end-to-end replay of the existing two-goal scenario from its JSON configuration, saving and reloading the CaseFile after every proposal decision and observation. Inspect the resulting artifact and tighten the runner or assertions only where the replay exposes ambiguity.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:31:41.951759"
+    },
+    {
+      "id": "383e55e5",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Implement and run one deterministic end-to-end command that creates a fresh temporary case directory, replays the configured two-goal scenario, saves and reloads at each required transition, and writes a readable JSON audit artifact. Use the run to identify and fix only gaps in snapshot coverage, cleanup, or assertions.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:32:43.967030"
+    },
+    {
+      "id": "12a32068",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Implement or document the clean replay command, execute it from a clean environment, and use the generated artifact to fix only concrete gaps in snapshot coverage, cleanup, reload handling, or assertions.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:44:03.933292"
+    },
+    {
+      "id": "51e2d833",
+      "decision_type": "REJECT",
+      "goal_id": "ca6d4a30",
+      "context": "Implement or document the clean replay command, run it from a fresh temporary directory using the scenario JSON, inspect the resulting artifact, and make only targeted fixes for missing snapshot coverage, cleanup, reload handling, or assertions.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:49:21.534219"
+    },
+    {
+      "id": "986b15e3",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Pause implementation and make an explicit next-direction decision using the evidence already available. First inspect the current repository status and any generated artifact, then choose one narrowly scoped follow-up: finish the persistence/replay boundary, improve Engine reasoning, or explore participant-facing behavior.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:53:22.623010"
+    },
+    {
+      "id": "440aaace",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Inspect the current Python interfaces, then implement one local web page with a small set of actions: select or create a goal, add an observation, request an Engine proposal, and accept, modify, or reject that proposal. Keep the existing CLI and domain model unchanged where possible.",
+      "reason": null,
+      "timestamp": "2026-08-26T14:58:03.255450"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The team is developing the Adaptive Navigation Engine and wants to move from conceptual modeling to a working prototype that can empirically test the adaptive loop and reveal its failure points."
+      },
+      "timestamp": "2026-08-26T14:17:28.590941"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "ca6d4a30",
+        "direction": "Build the smallest executable loop that demonstrates Case File continuity, multiple goals with independent lifecycles, and Engine proposals that reflect accumulated observations. Use Python. Optimise for clarity and reversibility, not production architecture."
+      },
+      "timestamp": "2026-08-26T14:17:28.591741"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Implement one in-memory vertical slice with a CaseFile, two independently tracked Goals, recorded Observations, and an Engine that produces the next proposal from the current accumulated state. Drive it with a short scripted scenario and inspect the proposal after each step."
+      },
+      "timestamp": "2026-08-26T14:17:36.719705"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "dc317a25",
+        "goal_id": "ca6d4a30",
+        "purpose": "To establish the smallest runnable experiment for testing Case File continuity, independent goal lifecycles, and observation-informed Engine behavior."
+      },
+      "timestamp": "2026-08-26T14:17:36.719743"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "dc317a25",
+        "result": "Implemented Case File, Goal, Mission, Observation, Decision dataclasses with JSON persistence. Created a rule-based Engine stub. Built a CLI loop and a non-interactive test."
+      },
+      "timestamp": "2026-08-26T14:17:36.720822"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "a3d92d45",
+        "text": "The complete loop executes mechanically. Continuity works at the data level — the next proposal contains the previous observation text. Multiple goals coexist and GIVE UP is locally scoped. But the Engine adds no domain intelligence. All meaningful content came from the participant, not the Engine.",
+        "mission_id": "dc317a25"
+      },
+      "timestamp": "2026-08-26T14:17:36.720854"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The team is developing the Adaptive Navigation Engine and wants to move from conceptual modeling to a working prototype that can empirically test the adaptive loop and reveal its failure points.",
+        "new": "The complete loop executes mechanically. Continuity works at the data level — the next proposal contains the previous observation text. Multiple goals coexist and GIVE UP is locally scoped. But the Engine adds no domain intelligence. All meaningful content came from the participant, not the Engine."
+      },
+      "timestamp": "2026-08-26T14:17:36.720856"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Add a small, explicit rule-based proposal policy that interprets a few recognizable observation patterns and converts them into actionable next steps, while preserving the existing data model and allowing the rules to be replaced later."
+      },
+      "timestamp": "2026-08-26T14:17:47.368141"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "3b777864",
+        "goal_id": "ca6d4a30",
+        "purpose": "Demonstrate that the Engine can derive a context-sensitive next proposal from accumulated observations while keeping goal lifecycles independent and the behavior easy to inspect and revise."
+      },
+      "timestamp": "2026-08-26T14:17:47.368175"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "3b777864",
+        "result": "Replaced the rule-based Engine reasoning with GPT-5.6 Luna. Ran the Skördefesten case as an A/B comparison against the v0.1 baseline."
+      },
+      "timestamp": "2026-08-26T14:17:47.369246"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "60dec17a",
+        "text": "The AI Engine produced proposals that a participant could plausibly ACCEPT without modification. It used geographic and time context, generated specific missions with verifiable definitions of done, and built on previous observations with reasoning rather than verbatim quotation. The rule-based engine required MODIFY every time. The AI constraint held: it did not fabricate evidence or claim mission completion.",
+        "mission_id": "3b777864"
+      },
+      "timestamp": "2026-08-26T14:17:47.369311"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The complete loop executes mechanically. Continuity works at the data level — the next proposal contains the previous observation text. Multiple goals coexist and GIVE UP is locally scoped. But the Engine adds no domain intelligence. All meaningful content came from the participant, not the Engine.",
+        "new": "The AI Engine produced proposals that a participant could plausibly ACCEPT without modification. It used geographic and time context, generated specific missions with verifiable definitions of done, and built on previous observations with reasoning rather than verbatim quotation. The rule-based engine required MODIFY every time. The AI constraint held: it did not fabricate evidence or claim mission completion."
+      },
+      "timestamp": "2026-08-26T14:17:47.369317"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Build a small end-to-end regression scenario around the existing AI Engine. Use fixed observations for two goals, request proposals after each update, assert structural invariants, and save the generated proposals for human review rather than asserting exact wording."
+      },
+      "timestamp": "2026-08-26T14:17:56.903342"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "7c9c713a",
+        "goal_id": "ca6d4a30",
+        "purpose": "To turn the current successful demonstration into a repeatable regression loop that checks continuity and lifecycle isolation while leaving proposal wording open for human evaluation."
+      },
+      "timestamp": "2026-08-26T14:17:56.903383"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "7c9c713a",
+        "result": "Extracted scenario configuration from hardcoded Python into JSON files. Created a generic simulation runner with a three-layer model: scenario (starting conditions), simulation (repeatable participant responses), case file (accumulated state)."
+      },
+      "timestamp": "2026-08-26T14:17:56.904560"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "2251d7d5",
+        "text": "The same Engine handles radically different domains without code changes. The three-layer separation makes experiments reproducible. But the runner had a structural flaw: the Goal was created directly from the AI's interpretation without participant confirmation. This diverges from the documented principle that the Engine proposes and the user decides.",
+        "mission_id": "7c9c713a"
+      },
+      "timestamp": "2026-08-26T14:17:56.904645"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The AI Engine produced proposals that a participant could plausibly ACCEPT without modification. It used geographic and time context, generated specific missions with verifiable definitions of done, and built on previous observations with reasoning rather than verbatim quotation. The rule-based engine required MODIFY every time. The AI constraint held: it did not fabricate evidence or claim mission completion.",
+        "new": "The same Engine handles radically different domains without code changes. The three-layer separation makes experiments reproducible. But the runner had a structural flaw: the Goal was created directly from the AI's interpretation without participant confirmation. This diverges from the documented principle that the Engine proposes and the user decides."
+      },
+      "timestamp": "2026-08-26T14:17:56.904652"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Add a minimal proposal-confirmation gate to the in-memory runner. Have the Engine return a pending Proposal first; require an explicit ACCEPT, MODIFY, or REJECT decision before creating or updating a Goal, and add a regression scenario proving that an unaccepted proposal does not alter stored goals."
+      },
+      "timestamp": "2026-08-26T14:18:05.742704"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "2d5dc0f5",
+        "goal_id": "ca6d4a30",
+        "purpose": "To enforce that the Engine proposes and the participant decides, while demonstrating that Case File continuity and independent goal lifecycles still work through the confirmation boundary."
+      },
+      "timestamp": "2026-08-26T14:18:05.742744"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "2d5dc0f5",
+        "result": "Added an interpret-and-confirm step. The participant can now accept, correct, or reject the Engine's interpretation before a Goal is created. Tested with a correction that narrowed the direction from broad entrepreneurship to small practical income tasks."
+      },
+      "timestamp": "2026-08-26T14:18:05.744017"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "b4b4c4ad",
+        "text": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case.",
+        "mission_id": "2d5dc0f5"
+      },
+      "timestamp": "2026-08-26T14:18:05.744085"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The same Engine handles radically different domains without code changes. The three-layer separation makes experiments reproducible. But the runner had a structural flaw: the Goal was created directly from the AI's interpretation without participant confirmation. This diverges from the documented principle that the Engine proposes and the user decides.",
+        "new": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case."
+      },
+      "timestamp": "2026-08-26T14:18:05.744091"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Add a deterministic end-to-end regression test for the confirmation lifecycle. Use a scripted two-goal scenario with interleaved observations, include one rejected proposal and one participant-modified proposal, persist the case after each decision, reload it, and verify that subsequent proposals use the confirmed direction while unrelated goals remain unchanged."
+      },
+      "timestamp": "2026-08-26T14:18:14.977252"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "f5a021d4",
+        "goal_id": "ca6d4a30",
+        "purpose": "Demonstrate that participant decisions—not pending Engine interpretations—control durable state and shape subsequent proposals while independent goal lifecycles remain intact."
+      },
+      "timestamp": "2026-08-26T14:18:14.977286"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "f5a021d4",
+        "result": "Created a four-part regression test for the interpret-and-confirm boundary. Tests verify: correction changes goal direction, rejection leaves Case File unchanged, goal isolation holds, and continuity works after correction + mission + observation."
+      },
+      "timestamp": "2026-08-26T14:18:14.978207"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "c2db2555",
+        "text": "All four regression tests pass with AI-generated proposals. The boundary between Engine interpretation and participant decision is now structurally enforced and observable. The tests do not depend on exact AI wording — only on structural properties. This means the Engine can change how it reasons without breaking the confirmed contract.",
+        "mission_id": "f5a021d4"
+      },
+      "timestamp": "2026-08-26T14:18:14.978290"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case.",
+        "new": "All four regression tests pass with AI-generated proposals. The boundary between Engine interpretation and participant decision is now structurally enforced and observable. The tests do not depend on exact AI wording — only on structural properties. This means the Engine can change how it reasons without breaking the confirmed contract."
+      },
+      "timestamp": "2026-08-26T14:18:14.978297"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Add a focused state-transition audit to the existing deterministic regression scenario. Capture the case state before and after proposal generation and after each decision type, then assert the allowed changes and persistence behavior."
+      },
+      "timestamp": "2026-08-26T14:18:24.199771"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "a81f7883",
+        "goal_id": "ca6d4a30",
+        "purpose": "To verify that proposals are pending interpretations rather than state mutations, that participant decisions have distinct and correctly scoped effects, and that the confirmed lifecycle survives persistence."
+      },
+      "timestamp": "2026-08-26T14:18:24.199800"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "decision_type": "ACCEPT",
+        "mission_id": "a81f7883"
+      },
+      "timestamp": "2026-08-26T14:20:03.999938"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Run a clean end-to-end replay of the existing two-goal scenario from its JSON configuration, saving and reloading the CaseFile after every proposal decision and observation. Inspect the resulting artifact and tighten the runner or assertions only where the replay exposes ambiguity."
+      },
+      "timestamp": "2026-08-26T14:31:41.951792"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "2a94cbf5",
+        "goal_id": "ca6d4a30",
+        "purpose": "To prove that the complete continuity and confirmation loop is reproducible, inspectable, and safe to extend before adding more Engine behavior or domain-specific features."
+      },
+      "timestamp": "2026-08-26T14:31:41.951859"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Implement and run one deterministic end-to-end command that creates a fresh temporary case directory, replays the configured two-goal scenario, saves and reloads at each required transition, and writes a readable JSON audit artifact. Use the run to identify and fix only gaps in snapshot coverage, cleanup, or assertions."
+      },
+      "timestamp": "2026-08-26T14:32:43.967057"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "17e1d799",
+        "goal_id": "ca6d4a30",
+        "purpose": "To provide a reproducible, auditable end-to-end demonstration that proposal generation is separate from state mutation, participant decisions control updates, multiple goals remain isolated, and confirmed state survives persistence and shapes later proposals."
+      },
+      "timestamp": "2026-08-26T14:32:43.967114"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "2a94cbf5",
+        "result": "6 of 12 Definition of Done items are verified by existing tests. The core behavioral assertions pass (proposal doesn't mutate state, reject leaves case unchanged, modify stores correction, accept updates only intended goal, goals are independent, proposals reflect corrected direction). Missing: persistence round-trip at each step, running from config file, clean temp directory."
+      },
+      "timestamp": "2026-08-26T14:43:40.495369"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "c6d4b7d5",
+        "text": "The behavioral contract (propose/decide boundary) is tested and solid. The persistence and configuration-driven aspects are not yet tested. The Definition of Done was too detailed for this stage — 12 items is a production spec, not a prototype checkpoint. Simpler missions with 3-5 items would have been easier to verify and complete.",
+        "mission_id": "2a94cbf5"
+      },
+      "timestamp": "2026-08-26T14:43:40.495481"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "All four regression tests pass with AI-generated proposals. The boundary between Engine interpretation and participant decision is now structurally enforced and observable. The tests do not depend on exact AI wording — only on structural properties. This means the Engine can change how it reasons without breaking the confirmed contract.",
+        "new": "The behavioral contract (propose/decide boundary) is tested and solid. The persistence and configuration-driven aspects are not yet tested. The Definition of Done was too detailed for this stage — 12 items is a production spec, not a prototype checkpoint. Simpler missions with 3-5 items would have been easier to verify and complete."
+      },
+      "timestamp": "2026-08-26T14:43:40.495490"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Implement or document the clean replay command, execute it from a clean environment, and use the generated artifact to fix only concrete gaps in snapshot coverage, cleanup, reload handling, or assertions."
+      },
+      "timestamp": "2026-08-26T14:44:03.933315"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "06ad04a2",
+        "goal_id": "ca6d4a30",
+        "purpose": "Demonstrate that the confirmed behavioral contract survives a deterministic, configuration-driven persistence round trip."
+      },
+      "timestamp": "2026-08-26T14:44:03.933378"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "17e1d799",
+        "result": "This mission has not been started yet. I just arrived here."
+      },
+      "timestamp": "2026-08-26T14:46:48.270904"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The behavioral contract (propose/decide boundary) is tested and solid. The persistence and configuration-driven aspects are not yet tested. The Definition of Done was too detailed for this stage — 12 items is a production spec, not a prototype checkpoint. Simpler missions with 3-5 items would have been easier to verify and complete.",
+        "new": "This mission has not been started yet. I just arrived here."
+      },
+      "timestamp": "2026-08-26T14:46:48.270939"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "REJECT",
+        "goal_id": "ca6d4a30",
+        "context": "Implement or document the clean replay command, run it from a fresh temporary directory using the scenario JSON, inspect the resulting artifact, and make only targeted fixes for missing snapshot coverage, cleanup, reload handling, or assertions."
+      },
+      "timestamp": "2026-08-26T14:49:21.534244"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "06ad04a2",
+        "result": "\"The Engine keeps proposing regression tests. I want to decide the next direction myself.\""
+      },
+      "timestamp": "2026-08-26T14:50:30.663816"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "This mission has not been started yet. I just arrived here.",
+        "new": "\"The Engine keeps proposing regression tests. I want to decide the next direction myself.\""
+      },
+      "timestamp": "2026-08-26T14:50:30.663843"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Pause implementation and make an explicit next-direction decision using the evidence already available. First inspect the current repository status and any generated artifact, then choose one narrowly scoped follow-up: finish the persistence/replay boundary, improve Engine reasoning, or explore participant-facing behavior."
+      },
+      "timestamp": "2026-08-26T14:53:22.623039"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "6b0120af",
+        "goal_id": "ca6d4a30",
+        "purpose": "To replace the default regression-testing trajectory with an explicit participant-chosen development direction grounded in the current evidence."
+      },
+      "timestamp": "2026-08-26T14:53:22.623084"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "6b0120af",
+        "result": "\"Build a minimal web interface instead of CLI\""
+      },
+      "timestamp": "2026-08-26T14:57:25.405715"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "\"The Engine keeps proposing regression tests. I want to decide the next direction myself.\"",
+        "new": "\"Build a minimal web interface instead of CLI\""
+      },
+      "timestamp": "2026-08-26T14:57:25.405734"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Inspect the current Python interfaces, then implement one local web page with a small set of actions: select or create a goal, add an observation, request an Engine proposal, and accept, modify, or reject that proposal. Keep the existing CLI and domain model unchanged where possible."
+      },
+      "timestamp": "2026-08-26T14:58:03.255479"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "f58b712c",
+        "goal_id": "ca6d4a30",
+        "purpose": "Demonstrate the smallest participant-facing executable loop while preserving CaseFile continuity, independent goals, and the Engine-proposes/participant-decides boundary."
+      },
+      "timestamp": "2026-08-26T14:58:03.255539"
+    }
+  ],
+  "created": "2026-08-26T14:17:25.073504",
+  "updated": "2026-08-26T14:58:03.255539"
+}

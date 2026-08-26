@@ -26,6 +26,7 @@ class Proposal:
     desired: str = ""  # description of desired direction
     suggestion: str = ""  # what the Engine proposes
     reason: str = ""  # why this is relevant
+    mission_name: str = ""  # short label (1-3 words)
     mission_description: str = ""  # concrete next step if accepted
     mission_purpose: str = ""
     definition_of_done: list = field(default_factory=list)

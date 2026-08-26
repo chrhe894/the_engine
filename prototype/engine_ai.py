@@ -74,6 +74,7 @@ OUTPUT FORMAT (JSON):
   "uncertainty": "What remains unclear or questionable",
   "suggestion": "What you propose as the next step",
   "reason": "Why this is the next useful step",
+  "mission_name": "A short label for this mission (1-3 words, like a tab title)",
   "mission_description": "A concrete, executable action",
   "mission_purpose": "What this mission is meant to achieve",
   "definition_of_done": ["condition 1", "condition 2", ...]
@@ -252,6 +253,7 @@ Respond ONLY with the JSON object."""
                 desired=goal.desired_direction,
                 suggestion=result.get("suggestion", ""),
                 reason=result.get("reason", ""),
+                mission_name=result.get("mission_name", ""),
                 mission_description=result.get("mission_description", ""),
                 mission_purpose=result.get("mission_purpose", ""),
                 definition_of_done=result.get("definition_of_done", []),
@@ -314,6 +316,7 @@ Respond with the same JSON format as a normal proposal."""
                 desired=goal.desired_direction,
                 suggestion=result.get("suggestion", ""),
                 reason=result.get("reason", ""),
+                mission_name=result.get("mission_name", ""),
                 mission_description=result.get("mission_description", ""),
                 mission_purpose=result.get("mission_purpose", ""),
                 definition_of_done=result.get("definition_of_done", []),

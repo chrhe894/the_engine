@@ -1,0 +1,327 @@
+{
+  "id": "d06c6ad6",
+  "context": {
+    "description": "Personal income exploration",
+    "opening_question": "What could help this person build a sustainable source of income?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "I like computers and fixing things.",
+  "goals": [
+    {
+      "id": "53b27416",
+      "desired_direction": "I want to find small, practical ways to earn extra money using what I already have or can learn quickly. Not a startup. Not investments. Just real things I could start doing soon.",
+      "status": "ACTIVE",
+      "missions": [
+        "b37c54f7",
+        "7d4485f5",
+        "634455b1",
+        "5bbca9ee"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T13:54:27.643653"
+    }
+  ],
+  "missions": [
+    {
+      "id": "b37c54f7",
+      "name": "Opportunity Inventory",
+      "goal_id": "53b27416",
+      "purpose": "To turn existing abilities and resources into a short list of concrete, low-cost income experiments rather than pursuing vague or unrealistic opportunities.",
+      "description": "Write down: (1) five things you can do reasonably well, (2) five items or resources you already have, such as tools, a vehicle, space, or a computer, (3) the hours you could realistically use each week, (4) tasks you would and would not want to do, and (5) any constraints such as transportation, childcare, or startup costs. Then list three possible ways each category could help someone and select the three most realistic options.",
+      "definition_of_done": [
+        "At least five usable skills, resources, or assets are listed",
+        "A realistic weekly time budget and key constraints are written down",
+        "At least three possible income activities are identified",
+        "The three options require little or no upfront spending",
+        "Each option could be tested or offered to a real person within the next two weeks"
+      ],
+      "status": "COMPLETED",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observations": [
+        "f290e53d"
+      ],
+      "timestamp": "2026-08-26T13:54:35.643148"
+    },
+    {
+      "id": "7d4485f5",
+      "name": "Recall Evidence",
+      "goal_id": "53b27416",
+      "purpose": "Create concrete evidence and boundaries that can be translated into three realistic small-income options for testing within two weeks.",
+      "description": "Spend 15 minutes writing brief answers to these prompts: (1) What are three tasks you have completed in the last year, at home, work, school, or for someone else? (2) What have people asked you to help with, even informally? (3) What tasks do you complete reliably or learn quickly? (4) What tools, equipment, vehicle, computer, space, or online access do you have? (5) Which activities would you be willing to do for pay, and which would you refuse? (6) How many hours and what days could you realistically use? If you cannot think of examples, ask one trusted person: “What practical things have you seen me handle well?”",
+      "definition_of_done": [
+        "At least three real tasks or activities are written down, even if they seem ordinary",
+        "At least two examples of help others have requested or appreciated are recorded, or one person has been asked for input",
+        "Available resources, weekly time, and major constraints are listed",
+        "At least three work activities you would consider and three you would avoid are identified"
+      ],
+      "status": "COMPLETED",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observations": [
+        "e8ce3821"
+      ],
+      "timestamp": "2026-08-26T13:54:42.685081"
+    },
+    {
+      "id": "634455b1",
+      "name": "Gather Evidence",
+      "goal_id": "53b27416",
+      "purpose": "To identify concrete, observed capabilities that can be translated into realistic small-income experiments.",
+      "description": "Contact two people who know you reasonably well by message or conversation. Ask: “What practical things have you seen me handle well or learn quickly? What would you feel comfortable asking me to help with? Please give specific examples.” Record their answers, along with any tasks you remember completing reliably in the last year. Highlight tasks that are repeatable, useful to someone else, and possible without major training or startup costs.",
+      "definition_of_done": [
+        "Two people have been asked for specific examples, or two honest attempts to ask have been made",
+        "At least five concrete tasks or abilities are recorded, even if they seem ordinary",
+        "Each task is marked as acceptable, unacceptable, or uncertain for paid work",
+        "Any obvious constraints such as transport, schedule, equipment, or startup cost are noted"
+      ],
+      "status": "COMPLETED",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observations": [
+        "46d6296c"
+      ],
+      "timestamp": "2026-08-26T13:54:49.653737"
+    },
+    {
+      "id": "5bbca9ee",
+      "name": "Test One Task",
+      "goal_id": "53b27416",
+      "purpose": "To gather direct evidence about one possible service: whether you can do it, whether you enjoy it, how long it takes, and whether anyone finds it useful enough to request or pay for.",
+      "description": "Write down three specific tasks involving computers or fixing things that you might be willing to try, such as setting up a device, troubleshooting a basic problem, installing software, cleaning up a computer, or assembling or repairing a simple item. Choose the easiest task that uses equipment you already have. Describe it in one sentence, ask three people whether they currently need that help, and offer one clearly bounded trial. Record who you asked, their response, the task, the time required, and any difficulty. Do not take on tasks involving safety risks, sensitive data, or expensive equipment.",
+      "definition_of_done": [
+        "Three specific candidate tasks have been written down.",
+        "One low-risk task has been selected using available tools and resources.",
+        "At least three people have been asked about that specific task.",
+        "Responses and any concerns or constraints have been recorded.",
+        "If someone agrees, one bounded trial has been attempted and its time, result, and difficulty have been noted."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T13:55:03.646105"
+    }
+  ],
+  "observations": [
+    {
+      "id": "f290e53d",
+      "text": "I don't really know what I'm good at.",
+      "source": "participant",
+      "timestamp": "2026-08-26T13:54:35.643208",
+      "mission_id": "b37c54f7"
+    },
+    {
+      "id": "e8ce3821",
+      "text": "I've tried getting ordinary jobs but haven't had much luck.",
+      "source": "participant",
+      "timestamp": "2026-08-26T13:54:42.685145",
+      "mission_id": "7d4485f5"
+    },
+    {
+      "id": "46d6296c",
+      "text": "I like computers and fixing things.",
+      "source": "participant",
+      "timestamp": "2026-08-26T13:54:49.653791",
+      "mission_id": "634455b1"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "312ad11c",
+      "decision_type": "ACCEPT",
+      "goal_id": "53b27416",
+      "context": "Create a quick personal opportunity inventory, then use it to identify three practical income options that could be tested within the next two weeks.",
+      "reason": null,
+      "timestamp": "2026-08-26T13:54:35.643109"
+    },
+    {
+      "id": "b7e2741a",
+      "decision_type": "ACCEPT",
+      "goal_id": "53b27416",
+      "context": "Complete a short evidence-based inventory by answering prompts about real activities, recent requests for help, available resources, and work preferences. Do not try to identify a career or choose an income idea yet.",
+      "reason": null,
+      "timestamp": "2026-08-26T13:54:42.685032"
+    },
+    {
+      "id": "5e0e2708",
+      "decision_type": "ACCEPT",
+      "goal_id": "53b27416",
+      "context": "Ask two trusted people for concrete observations about tasks they have seen you handle, then turn their answers into a short list of possible paid tasks without committing to any of them yet.",
+      "reason": null,
+      "timestamp": "2026-08-26T13:54:49.653696"
+    },
+    {
+      "id": "298b51d4",
+      "decision_type": "ACCEPT",
+      "goal_id": "53b27416",
+      "context": "Choose one simple, low-risk computer or fixing task to test with someone you know, then ask a few people whether they need that specific help.",
+      "reason": null,
+      "timestamp": "2026-08-26T13:55:03.646072"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The person is looking for ways to earn income outside a traditional day job and may be dissatisfied with or constrained by conventional employment."
+      },
+      "timestamp": "2026-08-26T13:54:27.643574"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "53b27416",
+        "direction": "I want to find small, practical ways to earn extra money using what I already have or can learn quickly. Not a startup. Not investments. Just real things I could start doing soon."
+      },
+      "timestamp": "2026-08-26T13:54:27.643658"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "53b27416",
+        "context": "Create a quick personal opportunity inventory, then use it to identify three practical income options that could be tested within the next two weeks."
+      },
+      "timestamp": "2026-08-26T13:54:35.643126"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "b37c54f7",
+        "goal_id": "53b27416",
+        "purpose": "To turn existing abilities and resources into a short list of concrete, low-cost income experiments rather than pursuing vague or unrealistic opportunities."
+      },
+      "timestamp": "2026-08-26T13:54:35.643157"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "b37c54f7",
+        "result": "Tried to think about what I could offer but drew a blank."
+      },
+      "timestamp": "2026-08-26T13:54:35.643192"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "f290e53d",
+        "text": "I don't really know what I'm good at.",
+        "mission_id": "b37c54f7"
+      },
+      "timestamp": "2026-08-26T13:54:35.643217"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The person is looking for ways to earn income outside a traditional day job and may be dissatisfied with or constrained by conventional employment.",
+        "new": "I don't really know what I'm good at."
+      },
+      "timestamp": "2026-08-26T13:54:35.643223"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "53b27416",
+        "context": "Complete a short evidence-based inventory by answering prompts about real activities, recent requests for help, available resources, and work preferences. Do not try to identify a career or choose an income idea yet."
+      },
+      "timestamp": "2026-08-26T13:54:42.685054"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "7d4485f5",
+        "goal_id": "53b27416",
+        "purpose": "Create concrete evidence and boundaries that can be translated into three realistic small-income options for testing within two weeks."
+      },
+      "timestamp": "2026-08-26T13:54:42.685092"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "7d4485f5",
+        "result": "Applied to several ordinary jobs over the past month."
+      },
+      "timestamp": "2026-08-26T13:54:42.685126"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "e8ce3821",
+        "text": "I've tried getting ordinary jobs but haven't had much luck.",
+        "mission_id": "7d4485f5"
+      },
+      "timestamp": "2026-08-26T13:54:42.685153"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I don't really know what I'm good at.",
+        "new": "I've tried getting ordinary jobs but haven't had much luck."
+      },
+      "timestamp": "2026-08-26T13:54:42.685158"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "53b27416",
+        "context": "Ask two trusted people for concrete observations about tasks they have seen you handle, then turn their answers into a short list of possible paid tasks without committing to any of them yet."
+      },
+      "timestamp": "2026-08-26T13:54:49.653713"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "634455b1",
+        "goal_id": "53b27416",
+        "purpose": "To identify concrete, observed capabilities that can be translated into realistic small-income experiments."
+      },
+      "timestamp": "2026-08-26T13:54:49.653745"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "634455b1",
+        "result": "Spent time reflecting on what I actually enjoy doing."
+      },
+      "timestamp": "2026-08-26T13:54:49.653774"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "46d6296c",
+        "text": "I like computers and fixing things.",
+        "mission_id": "634455b1"
+      },
+      "timestamp": "2026-08-26T13:54:49.653798"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I've tried getting ordinary jobs but haven't had much luck.",
+        "new": "I like computers and fixing things."
+      },
+      "timestamp": "2026-08-26T13:54:49.653802"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "53b27416",
+        "context": "Choose one simple, low-risk computer or fixing task to test with someone you know, then ask a few people whether they need that specific help."
+      },
+      "timestamp": "2026-08-26T13:55:03.646087"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "5bbca9ee",
+        "goal_id": "53b27416",
+        "purpose": "To gather direct evidence about one possible service: whether you can do it, whether you enjoy it, how long it takes, and whether anyone finds it useful enough to request or pay for."
+      },
+      "timestamp": "2026-08-26T13:55:03.646110"
+    }
+  ],
+  "created": "2026-08-26T13:54:23.130806",
+  "updated": "2026-08-26T13:55:03.646110"
+}

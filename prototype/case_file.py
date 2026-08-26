@@ -55,6 +55,7 @@ class Observation:
 class Mission:
     """A concrete executable step belonging to a Goal."""
     id: str = field(default_factory=lambda: str(uuid.uuid4())[:8])
+    name: str = ""  # short label (1-3 words)
     goal_id: str = ""
     purpose: str = ""
     description: str = ""
@@ -160,9 +161,10 @@ class CaseFile:
     # --- Mission operations ---
 
     def add_mission(self, goal_id: str, purpose: str, description: str,
-                    definition_of_done: list = None) -> Mission:
+                    definition_of_done: list = None, name: str = "") -> Mission:
         """Create a mission attached to a goal."""
         mission = Mission(
+            name=name,
             goal_id=goal_id,
             purpose=purpose,
             description=description,

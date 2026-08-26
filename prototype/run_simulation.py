@@ -175,8 +175,9 @@ def main():
         purpose=proposal.mission_purpose,
         description=proposal.mission_description,
         definition_of_done=proposal.definition_of_done,
+        name=proposal.mission_name,
     )
-    print(f"\n  → ACCEPTED. Mission: {mission.id}")
+    print(f"\n  → ACCEPTED. Mission: {mission.name or mission.id}")
 
     # ─────────────────────────────────────────────────────────────────
     # TURNS 1..N: Simulation provides results, Engine proposes next
@@ -212,8 +213,9 @@ def main():
             purpose=proposal.mission_purpose,
             description=proposal.mission_description,
             definition_of_done=proposal.definition_of_done,
+            name=proposal.mission_name,
         )
-        print(f"\n  → ACCEPTED. Mission: {mission.id}")
+        print(f"\n  → ACCEPTED. Mission: {mission.name or mission.id}")
 
     # ─────────────────────────────────────────────────────────────────
     # Final state

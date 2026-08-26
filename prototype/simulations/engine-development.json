@@ -25,6 +25,11 @@
       "type": "mission_result",
       "result": "Added an interpret-and-confirm step. The participant can now accept, correct, or reject the Engine's interpretation before a Goal is created. Tested with a correction that narrowed the direction from broad entrepreneurship to small practical income tasks.",
       "observation": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case."
+    },
+    {
+      "type": "mission_result",
+      "result": "Created a four-part regression test for the interpret-and-confirm boundary. Tests verify: correction changes goal direction, rejection leaves Case File unchanged, goal isolation holds, and continuity works after correction + mission + observation.",
+      "observation": "All four regression tests pass with AI-generated proposals. The boundary between Engine interpretation and participant decision is now structurally enforced and observable. The tests do not depend on exact AI wording — only on structural properties. This means the Engine can change how it reasons without breaking the confirmed contract."
     }
   ]
 }
