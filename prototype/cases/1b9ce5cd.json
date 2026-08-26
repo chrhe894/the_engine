@@ -1,0 +1,204 @@
+{
+  "id": "1b9ce5cd",
+  "context": {
+    "description": "Skördefesten / Södra Öland",
+    "opening_question": "What would make Södra Öland an even better place to live, work and visit?",
+    "time_scope": "2026-09 to 2026-10",
+    "geographic_scope": "Södra Öland"
+  },
+  "current_situation": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival.",
+  "goals": [
+    {
+      "id": "35b2b956",
+      "desired_direction": "Increase meaningful youth participation in the festival",
+      "status": "ACTIVE",
+      "missions": [
+        "dcf1ea66"
+      ],
+      "history": [],
+      "timestamp": "2026-08-25T14:22:18.776102"
+    },
+    {
+      "id": "07e14a5f",
+      "desired_direction": "Strengthen cooperation between local businesses during the festival",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-25T14:22:18.778679"
+    },
+    {
+      "id": "0417e00b",
+      "desired_direction": "Improve evening transport options for visitors",
+      "status": "ABANDONED",
+      "missions": [],
+      "history": [
+        {
+          "event": "abandoned",
+          "reason": "Municipality won't fund evening buses this year.",
+          "timestamp": "2026-08-25T14:22:18.779894"
+        }
+      ],
+      "timestamp": "2026-08-25T14:22:18.778700"
+    }
+  ],
+  "missions": [
+    {
+      "id": "dcf1ea66",
+      "goal_id": "35b2b956",
+      "purpose": "Let young people shape the activity rather than only attend",
+      "description": "Co-design one small festival activity together with young people",
+      "definition_of_done": [
+        "Young participants involved in design",
+        "One pilot activity defined",
+        "Pilot tested",
+        "Observations recorded"
+      ],
+      "status": "COMPLETED",
+      "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.",
+      "observations": [
+        "3f981c60"
+      ],
+      "timestamp": "2026-08-25T14:22:18.777515"
+    }
+  ],
+  "observations": [
+    {
+      "id": "3f981c60",
+      "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+      "source": "participant",
+      "timestamp": "2026-08-25T14:22:18.777897",
+      "mission_id": "dcf1ea66"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "2b1feaf7",
+      "decision_type": "MODIFY",
+      "goal_id": "35b2b956",
+      "context": "Explore what 'Increase meaningful youth participation in the festival' means concretely.",
+      "reason": "Young people should help design the activity, not just participate.",
+      "timestamp": "2026-08-25T14:22:18.776852"
+    },
+    {
+      "id": "a7b9e34a",
+      "decision_type": "ACCEPT",
+      "goal_id": "35b2b956",
+      "context": "Co-design one small festival activity together with young people",
+      "reason": null,
+      "timestamp": "2026-08-25T14:22:18.777482"
+    },
+    {
+      "id": "1e22c2ca",
+      "decision_type": "GIVE_UP",
+      "goal_id": "0417e00b",
+      "context": "Improve evening transport options for visitors",
+      "reason": "Municipality won't fund evening buses this year.",
+      "timestamp": "2026-08-25T14:22:18.779431"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The participant describes: We want more young people to become involved in the festival"
+      },
+      "timestamp": "2026-08-25T14:22:18.775864"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "35b2b956",
+        "direction": "Increase meaningful youth participation in the festival"
+      },
+      "timestamp": "2026-08-25T14:22:18.776108"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "MODIFY",
+        "goal_id": "35b2b956",
+        "context": "Explore what 'Increase meaningful youth participation in the festival' means concretely."
+      },
+      "timestamp": "2026-08-25T14:22:18.776867"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "35b2b956",
+        "context": "Co-design one small festival activity together with young people"
+      },
+      "timestamp": "2026-08-25T14:22:18.777495"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "dcf1ea66",
+        "goal_id": "35b2b956",
+        "purpose": "Let young people shape the activity rather than only attend"
+      },
+      "timestamp": "2026-08-25T14:22:18.777523"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "dcf1ea66",
+        "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling."
+      },
+      "timestamp": "2026-08-25T14:22:18.777872"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "3f981c60",
+        "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+        "mission_id": "dcf1ea66"
+      },
+      "timestamp": "2026-08-25T14:22:18.777902"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The participant describes: We want more young people to become involved in the festival",
+        "new": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival."
+      },
+      "timestamp": "2026-08-25T14:22:18.777906"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "07e14a5f",
+        "direction": "Strengthen cooperation between local businesses during the festival"
+      },
+      "timestamp": "2026-08-25T14:22:18.778690"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "0417e00b",
+        "direction": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-25T14:22:18.778703"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "GIVE_UP",
+        "goal_id": "0417e00b",
+        "context": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-25T14:22:18.779441"
+    },
+    {
+      "event": "goal_abandoned",
+      "data": {
+        "goal_id": "0417e00b",
+        "reason": "Municipality won't fund evening buses this year."
+      },
+      "timestamp": "2026-08-25T14:22:18.779902"
+    }
+  ],
+  "created": "2026-08-25T14:22:18.774908",
+  "updated": "2026-08-25T14:22:18.779902"
+}

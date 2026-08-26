@@ -1,0 +1,250 @@
+{
+  "id": "b45159d6",
+  "context": {
+    "description": "Skördefesten / Södra Öland",
+    "opening_question": "What would make Södra Öland an even better place to live, work and visit?",
+    "time_scope": "2026-09 to 2026-10",
+    "geographic_scope": "Södra Öland"
+  },
+  "current_situation": "The group wanted to lead the activity themselves rather than assist adults. They proposed a storytelling route using local landmarks. Two wanted to be paid guides.",
+  "goals": [
+    {
+      "id": "be0aeef5",
+      "desired_direction": "Create more opportunities, roles, activities, and participation channels that attract and involve young people in planning, organizing, performing, and attending the festival.",
+      "status": "ACTIVE",
+      "missions": [
+        "7a563f12",
+        "aa5bd733",
+        "8fbc3e9e"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T11:36:44.218928"
+    }
+  ],
+  "missions": [
+    {
+      "id": "7a563f12",
+      "goal_id": "be0aeef5",
+      "purpose": "To understand young people's needs and generate a grounded shortlist of practical participation opportunities, roles, or activities for Skördefesten.",
+      "description": "Recruit 8–12 young people from different parts of Södra Öland, ideally including both people who attend Skördefesten and people who do not. Hold one 60–90 minute discussion or several short conversations using three questions: What would make you want to attend or participate? What roles or activities would interest you? What would make participation difficult? Record the responses anonymously, group them into themes, and select the three most promising ideas for a follow-up test.",
+      "definition_of_done": [
+        "At least 8 young people have contributed input.",
+        "Participants include both current festival participants and non-participants, where possible.",
+        "Responses have been summarized into recurring motivations, barriers, and preferred forms of involvement.",
+        "Three concrete ideas for increasing youth participation have been identified.",
+        "Each idea has a named target group and a possible small-scale test during September–October 2026."
+      ],
+      "status": "COMPLETED",
+      "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.",
+      "observations": [
+        "0d39a4a9"
+      ],
+      "timestamp": "2026-08-26T11:36:50.490094"
+    },
+    {
+      "id": "aa5bd733",
+      "goal_id": "be0aeef5",
+      "purpose": "To produce a feasible, youth-owned prototype plan that can be tested during the September–October 2026 festival period without committing prematurely to a full-scale initiative.",
+      "description": "Hold one 60–90 minute youth-led planning session. Decide on a preliminary route, length, meeting point, audience, storytelling format, youth roles, date or test window, and recruitment message. Create a simple safety and accessibility checklist covering lighting, weather, adult support, emergency contact, group size, permissions, and an alternative indoor or daytime format. End by assigning owners for the next actions and inviting participants to volunteer for guiding, storytelling, welcoming, documentation, or promotion.",
+      "definition_of_done": [
+        "At least three young people participate in the planning session.",
+        "A draft route, format, timing, capacity, and target audience are agreed.",
+        "At least three concrete youth roles are identified and volunteers or role owners are recorded.",
+        "A basic safety, accessibility, weather, and permissions checklist is completed.",
+        "A decision is recorded on whether and how to run a small prototype.",
+        "The next actions, responsible people, and deadlines are documented."
+      ],
+      "status": "COMPLETED",
+      "result": "Ran a follow-up co-design session with eight young people.",
+      "observations": [
+        "29401631"
+      ],
+      "timestamp": "2026-08-26T11:36:59.838363"
+    },
+    {
+      "id": "8fbc3e9e",
+      "goal_id": "be0aeef5",
+      "purpose": "To validate and improve the youth-led night walk, clarify the practical conditions for delivering it, and decide whether it is ready to become a Skördefesten activity.",
+      "description": "Within the next planning period, meet with the youth team for up to 60 minutes to finalize a 30–60 minute route, meeting point, audience, maximum group size, guide and host roles, test date, and recruitment message. Confirm permissions and a safety plan covering lighting, weather, emergency contact, adult backup, accessibility, cancellation, and an indoor or daytime alternative. Invite 8–15 test participants, run the walk, and collect brief anonymous feedback from participants and youth leaders on enjoyment, clarity, safety, accessibility, and willingness to attend or lead it during Skördefesten. Record the decisions and assign owners for any changes.",
+      "definition_of_done": [
+        "A final prototype route, date, meeting point, duration, audience, and group-size limit are documented.",
+        "Youth responsibilities for guiding, storytelling, welcoming, promotion, and documentation are assigned.",
+        "Permissions, adult support, emergency arrangements, accessibility measures, weather plan, and alternative format are confirmed.",
+        "The prototype is delivered to a small invited group.",
+        "Feedback is collected from both participants and youth leaders.",
+        "The team documents specific improvements and makes a clear recommendation about testing or offering the walk during Skördefesten.",
+        "The team has addressed whether and how youth guides can be compensated."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T11:37:08.675945"
+    }
+  ],
+  "observations": [
+    {
+      "id": "0d39a4a9",
+      "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:36:50.490123",
+      "mission_id": "7a563f12"
+    },
+    {
+      "id": "29401631",
+      "text": "The group wanted to lead the activity themselves rather than assist adults. They proposed a storytelling route using local landmarks. Two wanted to be paid guides.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:36:59.838407",
+      "mission_id": "aa5bd733"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "bab3d4e6",
+      "decision_type": "ACCEPT",
+      "goal_id": "be0aeef5",
+      "context": "Run a short, youth-led listening and idea-gathering activity before deciding on specific festival initiatives.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:36:50.490072"
+    },
+    {
+      "id": "8444dbae",
+      "decision_type": "ACCEPT",
+      "goal_id": "be0aeef5",
+      "context": "Invite the five co-designers, plus any additional interested young people, to plan a low-risk prototype of the guided night walk and agree whether to test it during Skördefesten.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:36:59.838331"
+    },
+    {
+      "id": "98b934f7",
+      "decision_type": "ACCEPT",
+      "goal_id": "be0aeef5",
+      "context": "Organize one low-risk prototype of the guided night walk with the youth co-designers, using a short route and limited group size. Before the test, confirm the route, safety arrangements, responsibilities, participant invitation, and whether the prototype will be presented during Skördefesten.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:37:08.675912"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Young people are currently underrepresented or not sufficiently engaged in Skördefesten in Södra Öland."
+      },
+      "timestamp": "2026-08-26T11:36:44.218892"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "be0aeef5",
+        "direction": "Create more opportunities, roles, activities, and participation channels that attract and involve young people in planning, organizing, performing, and attending the festival."
+      },
+      "timestamp": "2026-08-26T11:36:44.218930"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "be0aeef5",
+        "context": "Run a short, youth-led listening and idea-gathering activity before deciding on specific festival initiatives."
+      },
+      "timestamp": "2026-08-26T11:36:50.490082"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "7a563f12",
+        "goal_id": "be0aeef5",
+        "purpose": "To understand young people's needs and generate a grounded shortlist of practical participation opportunities, roles, or activities for Skördefesten."
+      },
+      "timestamp": "2026-08-26T11:36:50.490098"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "7a563f12",
+        "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling."
+      },
+      "timestamp": "2026-08-26T11:36:50.490114"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "0d39a4a9",
+        "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+        "mission_id": "7a563f12"
+      },
+      "timestamp": "2026-08-26T11:36:50.490127"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "Young people are currently underrepresented or not sufficiently engaged in Skördefesten in Södra Öland.",
+        "new": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival."
+      },
+      "timestamp": "2026-08-26T11:36:50.490130"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "be0aeef5",
+        "context": "Invite the five co-designers, plus any additional interested young people, to plan a low-risk prototype of the guided night walk and agree whether to test it during Skördefesten."
+      },
+      "timestamp": "2026-08-26T11:36:59.838345"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "aa5bd733",
+        "goal_id": "be0aeef5",
+        "purpose": "To produce a feasible, youth-owned prototype plan that can be tested during the September–October 2026 festival period without committing prematurely to a full-scale initiative."
+      },
+      "timestamp": "2026-08-26T11:36:59.838370"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "aa5bd733",
+        "result": "Ran a follow-up co-design session with eight young people."
+      },
+      "timestamp": "2026-08-26T11:36:59.838393"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "29401631",
+        "text": "The group wanted to lead the activity themselves rather than assist adults. They proposed a storytelling route using local landmarks. Two wanted to be paid guides.",
+        "mission_id": "aa5bd733"
+      },
+      "timestamp": "2026-08-26T11:36:59.838412"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+        "new": "The group wanted to lead the activity themselves rather than assist adults. They proposed a storytelling route using local landmarks. Two wanted to be paid guides."
+      },
+      "timestamp": "2026-08-26T11:36:59.838416"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "be0aeef5",
+        "context": "Organize one low-risk prototype of the guided night walk with the youth co-designers, using a short route and limited group size. Before the test, confirm the route, safety arrangements, responsibilities, participant invitation, and whether the prototype will be presented during Skördefesten."
+      },
+      "timestamp": "2026-08-26T11:37:08.675926"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "8fbc3e9e",
+        "goal_id": "be0aeef5",
+        "purpose": "To validate and improve the youth-led night walk, clarify the practical conditions for delivering it, and decide whether it is ready to become a Skördefesten activity."
+      },
+      "timestamp": "2026-08-26T11:37:08.675951"
+    }
+  ],
+  "created": "2026-08-26T11:36:41.395021",
+  "updated": "2026-08-26T11:37:08.675951"
+}

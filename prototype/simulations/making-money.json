@@ -1,0 +1,21 @@
+{
+  "scenario": "scenarios/making-money.json",
+  "description": "Progressive simulation: person exploring income alternatives",
+  "turns": [
+    {
+      "type": "mission_result",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observation": "I don't really know what I'm good at."
+    },
+    {
+      "type": "mission_result",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observation": "I've tried getting ordinary jobs but haven't had much luck."
+    },
+    {
+      "type": "mission_result",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observation": "I like computers and fixing things."
+    }
+  ]
+}

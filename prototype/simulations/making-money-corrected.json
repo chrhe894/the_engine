@@ -1,0 +1,25 @@
+{
+  "scenario": "scenarios/making-money.json",
+  "description": "Progressive simulation with interpretation correction: person wants practical small-scale income, not a startup or investment strategy",
+  "interpretation_response": {
+    "decision": "modify",
+    "correction": "I want to find small, practical ways to earn extra money using what I already have or can learn quickly. Not a startup. Not investments. Just real things I could start doing soon."
+  },
+  "turns": [
+    {
+      "type": "mission_result",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observation": "I don't really know what I'm good at."
+    },
+    {
+      "type": "mission_result",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observation": "I've tried getting ordinary jobs but haven't had much luck."
+    },
+    {
+      "type": "mission_result",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observation": "I like computers and fixing things."
+    }
+  ]
+}

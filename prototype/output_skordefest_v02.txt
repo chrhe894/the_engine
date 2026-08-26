@@ -1,0 +1,169 @@
+
+============================================================
+  SKÖRDEFESTEN v0.2 — AI-ASSISTED ENGINE
+============================================================
+
+  Engine: AI (gpt-5.6-luna)
+
+  Case ID: 8fa09182
+  Context: Skördefesten / Södra Öland
+  Time: 2026-09 to 2026-10
+  Geography: Södra Öland
+  Opening question: What would make Södra Öland an even better place to live, work and visit?
+
+============================================================
+  PHASE 1: Initial Input
+============================================================
+
+  Participant: "We want more young people to become involved in the festival"
+
+  Engine interpretation:
+    Situation:   Young people are currently not involved enough in Skördefesten / Södra Öland, or their participation is not sufficiently visible or meaningful.
+    Direction:   Create more opportunities, roles and appealing activities for young people to participate in, shape and contribute to the festival.
+    Uncertainty: medium
+
+  Goal created: Increase meaningful youth participation in the festival
+    ID: 6c3b01a7
+    Status: ACTIVE
+
+============================================================
+  PHASE 2: First Proposal (AI vs baseline)
+============================================================
+
+  ENGINE PROPOSAL:
+    Current:    Young people are not yet sufficiently involved in Skördefesten or their involvement is not visible or meaningful. The next useful step is to learn directly from young people what participation they want and what currently prevents it.
+    Desired:    Increase meaningful youth participation in the festival
+    Suggestion: Run a short, youth-led listening and idea-gathering activity before or during the 2026 festival period, involving young people from different parts of Södra Öland.
+    Reason:     Direct input will prevent adults from designing participation opportunities based on assumptions and will identify a small number of realistic ideas that can be tested within the available time.
+    Mission:    Recruit 6–10 young people from at least two communities in Södra Öland. Hold a 60–90 minute discussion or workshop, in person or online, asking: what would make Skördefesten worth participating in, what barriers exist, what roles or activities would feel meaningful, and how should youth contributions be made visible? Document the responses, group them into themes, and select up to three ideas for possible pilot testing.
+    Purpose:    To establish a grounded understanding of young people's needs and priorities and create a concrete basis for designing more meaningful participation in Skördefesten.
+    Done when:  ['6–10 young people have contributed, representing at least two communities in Södra Öland', 'Participants have identified specific barriers and desired forms of involvement', 'The input has been documented without attributing statements unnecessarily to individuals', 'Up to three feasible participation ideas have been prioritised by the participants', 'Each prioritised idea includes a short note on what support, decision, or resource would be needed to test it']
+
+============================================================
+  PHASE 3: Decision — ACCEPT (no MODIFY needed?)
+============================================================
+
+  [A/B COMPARISON POINT]
+  v0.1 required MODIFY to make the proposal useful.
+  v0.2 tests whether the AI proposal is directly acceptable.
+
+  Participant decides: ACCEPT
+
+  Mission created:
+    ID: a37540d8
+    Description: Recruit 6–10 young people from at least two communities in Södra Öland. Hold a 60–90 minute discussion or workshop, in person or online, asking: what would make Skördefesten worth participating in, what barriers exist, what roles or activities would feel meaningful, and how should youth contributions be made visible? Document the responses, group them into themes, and select up to three ideas for possible pilot testing.
+    Purpose: To establish a grounded understanding of young people's needs and priorities and create a concrete basis for designing more meaningful participation in Skördefesten.
+    Done when: ['6–10 young people have contributed, representing at least two communities in Södra Öland', 'Participants have identified specific barriers and desired forms of involvement', 'The input has been documented without attributing statements unnecessarily to individuals', 'Up to three feasible participation ideas have been prioritised by the participants', 'Each prioritised idea includes a short note on what support, decision, or resource would be needed to test it']
+
+============================================================
+  PHASE 4: Mission Result (participant provides)
+============================================================
+
+  [Simulating: the mission was executed]
+
+  Result: Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.
+
+  Observation: Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.
+
+  Updated situation: Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival.
+
+============================================================
+  PHASE 5: Next Proposal (Continuity — AI reasoning)
+============================================================
+
+  ENGINE PROPOSAL (after observation):
+    Current:    The initial pilot showed that young people engage when they have creative ownership, and that evening activities are promising. The next step is to bring youth leadership into the festival context and learn whether the proposed format and other ideas feel relevant to a wider group of young people from Södra Öland.
+    Desired:    Increase meaningful youth participation in the festival
+    Suggestion: Run a short youth-led listening and idea-gathering activity during the 2026 festival period, using the earlier night-walk concept as one prompt while inviting new suggestions.
+    Reason:     This tests the pilot in a real festival setting, reaches participants beyond the original group, and gives young people a visible role in shaping the next stage rather than only providing feedback afterward.
+    Mission:    Together with 4–8 young people from at least two communities in Södra Öland, prepare and run one 60–90 minute activity before or during Skördefesten 2026. Let the young people choose the format, for example a pop-up conversation point, short guided walk, or evening idea session. Ask participants what would make the festival worth returning to, what prevents participation, which youth-led activities they would join or help deliver, and how their contributions should be visible. Record responses without unnecessary personal details, group them into themes, and identify up to three ideas for further testing.
+    Purpose:    To validate and expand the earlier pilot, understand practical participation barriers in the festival environment, and identify concrete youth-led activities or roles that can be developed next.
+    Done when:  ['A youth-led listening or idea-gathering activity has been held during the 2026 festival period.', 'Young people from at least two communities in Södra Öland participated in planning or delivery.', 'Feedback was collected from festival participants or other young people beyond the original pilot group.', 'Responses were documented and grouped into clear themes.', 'Up to three promising ideas were selected with a brief note on who they could involve and what would be needed to test them.']
+
+============================================================
+  PHASE 6: Multiple Goals
+============================================================
+
+  Three goals now active:
+    [ACTIVE] Increase meaningful youth participation in the festival (id: 6c3b01a7)
+    [ACTIVE] Strengthen cooperation between local businesses during the festival (id: 79c5464a)
+    [ACTIVE] Improve evening transport options for visitors (id: 48a175f6)
+
+============================================================
+  PHASE 6b: Proposal for business goal
+============================================================
+
+  ENGINE PROPOSAL (business cooperation):
+    Current:    The next useful step is to turn the intention to strengthen cooperation into a specific, shared festival opportunity that local businesses can shape together.
+    Suggestion: Invite a small, representative group of local businesses to a focused working session about one concrete collaboration for the 2026 festival.
+    Reason:     A focused session can reveal shared interests and constraints while producing an actionable pilot instead of a general discussion about cooperation.
+    Mission:    Identify and invite 6–10 businesses from different parts of Södra Öland and different sectors to a 60–90 minute working session. Ask them to map one visitor or operational challenge that could be addressed jointly, generate possible solutions, and agree on one collaboration to develop further. Record participating businesses, the selected idea, required resources, responsibilities, and the next decision date.
+    Done when:  ['At least 6 local businesses have been invited and the participating sectors and locations are documented.', 'The group has identified at least two shared challenges or opportunities related to the festival.', 'The group has selected one joint collaboration to explore for Skördefesten 2026.', 'Initial responsibilities, resource needs, and unresolved questions are documented.', 'A follow-up date and next decision point have been agreed.']
+
+============================================================
+  PHASE 7: GIVE UP on transport goal
+============================================================
+
+  Participant decides: GIVE UP on "Improve evening transport options for visitors"
+  Reason: "Municipality won't fund evening buses this year."
+
+  Engine reassessment:
+    Message: It's never too late to give up.
+    Question: What is happening?
+      • I'm done.
+      • The goal is still worth it, but this approach isn't.
+      • I don't know anymore.
+      • Challenge me.
+
+  Participant chooses: "I'm done."
+
+============================================================
+  FINAL CASE FILE STATE
+============================================================
+
+  Case ID: 8fa09182
+  Context: Skördefesten / Södra Öland
+  Situation: Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival.
+
+  Goals (3):
+    ● [ACTIVE] Increase meaningful youth participation in the festival
+    ● [ACTIVE] Strengthen cooperation between local businesses during the festival
+    ✗ [ABANDONED] Improve evening transport options for visitors
+
+  Missions (1):
+    [COMPLETED] Recruit 6–10 young people from at least two communities in Södra Öland. Hold a 60–90 minute discussion or workshop, in person or online, asking: what would make Skördefesten worth participating in, what barriers exist, what roles or activities would feel meaningful, and how should youth contributions be made visible? Document the responses, group them into themes, and select up to three ideas for possible pilot testing.
+
+  Observations (1):
+    • Young people were highly engaged when they had creative control. The proposed evening time worked we
+
+  Decisions (2):
+    [ACCEPT] Run a short, youth-led listening and idea-gathering activity
+    [GIVE_UP] Improve evening transport options for visitors — Municipality won't fund evening buses th
+
+  History events: 11
+
+  Saved to: cases\8fa09182.json
+
+============================================================
+  A/B COMPARISON SUMMARY
+============================================================
+
+  v0.1 (rule-based):
+    First proposal: "Explore what X means concretely."
+    Required MODIFY: Yes — participant had to rewrite the mission.
+    Continuity: Quoted observation verbatim.
+    Business goal: "Explore what X means concretely." (same template)
+
+  v0.2 (AI-assisted):
+    First proposal: Run a short, youth-led listening and idea-gathering activity before or...
+    Required MODIFY: Not tested (accepted directly for comparison)
+    Continuity: Run a short youth-led listening and idea-gathering activity during the...
+    Business goal: Invite a small, representative group of local businesses to a focused ...
+
+  Goal independence: VERIFIED
+  AI fabrication check: Mission completion provided by participant only.
+
+
+============================================================
+  SKÖRDEFESTEN v0.2 COMPLETE
+============================================================

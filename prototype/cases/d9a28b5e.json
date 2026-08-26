@@ -1,0 +1,325 @@
+{
+  "id": "d9a28b5e",
+  "context": {
+    "description": "Personal income exploration",
+    "opening_question": "What could help this person build a sustainable source of income?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "I like computers and fixing things.",
+  "goals": [
+    {
+      "id": "fefcfb92",
+      "desired_direction": "I want to find small, practical ways to earn extra money using what I already have or can learn quickly. Not a startup. Not investments. Just real things I could start doing soon.",
+      "status": "ACTIVE",
+      "missions": [
+        "1806841f",
+        "a154b140",
+        "031a3ec5",
+        "28461d33"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T11:37:18.984827"
+    }
+  ],
+  "missions": [
+    {
+      "id": "1806841f",
+      "goal_id": "fefcfb92",
+      "purpose": "To turn a broad desire for extra income into a small set of realistic, testable opportunities based on the person's actual circumstances.",
+      "description": "Spend 20 to 30 minutes writing down: (1) five things you can do reasonably well, (2) five items or resources you already have that others might pay to use or benefit from, (3) how many hours per week you can spare and when, (4) whether you can travel or work online, (5) tasks you would refuse to do, and (6) a rough monthly extra-income target. Then generate three possible income activities that fit those constraints, and for each record the likely customer, first way to find one, startup cost, and the smallest paid test you could attempt within the next two weeks.",
+      "definition_of_done": [
+        "The person's available skills, resources, time, constraints, and income target are written down.",
+        "Three possible income activities have been identified.",
+        "Each activity has a defined customer, customer-finding method, estimated startup cost, and first paid test.",
+        "At least one activity appears possible to test within the next two weeks without significant upfront spending."
+      ],
+      "status": "COMPLETED",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observations": [
+        "2594907c"
+      ],
+      "timestamp": "2026-08-26T11:37:25.600179"
+    },
+    {
+      "id": "a154b140",
+      "goal_id": "fefcfb92",
+      "purpose": "To create a concrete starting inventory from lived experience and available resources, so the next step can generate three realistic earning options and select one small paid test.",
+      "description": "Set a timer for 20 minutes and answer these prompts with short phrases: (1) list three tasks you have done for yourself or someone else in the last year, even if they seemed ordinary; (2) list three things people have asked you for help with; (3) list three tasks you can do on a phone or computer; (4) list three physical, household, transport, communication, or organizational resources you have access to; (5) choose any tasks you would rather avoid; (6) record hours available per week, whether you can work online or travel locally, and a rough monthly income target. If you cannot answer a prompt, write 'unknown' rather than forcing an answer.",
+      "definition_of_done": [
+        "At least three ordinary tasks you have completed are written down",
+        "At least three ways you have helped or could help someone are written down",
+        "At least three available resources or assets are listed",
+        "Your available hours, work location or travel limits, and refused task types are recorded",
+        "A rough monthly extra-income target is recorded, even if it is only a range",
+        "Any unanswered items are explicitly marked as unknown"
+      ],
+      "status": "COMPLETED",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observations": [
+        "0e396600"
+      ],
+      "timestamp": "2026-08-26T11:37:33.044096"
+    },
+    {
+      "id": "031a3ec5",
+      "goal_id": "fefcfb92",
+      "purpose": "To replace vague self-assessment with concrete evidence and generate three realistic candidates for a small, low-cost earning experiment.",
+      "description": "Within the next two days, spend 30 minutes reviewing the last month of your messages, calendar, photos, notes, receipts, or search history. Write down at least eight specific tasks you completed, attempted, or helped with, including ordinary tasks. Then ask two people who know you: \"What is one practical thing you have seen me handle reasonably well or would trust me to help with?\" Record their exact answers. From the combined list, select three tasks that seem possible to offer locally or online, and for each write one likely customer and one place or person where you could ask about a small paid trial.",
+      "definition_of_done": [
+        "Eight specific recent tasks or examples are written down, even if some seem ordinary.",
+        "Two people have been asked for practical feedback, or the attempts to contact them are recorded.",
+        "Three possible paid tasks have been selected from the evidence.",
+        "Each selected task has a possible customer and a first contact route recorded.",
+        "No task is treated as a commitment; it is only a candidate for a later small test."
+      ],
+      "status": "COMPLETED",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observations": [
+        "3ce630a9"
+      ],
+      "timestamp": "2026-08-26T11:37:43.083623"
+    },
+    {
+      "id": "28461d33",
+      "goal_id": "fefcfb92",
+      "purpose": "To identify one concrete customer problem and assess whether it can become a safe, small paid trial using your existing resources or a short learning step.",
+      "description": "Within the next seven days, contact or speak with five people you know or can reach locally. Say: \"I'm exploring small paid jobs involving basic computer help or fixing practical problems. Is there anything like setup, troubleshooting, cleanup, installation, assembly, or minor repair that you or someone you know currently needs help with?\" For each person, record the exact problem, what outcome they want, whether they would consider paying, and any deadline. Then choose the one request that seems safest and most manageable, and write the specific steps, tools, and knowledge it would require before agreeing to do it.",
+      "definition_of_done": [
+        "Five people have been asked and their responses recorded.",
+        "At least three specific computer, repair, or practical-help problems are documented, or it is recorded that no relevant problems were found.",
+        "One possible task has been selected based on safety, simplicity, access to tools, and likelihood of payment.",
+        "The required steps, tools, knowledge, and any limits on what you can responsibly do are written down.",
+        "No paid work has been promised before you are confident you can complete the selected task."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T11:37:53.503822"
+    }
+  ],
+  "observations": [
+    {
+      "id": "2594907c",
+      "text": "I don't really know what I'm good at.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:37:25.601562",
+      "mission_id": "1806841f"
+    },
+    {
+      "id": "0e396600",
+      "text": "I've tried getting ordinary jobs but haven't had much luck.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:37:33.045332",
+      "mission_id": "a154b140"
+    },
+    {
+      "id": "3ce630a9",
+      "text": "I like computers and fixing things.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:37:43.085127",
+      "mission_id": "031a3ec5"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "3b1b2caa",
+      "decision_type": "ACCEPT",
+      "goal_id": "fefcfb92",
+      "context": "Create a short personal opportunity inventory, then use it to identify three low-cost income ideas that could be tested soon.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:37:25.600123"
+    },
+    {
+      "id": "7ffde7c2",
+      "decision_type": "ACCEPT",
+      "goal_id": "fefcfb92",
+      "context": "Complete a guided evidence-gathering exercise using specific prompts rather than trying to identify your strengths directly.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:37:33.044038"
+    },
+    {
+      "id": "f86804cc",
+      "decision_type": "ACCEPT",
+      "goal_id": "fefcfb92",
+      "context": "Run a short evidence-gathering exercise using your recent activities, messages, calendar, photos, and feedback from people who know you. Use the results to identify a few ordinary tasks that could plausibly be offered for payment.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:37:43.083560"
+    },
+    {
+      "id": "db6d5c31",
+      "decision_type": "ACCEPT",
+      "goal_id": "fefcfb92",
+      "context": "Run a small demand test focused on everyday computer and fixing problems. Do not promise services you cannot yet perform; use the conversations to discover specific problems people already want solved.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:37:53.503786"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The person is seeking alternatives to relying solely on conventional day-job employment for income."
+      },
+      "timestamp": "2026-08-26T11:37:18.983845"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "fefcfb92",
+        "direction": "I want to find small, practical ways to earn extra money using what I already have or can learn quickly. Not a startup. Not investments. Just real things I could start doing soon."
+      },
+      "timestamp": "2026-08-26T11:37:18.984835"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "fefcfb92",
+        "context": "Create a short personal opportunity inventory, then use it to identify three low-cost income ideas that could be tested soon."
+      },
+      "timestamp": "2026-08-26T11:37:25.600141"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "1806841f",
+        "goal_id": "fefcfb92",
+        "purpose": "To turn a broad desire for extra income into a small set of realistic, testable opportunities based on the person's actual circumstances."
+      },
+      "timestamp": "2026-08-26T11:37:25.600187"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "1806841f",
+        "result": "Tried to think about what I could offer but drew a blank."
+      },
+      "timestamp": "2026-08-26T11:37:25.601521"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "2594907c",
+        "text": "I don't really know what I'm good at.",
+        "mission_id": "1806841f"
+      },
+      "timestamp": "2026-08-26T11:37:25.601574"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The person is seeking alternatives to relying solely on conventional day-job employment for income.",
+        "new": "I don't really know what I'm good at."
+      },
+      "timestamp": "2026-08-26T11:37:25.601581"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "fefcfb92",
+        "context": "Complete a guided evidence-gathering exercise using specific prompts rather than trying to identify your strengths directly."
+      },
+      "timestamp": "2026-08-26T11:37:33.044061"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "a154b140",
+        "goal_id": "fefcfb92",
+        "purpose": "To create a concrete starting inventory from lived experience and available resources, so the next step can generate three realistic earning options and select one small paid test."
+      },
+      "timestamp": "2026-08-26T11:37:33.044107"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "a154b140",
+        "result": "Applied to several ordinary jobs over the past month."
+      },
+      "timestamp": "2026-08-26T11:37:33.045290"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "0e396600",
+        "text": "I've tried getting ordinary jobs but haven't had much luck.",
+        "mission_id": "a154b140"
+      },
+      "timestamp": "2026-08-26T11:37:33.045342"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I don't really know what I'm good at.",
+        "new": "I've tried getting ordinary jobs but haven't had much luck."
+      },
+      "timestamp": "2026-08-26T11:37:33.045346"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "fefcfb92",
+        "context": "Run a short evidence-gathering exercise using your recent activities, messages, calendar, photos, and feedback from people who know you. Use the results to identify a few ordinary tasks that could plausibly be offered for payment."
+      },
+      "timestamp": "2026-08-26T11:37:43.083587"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "031a3ec5",
+        "goal_id": "fefcfb92",
+        "purpose": "To replace vague self-assessment with concrete evidence and generate three realistic candidates for a small, low-cost earning experiment."
+      },
+      "timestamp": "2026-08-26T11:37:43.083635"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "031a3ec5",
+        "result": "Spent time reflecting on what I actually enjoy doing."
+      },
+      "timestamp": "2026-08-26T11:37:43.085045"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "3ce630a9",
+        "text": "I like computers and fixing things.",
+        "mission_id": "031a3ec5"
+      },
+      "timestamp": "2026-08-26T11:37:43.085141"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I've tried getting ordinary jobs but haven't had much luck.",
+        "new": "I like computers and fixing things."
+      },
+      "timestamp": "2026-08-26T11:37:43.085149"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "fefcfb92",
+        "context": "Run a small demand test focused on everyday computer and fixing problems. Do not promise services you cannot yet perform; use the conversations to discover specific problems people already want solved."
+      },
+      "timestamp": "2026-08-26T11:37:53.503804"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "28461d33",
+        "goal_id": "fefcfb92",
+        "purpose": "To identify one concrete customer problem and assess whether it can become a safe, small paid trial using your existing resources or a short learning step."
+      },
+      "timestamp": "2026-08-26T11:37:53.503829"
+    }
+  ],
+  "created": "2026-08-26T11:37:16.630922",
+  "updated": "2026-08-26T11:37:53.503829"
+}

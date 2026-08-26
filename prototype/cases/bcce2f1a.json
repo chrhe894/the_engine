@@ -1,0 +1,187 @@
+{
+  "id": "bcce2f1a",
+  "context": {
+    "description": "Personal income exploration",
+    "opening_question": "What could help this person build a sustainable source of income?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival.",
+  "goals": [
+    {
+      "id": "91dde46f",
+      "desired_direction": "Increase meaningful youth participation in the festival",
+      "status": "ACTIVE",
+      "missions": [
+        "30e4282d"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T10:45:23.729832"
+    },
+    {
+      "id": "4d0f6268",
+      "desired_direction": "Strengthen cooperation between local businesses during the festival",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-26T10:45:38.550944"
+    },
+    {
+      "id": "92db5fec",
+      "desired_direction": "Improve evening transport options for visitors",
+      "status": "ABANDONED",
+      "missions": [],
+      "history": [
+        {
+          "event": "abandoned",
+          "reason": "Municipality won't fund evening buses this year.",
+          "timestamp": "2026-08-26T10:45:44.307041"
+        }
+      ],
+      "timestamp": "2026-08-26T10:45:38.550979"
+    }
+  ],
+  "missions": [
+    {
+      "id": "30e4282d",
+      "goal_id": "91dde46f",
+      "purpose": "To identify a youth-informed festival opportunity that improves participation while testing whether the person could build a sustainable income stream around delivering it.",
+      "description": "Within the next two weeks, speak with at least 3 young people and 2 festival organizers or community partners. Ask what would make the festival more appealing and accessible to youth, what roles or activities they would want, what currently gets in the way, and what support the festival lacks. Record recurring themes, then outline 3 possible paid or funded contributions the person could offer, such as youth programming, workshop facilitation, outreach, or event coordination.",
+      "definition_of_done": [
+        "At least 3 young people and 2 festival stakeholders have been consulted",
+        "The main recurring participation barriers and desired activities are documented",
+        "At least 3 potential paid or funded contribution ideas are outlined",
+        "Each idea includes a likely customer or funder, the value provided, and the next feasibility question"
+      ],
+      "status": "COMPLETED",
+      "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.",
+      "observations": [
+        "7c473aca"
+      ],
+      "timestamp": "2026-08-26T10:45:31.667134"
+    }
+  ],
+  "observations": [
+    {
+      "id": "7c473aca",
+      "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+      "source": "participant",
+      "timestamp": "2026-08-26T10:45:31.667680",
+      "mission_id": "30e4282d"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "29957781",
+      "decision_type": "ACCEPT",
+      "goal_id": "91dde46f",
+      "context": "Run a short discovery exercise with youth and festival stakeholders before committing to a specific income model or program.",
+      "reason": null,
+      "timestamp": "2026-08-26T10:45:31.667111"
+    },
+    {
+      "id": "990b6204",
+      "decision_type": "GIVE_UP",
+      "goal_id": "92db5fec",
+      "context": "Improve evening transport options for visitors",
+      "reason": "Municipality won't fund evening buses this year.",
+      "timestamp": "2026-08-26T10:45:44.304441"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The person is seeking alternatives to relying solely on conventional day-job employment and may be exploring ways to generate income through independent, flexible, passive, or entrepreneurial activities."
+      },
+      "timestamp": "2026-08-26T10:45:23.729234"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "91dde46f",
+        "direction": "Increase meaningful youth participation in the festival"
+      },
+      "timestamp": "2026-08-26T10:45:23.729839"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "91dde46f",
+        "context": "Run a short discovery exercise with youth and festival stakeholders before committing to a specific income model or program."
+      },
+      "timestamp": "2026-08-26T10:45:31.667121"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "30e4282d",
+        "goal_id": "91dde46f",
+        "purpose": "To identify a youth-informed festival opportunity that improves participation while testing whether the person could build a sustainable income stream around delivering it."
+      },
+      "timestamp": "2026-08-26T10:45:31.667139"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "30e4282d",
+        "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling."
+      },
+      "timestamp": "2026-08-26T10:45:31.667663"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "7c473aca",
+        "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+        "mission_id": "30e4282d"
+      },
+      "timestamp": "2026-08-26T10:45:31.667685"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The person is seeking alternatives to relying solely on conventional day-job employment and may be exploring ways to generate income through independent, flexible, passive, or entrepreneurial activities.",
+        "new": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival."
+      },
+      "timestamp": "2026-08-26T10:45:31.667688"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "4d0f6268",
+        "direction": "Strengthen cooperation between local businesses during the festival"
+      },
+      "timestamp": "2026-08-26T10:45:38.550963"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "92db5fec",
+        "direction": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-26T10:45:38.550983"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "GIVE_UP",
+        "goal_id": "92db5fec",
+        "context": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-26T10:45:44.304469"
+    },
+    {
+      "event": "goal_abandoned",
+      "data": {
+        "goal_id": "92db5fec",
+        "reason": "Municipality won't fund evening buses this year."
+      },
+      "timestamp": "2026-08-26T10:45:44.307070"
+    }
+  ],
+  "created": "2026-08-26T10:45:21.308913",
+  "updated": "2026-08-26T10:45:44.307070"
+}

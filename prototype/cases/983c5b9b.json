@@ -1,0 +1,187 @@
+{
+  "id": "983c5b9b",
+  "context": {
+    "description": "Skördefesten / Södra Öland",
+    "opening_question": "What would make Södra Öland an even better place to live, work and visit?",
+    "time_scope": "2026-09 to 2026-10",
+    "geographic_scope": "Södra Öland"
+  },
+  "current_situation": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival.",
+  "goals": [
+    {
+      "id": "c10d5a53",
+      "desired_direction": "Increase meaningful youth participation in the festival",
+      "status": "ACTIVE",
+      "missions": [
+        "41204806"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T10:38:56.273910"
+    },
+    {
+      "id": "e9d44c97",
+      "desired_direction": "Strengthen cooperation between local businesses during the festival",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-26T10:39:09.546366"
+    },
+    {
+      "id": "3e419500",
+      "desired_direction": "Improve evening transport options for visitors",
+      "status": "ABANDONED",
+      "missions": [],
+      "history": [
+        {
+          "event": "abandoned",
+          "reason": "Municipality won't fund evening buses this year.",
+          "timestamp": "2026-08-26T10:39:14.903774"
+        }
+      ],
+      "timestamp": "2026-08-26T10:39:09.546406"
+    }
+  ],
+  "missions": [
+    {
+      "id": "41204806",
+      "goal_id": "c10d5a53",
+      "purpose": "To establish a youth-informed direction for meaningful participation and identify a feasible first activity or role that can be tested during Skördefesten 2026.",
+      "description": "Recruit 8–12 young people from different parts of Södra Öland and with varied interests. Hold a 60–90 minute session, in person or online, asking: what would make Skördefesten worth attending, what roles would they like to have, what would stop them from participating, and what small activity could they help design or lead in 2026. Record the main themes and agree on one promising idea to develop further.",
+      "definition_of_done": [
+        "A diverse group of young people from Södra Öland has been invited and the session has taken place.",
+        "The main motivations, barriers, preferred roles, and practical needs identified by participants are documented.",
+        "At least one concrete youth-led or youth-designed festival idea has been selected for further development.",
+        "Participants know the next decision point and how they can remain involved."
+      ],
+      "status": "COMPLETED",
+      "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.",
+      "observations": [
+        "0a91123b"
+      ],
+      "timestamp": "2026-08-26T10:39:01.975851"
+    }
+  ],
+  "observations": [
+    {
+      "id": "0a91123b",
+      "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+      "source": "participant",
+      "timestamp": "2026-08-26T10:39:01.975909",
+      "mission_id": "41204806"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "40a61aca",
+      "decision_type": "ACCEPT",
+      "goal_id": "c10d5a53",
+      "context": "Conduct a focused youth listening session and invite participants to shape one or more realistic festival activities for September–October 2026.",
+      "reason": null,
+      "timestamp": "2026-08-26T10:39:01.975811"
+    },
+    {
+      "id": "d9efcc02",
+      "decision_type": "GIVE_UP",
+      "goal_id": "3e419500",
+      "context": "Improve evening transport options for visitors",
+      "reason": "Municipality won't fund evening buses this year.",
+      "timestamp": "2026-08-26T10:39:14.903738"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Young people are currently underrepresented or not sufficiently engaged in Skördefesten in Södra Öland."
+      },
+      "timestamp": "2026-08-26T10:38:56.273877"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "c10d5a53",
+        "direction": "Increase meaningful youth participation in the festival"
+      },
+      "timestamp": "2026-08-26T10:38:56.273913"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "c10d5a53",
+        "context": "Conduct a focused youth listening session and invite participants to shape one or more realistic festival activities for September–October 2026."
+      },
+      "timestamp": "2026-08-26T10:39:01.975829"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "41204806",
+        "goal_id": "c10d5a53",
+        "purpose": "To establish a youth-informed direction for meaningful participation and identify a feasible first activity or role that can be tested during Skördefesten 2026."
+      },
+      "timestamp": "2026-08-26T10:39:01.975860"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "41204806",
+        "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling."
+      },
+      "timestamp": "2026-08-26T10:39:01.975894"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "0a91123b",
+        "text": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival.",
+        "mission_id": "41204806"
+      },
+      "timestamp": "2026-08-26T10:39:01.975916"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "Young people are currently underrepresented or not sufficiently engaged in Skördefesten in Södra Öland.",
+        "new": "Youth participation pilot completed successfully. Young people responded well to creative ownership. Evening timing worked. Some would return for the festival."
+      },
+      "timestamp": "2026-08-26T10:39:01.975922"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "e9d44c97",
+        "direction": "Strengthen cooperation between local businesses during the festival"
+      },
+      "timestamp": "2026-08-26T10:39:09.546387"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "3e419500",
+        "direction": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-26T10:39:09.546411"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "GIVE_UP",
+        "goal_id": "3e419500",
+        "context": "Improve evening transport options for visitors"
+      },
+      "timestamp": "2026-08-26T10:39:14.903750"
+    },
+    {
+      "event": "goal_abandoned",
+      "data": {
+        "goal_id": "3e419500",
+        "reason": "Municipality won't fund evening buses this year."
+      },
+      "timestamp": "2026-08-26T10:39:14.903777"
+    }
+  ],
+  "created": "2026-08-26T10:38:53.604417",
+  "updated": "2026-08-26T10:39:14.903777"
+}

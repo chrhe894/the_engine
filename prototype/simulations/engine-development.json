@@ -1,0 +1,30 @@
+{
+  "scenario": "scenarios/engine-development.json",
+  "description": "Real observations from the first prototype development session. Each turn records what actually happened.",
+  "interpretation_response": {
+    "decision": "modify",
+    "correction": "Build the smallest executable loop that demonstrates Case File continuity, multiple goals with independent lifecycles, and Engine proposals that reflect accumulated observations. Use Python. Optimise for clarity and reversibility, not production architecture."
+  },
+  "turns": [
+    {
+      "type": "mission_result",
+      "result": "Implemented Case File, Goal, Mission, Observation, Decision dataclasses with JSON persistence. Created a rule-based Engine stub. Built a CLI loop and a non-interactive test.",
+      "observation": "The complete loop executes mechanically. Continuity works at the data level — the next proposal contains the previous observation text. Multiple goals coexist and GIVE UP is locally scoped. But the Engine adds no domain intelligence. All meaningful content came from the participant, not the Engine."
+    },
+    {
+      "type": "mission_result",
+      "result": "Replaced the rule-based Engine reasoning with GPT-5.6 Luna. Ran the Skördefesten case as an A/B comparison against the v0.1 baseline.",
+      "observation": "The AI Engine produced proposals that a participant could plausibly ACCEPT without modification. It used geographic and time context, generated specific missions with verifiable definitions of done, and built on previous observations with reasoning rather than verbatim quotation. The rule-based engine required MODIFY every time. The AI constraint held: it did not fabricate evidence or claim mission completion."
+    },
+    {
+      "type": "mission_result",
+      "result": "Extracted scenario configuration from hardcoded Python into JSON files. Created a generic simulation runner with a three-layer model: scenario (starting conditions), simulation (repeatable participant responses), case file (accumulated state).",
+      "observation": "The same Engine handles radically different domains without code changes. The three-layer separation makes experiments reproducible. But the runner had a structural flaw: the Goal was created directly from the AI's interpretation without participant confirmation. This diverges from the documented principle that the Engine proposes and the user decides."
+    },
+    {
+      "type": "mission_result",
+      "result": "Added an interpret-and-confirm step. The participant can now accept, correct, or reject the Engine's interpretation before a Goal is created. Tested with a correction that narrowed the direction from broad entrepreneurship to small practical income tasks.",
+      "observation": "The correction fundamentally redirected subsequent proposals. Without it, the AI suggested startup thinking and investment strategies. With it, the AI focused on low-cost local services and practical demand testing. This confirms that the interpretation-confirmation step is not cosmetic — it changes the trajectory of the entire case."
+    }
+  ]
+}

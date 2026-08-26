@@ -1,0 +1,325 @@
+{
+  "id": "6816cfb4",
+  "context": {
+    "description": "Personal income exploration",
+    "opening_question": "What could help this person build a sustainable source of income?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "I like computers and fixing things.",
+  "goals": [
+    {
+      "id": "21aa2143",
+      "desired_direction": "Identify and develop one or more sustainable income streams outside traditional employment, aligned with the person's skills, resources, interests, and tolerance for risk.",
+      "status": "ACTIVE",
+      "missions": [
+        "2a07a522",
+        "a1ed62a3",
+        "dfb16d5c",
+        "bcd320ff"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T11:38:49.359107"
+    }
+  ],
+  "missions": [
+    {
+      "id": "2a07a522",
+      "goal_id": "21aa2143",
+      "purpose": "To identify three plausible income directions that can be compared objectively before choosing one small, low-risk experiment.",
+      "description": "Write down: (1) five useful skills or areas of experience, (2) three interests or topics they could work on repeatedly, (3) available weekly time, (4) money they could invest without financial strain, (5) desired timeline for earning, (6) acceptable level of risk, and (7) any restrictions or resources such as equipment, audience, credentials, or network. Then generate three possible income streams and score each from 1 to 5 for fit, startup cost, speed to first income, sustainability, and personal interest.",
+      "definition_of_done": [
+        "The person's relevant skills, interests, time, budget, timeline, risk tolerance, restrictions, and resources are written down.",
+        "At least three possible income streams are identified.",
+        "Each option is scored against fit, startup cost, speed to first income, sustainability, and interest.",
+        "One option is selected for a later validation experiment, or the reasons for not selecting one are recorded."
+      ],
+      "status": "COMPLETED",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observations": [
+        "76b83da3"
+      ],
+      "timestamp": "2026-08-26T11:38:55.007355"
+    },
+    {
+      "id": "a1ed62a3",
+      "goal_id": "21aa2143",
+      "purpose": "To produce an initial evidence-based list of abilities and patterns that can later be translated into possible services, products, or other income opportunities.",
+      "description": "Write down three situations from any part of life—such as school, work, home, hobbies, volunteering, or helping someone—where you completed something, solved a problem, learned a process, organized an activity, made something, or helped another person. For each situation, answer: What was the task? What specific actions did you take? What was the result? Did anyone rely on, thank, or compliment you? Then underline repeated actions or qualities across the examples, even if they seem ordinary.",
+      "definition_of_done": [
+        "Three specific situations are written down.",
+        "Each situation includes the task, actions taken, and result.",
+        "Any outside feedback or evidence of usefulness is recorded when available.",
+        "At least three repeated actions, abilities, or qualities are underlined or listed.",
+        "No ability is rejected merely because it feels ordinary or easy."
+      ],
+      "status": "COMPLETED",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observations": [
+        "030af1f3"
+      ],
+      "timestamp": "2026-08-26T11:39:01.337420"
+    },
+    {
+      "id": "dfb16d5c",
+      "goal_id": "21aa2143",
+      "purpose": "To create an initial evidence-based profile of tasks you can potentially turn into a service, small business, freelance offer, or other income experiment.",
+      "description": "Set a 20-minute timer and write down five recent situations from work attempts, home, school, hobbies, errands, online activity, or helping others. For each, complete these four lines: (1) What needed to be done? (2) What did I personally do, step by step? (3) What was the result? (4) Did anyone depend on me, thank me, ask me to do it again, or give feedback? If you cannot think of five, write down as many as possible. Then list any action words that repeat, such as explaining, cleaning, organizing, researching, fixing, selling, caring, writing, designing, or following instructions.",
+      "definition_of_done": [
+        "At least three specific situations are written down",
+        "Each situation includes your actions and the result, not just the activity name",
+        "Any outside feedback, reliance, or repeat requests are recorded where applicable",
+        "Repeated action words or qualities are listed separately",
+        "Anything you could not determine is marked as unknown rather than guessed"
+      ],
+      "status": "COMPLETED",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observations": [
+        "625d17e3"
+      ],
+      "timestamp": "2026-08-26T11:39:08.260928"
+    },
+    {
+      "id": "bcd320ff",
+      "goal_id": "21aa2143",
+      "purpose": "To identify one specific, repeatable computer or repair service that has evidence of personal interest, basic capability, and real demand, while exposing any skill or equipment gaps before investing money.",
+      "description": "Within the next week, write down five computer- or fixing-related problems you have personally handled, attempted, or would be willing to learn, such as setting up a device, removing unwanted software, diagnosing a connection problem, replacing a simple component, organizing files, or explaining how to use a program. For each, rate your current confidence from 1 to 5 and note any tools or knowledge required. Then ask at least two people you know, or post in an appropriate local or online community, whether they have a small, non-sensitive computer or device problem they would like help with. Choose one low-risk task that matches your current ability, agree on the expected result, complete it if you can do so safely, and record the steps, time taken, outcome, and feedback. Do not handle passwords, private data, financial accounts, or repairs that could cause damage unless you are properly qualified.",
+      "definition_of_done": [
+        "Five possible computer- or fixing-related tasks are written down with confidence ratings.",
+        "At least two people or communities have been asked about relevant problems.",
+        "One low-risk task has been selected and its expected result is clear.",
+        "The task has either been attempted or documented as blocked, including the reason.",
+        "The time taken, outcome, difficulties, and any feedback are recorded.",
+        "At least one follow-up choice is identified: repeat the task, learn a missing skill, test a different task, or investigate whether people would pay for it."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T11:39:19.269804"
+    }
+  ],
+  "observations": [
+    {
+      "id": "76b83da3",
+      "text": "I don't really know what I'm good at.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:38:55.007396",
+      "mission_id": "2a07a522"
+    },
+    {
+      "id": "030af1f3",
+      "text": "I've tried getting ordinary jobs but haven't had much luck.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:39:01.337460",
+      "mission_id": "a1ed62a3"
+    },
+    {
+      "id": "625d17e3",
+      "text": "I like computers and fixing things.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:39:08.260978",
+      "mission_id": "dfb16d5c"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "3481c086",
+      "decision_type": "ACCEPT",
+      "goal_id": "21aa2143",
+      "context": "Create a realistic personal income-opportunity profile and use it to shortlist a few possible income streams for further testing.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:38:55.007324"
+    },
+    {
+      "id": "6ba6f72b",
+      "decision_type": "ACCEPT",
+      "goal_id": "21aa2143",
+      "context": "Complete a guided evidence-gathering exercise based on actual situations rather than abstract self-assessment.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:39:01.337393"
+    },
+    {
+      "id": "a423059e",
+      "decision_type": "ACCEPT",
+      "goal_id": "21aa2143",
+      "context": "Build a small evidence list from recent, specific activities rather than trying to name your strengths directly.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:39:08.260891"
+    },
+    {
+      "id": "832ec7cc",
+      "decision_type": "ACCEPT",
+      "goal_id": "21aa2143",
+      "context": "Run a small computer-help discovery and trial rather than trying to choose an income stream immediately.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:39:19.269772"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The person is seeking alternatives to relying solely on a conventional day job for income and may be exploring entrepreneurial, freelance, investment, or other income-generating options."
+      },
+      "timestamp": "2026-08-26T11:38:49.359070"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "21aa2143",
+        "direction": "Identify and develop one or more sustainable income streams outside traditional employment, aligned with the person's skills, resources, interests, and tolerance for risk."
+      },
+      "timestamp": "2026-08-26T11:38:49.359110"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "21aa2143",
+        "context": "Create a realistic personal income-opportunity profile and use it to shortlist a few possible income streams for further testing."
+      },
+      "timestamp": "2026-08-26T11:38:55.007338"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "2a07a522",
+        "goal_id": "21aa2143",
+        "purpose": "To identify three plausible income directions that can be compared objectively before choosing one small, low-risk experiment."
+      },
+      "timestamp": "2026-08-26T11:38:55.007361"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "2a07a522",
+        "result": "Tried to think about what I could offer but drew a blank."
+      },
+      "timestamp": "2026-08-26T11:38:55.007385"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "76b83da3",
+        "text": "I don't really know what I'm good at.",
+        "mission_id": "2a07a522"
+      },
+      "timestamp": "2026-08-26T11:38:55.007402"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The person is seeking alternatives to relying solely on a conventional day job for income and may be exploring entrepreneurial, freelance, investment, or other income-generating options.",
+        "new": "I don't really know what I'm good at."
+      },
+      "timestamp": "2026-08-26T11:38:55.007406"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "21aa2143",
+        "context": "Complete a guided evidence-gathering exercise based on actual situations rather than abstract self-assessment."
+      },
+      "timestamp": "2026-08-26T11:39:01.337405"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "a1ed62a3",
+        "goal_id": "21aa2143",
+        "purpose": "To produce an initial evidence-based list of abilities and patterns that can later be translated into possible services, products, or other income opportunities."
+      },
+      "timestamp": "2026-08-26T11:39:01.337427"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "a1ed62a3",
+        "result": "Applied to several ordinary jobs over the past month."
+      },
+      "timestamp": "2026-08-26T11:39:01.337448"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "030af1f3",
+        "text": "I've tried getting ordinary jobs but haven't had much luck.",
+        "mission_id": "a1ed62a3"
+      },
+      "timestamp": "2026-08-26T11:39:01.337464"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I don't really know what I'm good at.",
+        "new": "I've tried getting ordinary jobs but haven't had much luck."
+      },
+      "timestamp": "2026-08-26T11:39:01.337467"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "21aa2143",
+        "context": "Build a small evidence list from recent, specific activities rather than trying to name your strengths directly."
+      },
+      "timestamp": "2026-08-26T11:39:08.260906"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "dfb16d5c",
+        "goal_id": "21aa2143",
+        "purpose": "To create an initial evidence-based profile of tasks you can potentially turn into a service, small business, freelance offer, or other income experiment."
+      },
+      "timestamp": "2026-08-26T11:39:08.260936"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "dfb16d5c",
+        "result": "Spent time reflecting on what I actually enjoy doing."
+      },
+      "timestamp": "2026-08-26T11:39:08.260962"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "625d17e3",
+        "text": "I like computers and fixing things.",
+        "mission_id": "dfb16d5c"
+      },
+      "timestamp": "2026-08-26T11:39:08.260983"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I've tried getting ordinary jobs but haven't had much luck.",
+        "new": "I like computers and fixing things."
+      },
+      "timestamp": "2026-08-26T11:39:08.260987"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "21aa2143",
+        "context": "Run a small computer-help discovery and trial rather than trying to choose an income stream immediately."
+      },
+      "timestamp": "2026-08-26T11:39:19.269786"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "bcd320ff",
+        "goal_id": "21aa2143",
+        "purpose": "To identify one specific, repeatable computer or repair service that has evidence of personal interest, basic capability, and real demand, while exposing any skill or equipment gaps before investing money."
+      },
+      "timestamp": "2026-08-26T11:39:19.269809"
+    }
+  ],
+  "created": "2026-08-26T11:38:46.351928",
+  "updated": "2026-08-26T11:39:19.269809"
+}

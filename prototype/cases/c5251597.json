@@ -1,0 +1,124 @@
+{
+  "id": "c5251597",
+  "context": {
+    "description": "Individual occupational exploration",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": "Sweden"
+  },
+  "current_situation": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+  "goals": [
+    {
+      "id": "e0cacf23",
+      "desired_direction": "Learn programming and find a starting point",
+      "status": "ACTIVE",
+      "missions": [
+        "5117c243"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T11:39:34.956427"
+    }
+  ],
+  "missions": [
+    {
+      "id": "5117c243",
+      "goal_id": "e0cacf23",
+      "purpose": "To gain first-hand experience with programming and gather enough information to choose the next learning step.",
+      "description": "Set aside 30–45 minutes and complete one beginner Python lesson or exercise in an online environment that runs in the browser. The exercise should include writing or modifying a short program, such as displaying text, using variables, or making a simple calculation. Afterwards, record what felt easy, difficult, and interesting, and note whether you would prefer more lessons like this or a different kind of introduction.",
+      "definition_of_done": [
+        "One beginner programming lesson or exercise has been attempted.",
+        "A short program has been written or modified and run successfully, or the specific obstacle has been recorded.",
+        "The individual has noted one aspect they enjoyed, one difficulty, and one preference for the next step.",
+        "A decision has been made about whether to continue with Python, try another format, or explore a different programming goal."
+      ],
+      "status": "COMPLETED",
+      "result": "Completed. Tried a Python tutorial for 30 minutes.",
+      "observations": [
+        "66bc116c"
+      ],
+      "timestamp": "2026-08-26T11:39:41.065045"
+    }
+  ],
+  "observations": [
+    {
+      "id": "66bc116c",
+      "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:39:41.065288",
+      "mission_id": "5117c243"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "545744b4",
+      "decision_type": "ACCEPT",
+      "goal_id": "e0cacf23",
+      "context": "Run a small, low-commitment programming trial using beginner-friendly Python exercises, then use the experience to decide on a suitable learning pathway.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:39:41.065020"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The individual is interested in learning programming but lacks a clear starting point or learning pathway."
+      },
+      "timestamp": "2026-08-26T11:39:34.956400"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "e0cacf23",
+        "direction": "Learn programming and find a starting point"
+      },
+      "timestamp": "2026-08-26T11:39:34.956430"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "e0cacf23",
+        "context": "Run a small, low-commitment programming trial using beginner-friendly Python exercises, then use the experience to decide on a suitable learning pathway."
+      },
+      "timestamp": "2026-08-26T11:39:41.065031"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "5117c243",
+        "goal_id": "e0cacf23",
+        "purpose": "To gain first-hand experience with programming and gather enough information to choose the next learning step."
+      },
+      "timestamp": "2026-08-26T11:39:41.065051"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "5117c243",
+        "result": "Completed. Tried a Python tutorial for 30 minutes."
+      },
+      "timestamp": "2026-08-26T11:39:41.065262"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "66bc116c",
+        "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+        "mission_id": "5117c243"
+      },
+      "timestamp": "2026-08-26T11:39:41.065294"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The individual is interested in learning programming but lacks a clear starting point or learning pathway.",
+        "new": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next."
+      },
+      "timestamp": "2026-08-26T11:39:41.065298"
+    }
+  ],
+  "created": "2026-08-26T11:39:32.632578",
+  "updated": "2026-08-26T11:39:41.065298"
+}

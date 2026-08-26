@@ -1,0 +1,323 @@
+{
+  "id": "678618a6",
+  "context": {
+    "description": "Personal income exploration",
+    "opening_question": "What could help this person build a sustainable source of income?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "I like computers and fixing things.",
+  "goals": [
+    {
+      "id": "5eb33281",
+      "desired_direction": "Explore sustainable income streams such as entrepreneurship, freelancing, investments, digital products, or other sources of recurring or flexible income.",
+      "status": "ACTIVE",
+      "missions": [
+        "fe943d7d",
+        "140b19ee",
+        "d81e9301",
+        "e0f8d93c"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T11:16:41.481905"
+    }
+  ],
+  "missions": [
+    {
+      "id": "fe943d7d",
+      "goal_id": "5eb33281",
+      "purpose": "To turn a broad desire for alternative income into a focused set of feasible options and initial experiments.",
+      "description": "Write down: (1) skills or knowledge others might pay for, (2) past work or personal experiences that could become useful, (3) available time per week, (4) money available for experimentation, (5) target monthly income and desired timeline, (6) tolerance for uncertainty, and (7) preferences among freelancing, services, digital products, entrepreneurship, investments, or other models. Then choose the three most plausible income paths and briefly describe a first low-cost test for each.",
+      "definition_of_done": [
+        "The person's relevant skills, experiences, resources, constraints, and financial targets are written down.",
+        "At least three potential income paths have been identified.",
+        "Each path has a stated reason it may fit the person.",
+        "Each path has one concrete, low-cost first test."
+      ],
+      "status": "COMPLETED",
+      "result": "Tried to think about what I could offer but drew a blank.",
+      "observations": [
+        "3411571f"
+      ],
+      "timestamp": "2026-08-26T11:16:47.143824"
+    },
+    {
+      "id": "140b19ee",
+      "goal_id": "5eb33281",
+      "purpose": "To generate a grounded set of possible capabilities and interests that can later be matched to realistic, low-cost income experiments.",
+      "description": "Spend 20 minutes answering these prompts with brief bullet points: (1) What tasks have you handled at work, school, home, or in personal projects? (2) What problems have people asked you to help solve? (3) What have you learned faster than expected or taught yourself? (4) What compliments or positive feedback have you received, even if you dismissed it? (5) Which activities feel tolerable or interesting enough to repeat? (6) What responsibilities or experiences have given you useful knowledge? Then mark three items that seem most repeatable or potentially useful to someone else. If you remain stuck, list three recent days or projects and describe what you actually did in each.",
+      "definition_of_done": [
+        "At least five concrete tasks, experiences, problems solved, or pieces of feedback are written down",
+        "At least three items are marked as potentially repeatable or useful to others",
+        "Any major constraints that emerge, such as available weekly time, experimentation budget, or preferred work style, are noted",
+        "No income path is selected yet unless one feels clearly worth investigating"
+      ],
+      "status": "COMPLETED",
+      "result": "Applied to several ordinary jobs over the past month.",
+      "observations": [
+        "26c4a91c"
+      ],
+      "timestamp": "2026-08-26T11:16:55.391331"
+    },
+    {
+      "id": "d81e9301",
+      "goal_id": "5eb33281",
+      "purpose": "To create an evidence-based shortlist of recurring tasks and possible strengths that can later be matched with realistic, low-cost income experiments.",
+      "description": "Within the next week, choose five recent jobs you applied for or seriously considered. For each, copy the main tasks or requirements into a list and mark any that seem tolerable, familiar, or learnable. Then send this message to three people who know you reasonably well: \"I'm trying to identify work I could realistically offer. What are two things you've seen me do reliably or helpfully? Please give a specific example rather than a general compliment.\" Record their replies, along with your own reaction to each suggested task: willing to try, maybe, or avoid.",
+      "definition_of_done": [
+        "Five job roles or applications have been reviewed.",
+        "At least ten recurring tasks or requirements have been recorded.",
+        "Three people have been asked for specific examples of abilities or reliable contributions.",
+        "The responses and task list have been grouped into three categories: willing to try, maybe, and avoid.",
+        "At least two recurring tasks or abilities are identified as possible candidates for a small income test."
+      ],
+      "status": "COMPLETED",
+      "result": "Spent time reflecting on what I actually enjoy doing.",
+      "observations": [
+        "a33c169c"
+      ],
+      "timestamp": "2026-08-26T11:17:06.360684"
+    },
+    {
+      "id": "e0f8d93c",
+      "goal_id": "5eb33281",
+      "purpose": "To identify one or two specific computer-related services that have observable demand and are realistic for you to test without significant financial risk.",
+      "description": "Within the next week, find 10 real requests or listings involving computer help, device setup, troubleshooting, data transfer, software installation, or basic repairs from local groups, job boards, marketplaces, or people you know. Record the exact task, expected skill level, and any stated or implied price. Select the two tasks that seem safest, most learnable, and most interesting to you. For each selected task, write a simple offer such as: \"I can help with [specific task] for [person or device type].\" Show both offers to three people who might use or refer this service and ask whether they would consider paying for it, what concerns they would have, and what price seems reasonable. If an appropriate low-risk opportunity appears, arrange one supervised or low-cost trial; do not handle sensitive data or valuable equipment without clear permission and safeguards.",
+      "definition_of_done": [
+        "Ten concrete computer-help requests or listings have been recorded with their tasks and any available pricing information.",
+        "Two candidate services have been selected and described in plain language.",
+        "Three people have been asked for feedback on whether they would use, pay for, or refer each service.",
+        "The responses and your own reaction to each service are recorded as willing to try, maybe, or avoid.",
+        "A decision is made about whether to conduct one safe trial, gather more evidence, or drop these service ideas."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-26T11:17:16.069524"
+    }
+  ],
+  "observations": [
+    {
+      "id": "3411571f",
+      "text": "I don't really know what I'm good at.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:16:47.145336",
+      "mission_id": "fe943d7d"
+    },
+    {
+      "id": "26c4a91c",
+      "text": "I've tried getting ordinary jobs but haven't had much luck.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:16:55.392680",
+      "mission_id": "140b19ee"
+    },
+    {
+      "id": "a33c169c",
+      "text": "I like computers and fixing things.",
+      "source": "participant",
+      "timestamp": "2026-08-26T11:17:06.361992",
+      "mission_id": "d81e9301"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "292c2909",
+      "decision_type": "ACCEPT",
+      "goal_id": "5eb33281",
+      "context": "Create a brief personal income-opportunity inventory and use it to identify two or three realistic income paths for further testing.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:16:47.143644"
+    },
+    {
+      "id": "9cfd26a8",
+      "decision_type": "ACCEPT",
+      "goal_id": "5eb33281",
+      "context": "Create a short evidence-based strengths inventory by recalling specific situations rather than trying to identify marketable skills directly.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:16:55.391275"
+    },
+    {
+      "id": "467b9663",
+      "decision_type": "ACCEPT",
+      "goal_id": "5eb33281",
+      "context": "Gather outside and market-based evidence instead of trying to invent an income idea from scratch. Review several recent job applications and ask a few people who know you for specific examples of tasks you handle well.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:17:06.360612"
+    },
+    {
+      "id": "45b51b36",
+      "decision_type": "ACCEPT",
+      "goal_id": "5eb33281",
+      "context": "Run a small market-and-fit test focused on beginner-friendly computer help rather than committing to a business or expensive training.",
+      "reason": null,
+      "timestamp": "2026-08-26T11:17:16.069482"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The person is seeking alternatives to relying solely on traditional day-job employment for income."
+      },
+      "timestamp": "2026-08-26T11:16:41.481424"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "5eb33281",
+        "direction": "Explore sustainable income streams such as entrepreneurship, freelancing, investments, digital products, or other sources of recurring or flexible income."
+      },
+      "timestamp": "2026-08-26T11:16:41.481912"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "5eb33281",
+        "context": "Create a brief personal income-opportunity inventory and use it to identify two or three realistic income paths for further testing."
+      },
+      "timestamp": "2026-08-26T11:16:47.143670"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "fe943d7d",
+        "goal_id": "5eb33281",
+        "purpose": "To turn a broad desire for alternative income into a focused set of feasible options and initial experiments."
+      },
+      "timestamp": "2026-08-26T11:16:47.143859"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "fe943d7d",
+        "result": "Tried to think about what I could offer but drew a blank."
+      },
+      "timestamp": "2026-08-26T11:16:47.145258"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "3411571f",
+        "text": "I don't really know what I'm good at.",
+        "mission_id": "fe943d7d"
+      },
+      "timestamp": "2026-08-26T11:16:47.145355"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The person is seeking alternatives to relying solely on traditional day-job employment for income.",
+        "new": "I don't really know what I'm good at."
+      },
+      "timestamp": "2026-08-26T11:16:47.145367"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "5eb33281",
+        "context": "Create a short evidence-based strengths inventory by recalling specific situations rather than trying to identify marketable skills directly."
+      },
+      "timestamp": "2026-08-26T11:16:55.391300"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "140b19ee",
+        "goal_id": "5eb33281",
+        "purpose": "To generate a grounded set of possible capabilities and interests that can later be matched to realistic, low-cost income experiments."
+      },
+      "timestamp": "2026-08-26T11:16:55.391344"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "140b19ee",
+        "result": "Applied to several ordinary jobs over the past month."
+      },
+      "timestamp": "2026-08-26T11:16:55.392616"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "26c4a91c",
+        "text": "I've tried getting ordinary jobs but haven't had much luck.",
+        "mission_id": "140b19ee"
+      },
+      "timestamp": "2026-08-26T11:16:55.392693"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I don't really know what I'm good at.",
+        "new": "I've tried getting ordinary jobs but haven't had much luck."
+      },
+      "timestamp": "2026-08-26T11:16:55.392699"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "5eb33281",
+        "context": "Gather outside and market-based evidence instead of trying to invent an income idea from scratch. Review several recent job applications and ask a few people who know you for specific examples of tasks you handle well."
+      },
+      "timestamp": "2026-08-26T11:17:06.360634"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "d81e9301",
+        "goal_id": "5eb33281",
+        "purpose": "To create an evidence-based shortlist of recurring tasks and possible strengths that can later be matched with realistic, low-cost income experiments."
+      },
+      "timestamp": "2026-08-26T11:17:06.360695"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "d81e9301",
+        "result": "Spent time reflecting on what I actually enjoy doing."
+      },
+      "timestamp": "2026-08-26T11:17:06.361921"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "a33c169c",
+        "text": "I like computers and fixing things.",
+        "mission_id": "d81e9301"
+      },
+      "timestamp": "2026-08-26T11:17:06.362002"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "I've tried getting ordinary jobs but haven't had much luck.",
+        "new": "I like computers and fixing things."
+      },
+      "timestamp": "2026-08-26T11:17:06.362008"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "5eb33281",
+        "context": "Run a small market-and-fit test focused on beginner-friendly computer help rather than committing to a business or expensive training."
+      },
+      "timestamp": "2026-08-26T11:17:16.069502"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "e0f8d93c",
+        "goal_id": "5eb33281",
+        "purpose": "To identify one or two specific computer-related services that have observable demand and are realistic for you to test without significant financial risk."
+      },
+      "timestamp": "2026-08-26T11:17:16.069532"
+    }
+  ],
+  "created": "2026-08-26T11:16:38.255633",
+  "updated": "2026-08-26T11:17:16.069532"
+}

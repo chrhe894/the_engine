@@ -1,0 +1,122 @@
+{
+  "id": "aa9c2abd",
+  "context": {
+    "description": "Individual occupational exploration",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": "Sweden"
+  },
+  "current_situation": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+  "goals": [
+    {
+      "id": "1b7302bb",
+      "desired_direction": "Learn programming and find a starting point",
+      "status": "ACTIVE",
+      "missions": [
+        "54af6ab1"
+      ],
+      "history": [],
+      "timestamp": "2026-08-26T08:25:13.080893"
+    }
+  ],
+  "missions": [
+    {
+      "id": "54af6ab1",
+      "goal_id": "1b7302bb",
+      "purpose": "Explore the direction before committing to a larger transition.",
+      "description": "Take one small action to learn more about: Learn programming and find a starting point",
+      "definition_of_done": [
+        "One concrete action taken",
+        "One observation recorded"
+      ],
+      "status": "COMPLETED",
+      "result": "Completed. Tried a Python tutorial for 30 minutes.",
+      "observations": [
+        "0ccaf161"
+      ],
+      "timestamp": "2026-08-26T08:25:13.081581"
+    }
+  ],
+  "observations": [
+    {
+      "id": "0ccaf161",
+      "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+      "source": "participant",
+      "timestamp": "2026-08-26T08:25:13.081770",
+      "mission_id": "54af6ab1"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "b5a1b33b",
+      "decision_type": "ACCEPT",
+      "goal_id": "1b7302bb",
+      "context": "Explore what 'Learn programming and find a starting point' means concretely.",
+      "reason": null,
+      "timestamp": "2026-08-26T08:25:13.081567"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The participant describes: I want to learn programming but I don't know where to start"
+      },
+      "timestamp": "2026-08-26T08:25:13.080880"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "1b7302bb",
+        "direction": "Learn programming and find a starting point"
+      },
+      "timestamp": "2026-08-26T08:25:13.080895"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "1b7302bb",
+        "context": "Explore what 'Learn programming and find a starting point' means concretely."
+      },
+      "timestamp": "2026-08-26T08:25:13.081573"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "54af6ab1",
+        "goal_id": "1b7302bb",
+        "purpose": "Explore the direction before committing to a larger transition."
+      },
+      "timestamp": "2026-08-26T08:25:13.081585"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "54af6ab1",
+        "result": "Completed. Tried a Python tutorial for 30 minutes."
+      },
+      "timestamp": "2026-08-26T08:25:13.081750"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "0ccaf161",
+        "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+        "mission_id": "54af6ab1"
+      },
+      "timestamp": "2026-08-26T08:25:13.081774"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The participant describes: I want to learn programming but I don't know where to start",
+        "new": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next."
+      },
+      "timestamp": "2026-08-26T08:25:13.081777"
+    }
+  ],
+  "created": "2026-08-26T08:25:13.080851",
+  "updated": "2026-08-26T08:25:13.081777"
+}
