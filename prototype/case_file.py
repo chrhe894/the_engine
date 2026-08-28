@@ -106,6 +106,7 @@ class CaseFile:
     missions: list = field(default_factory=list)  # list of Mission
     observations: list = field(default_factory=list)  # list of Observation
     decisions: list = field(default_factory=list)  # list of Decision
+    pending_proposals: dict = field(default_factory=dict)  # goal_id -> proposal dict
     history: list = field(default_factory=list)  # chronological event log
     created: str = field(default_factory=lambda: datetime.now().isoformat())
     updated: str = field(default_factory=lambda: datetime.now().isoformat())
@@ -284,6 +285,7 @@ class CaseFile:
             "missions": [asdict(m) for m in self.missions],
             "observations": [asdict(o) for o in self.observations],
             "decisions": [asdict(d) for d in self.decisions],
+            "pending_proposals": self.pending_proposals,
             "history": self.history,
             "created": self.created,
             "updated": self.updated,
@@ -300,6 +302,7 @@ class CaseFile:
         cf.missions = [Mission(**m) for m in data.get("missions", [])]
         cf.observations = [Observation(**o) for o in data.get("observations", [])]
         cf.decisions = [Decision(**d) for d in data.get("decisions", [])]
+        cf.pending_proposals = data.get("pending_proposals", {})
         cf.history = data.get("history", [])
         cf.created = data.get("created", "")
         cf.updated = data.get("updated", "")

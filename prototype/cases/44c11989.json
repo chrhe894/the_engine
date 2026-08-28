@@ -1,0 +1,42 @@
+{
+  "id": "44c11989",
+  "context": {
+    "description": "I want to improve my neighbourhood",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "The user has a broad, ongoing intention to improve their neighbourhood, but has not specified the issues, assets, people, or resources involved.",
+  "goals": [],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Användaren bygger en webbapplikation för att stödja och hantera en generell förbättringsprocess."
+      },
+      "timestamp": "2026-08-28T11:39:21.427329"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "Användaren bygger en webbapplikation för att stödja och hantera en generell förbättringsprocess.",
+        "new": "The user is concerned about the current condition or quality of their neighbourhood and sees room for improvement."
+      },
+      "timestamp": "2026-08-28T11:39:44.004589"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The user is concerned about the current condition or quality of their neighbourhood and sees room for improvement.",
+        "new": "The user has a broad, ongoing intention to improve their neighbourhood, but has not specified the issues, assets, people, or resources involved."
+      },
+      "timestamp": "2026-08-28T11:42:37.950506"
+    }
+  ],
+  "created": "2026-08-28T11:38:47.329187",
+  "updated": "2026-08-28T11:42:37.950506"
+}

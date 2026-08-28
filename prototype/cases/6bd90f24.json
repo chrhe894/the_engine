@@ -1,0 +1,17 @@
+{
+  "id": "6bd90f24",
+  "context": {
+    "description": "New Case",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "",
+  "goals": [],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "history": [],
+  "created": "2026-08-28T11:34:26.804089",
+  "updated": "2026-08-28T11:34:26.804134"
+}

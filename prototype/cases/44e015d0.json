@@ -1,0 +1,123 @@
+{
+  "id": "44e015d0",
+  "context": {
+    "description": "",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Interest confirmed. Programming seems interesting. Python was approachable.",
+  "goals": [
+    {
+      "id": "3840eb21",
+      "desired_direction": "I want to become a software developer",
+      "status": "ACTIVE",
+      "missions": [
+        "a97e8e50"
+      ],
+      "history": [],
+      "timestamp": "2026-08-28T11:05:20.389930"
+    }
+  ],
+  "missions": [
+    {
+      "id": "a97e8e50",
+      "name": "",
+      "goal_id": "3840eb21",
+      "purpose": "Explore the direction before committing to a larger transition.",
+      "description": "Take one small action to learn more about: I want to become a software developer",
+      "definition_of_done": [
+        "One concrete action taken",
+        "One observation recorded"
+      ],
+      "status": "COMPLETED",
+      "result": "Completed the exploration",
+      "observations": [
+        "ba6983ca"
+      ],
+      "timestamp": "2026-08-28T11:05:20.390162"
+    }
+  ],
+  "observations": [
+    {
+      "id": "ba6983ca",
+      "text": "Programming seems interesting. Python was approachable.",
+      "source": "participant",
+      "timestamp": "2026-08-28T11:05:20.390300",
+      "mission_id": "a97e8e50"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "b68712a2",
+      "decision_type": "ACCEPT",
+      "goal_id": "3840eb21",
+      "context": "Explore what 'I want to become a software developer' means concretely.",
+      "reason": null,
+      "timestamp": "2026-08-28T11:05:20.390142"
+    }
+  ],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The participant describes: I want to become a software developer"
+      },
+      "timestamp": "2026-08-28T11:05:20.389912"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "3840eb21",
+        "direction": "I want to become a software developer"
+      },
+      "timestamp": "2026-08-28T11:05:20.389933"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "3840eb21",
+        "context": "Explore what 'I want to become a software developer' means concretely."
+      },
+      "timestamp": "2026-08-28T11:05:20.390149"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "a97e8e50",
+        "goal_id": "3840eb21",
+        "purpose": "Explore the direction before committing to a larger transition."
+      },
+      "timestamp": "2026-08-28T11:05:20.390166"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "a97e8e50",
+        "result": "Completed the exploration"
+      },
+      "timestamp": "2026-08-28T11:05:20.390269"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "ba6983ca",
+        "text": "Programming seems interesting. Python was approachable.",
+        "mission_id": "a97e8e50"
+      },
+      "timestamp": "2026-08-28T11:05:20.390307"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The participant describes: I want to become a software developer",
+        "new": "Interest confirmed. Programming seems interesting. Python was approachable."
+      },
+      "timestamp": "2026-08-28T11:05:20.390311"
+    }
+  ],
+  "created": "2026-08-28T11:05:20.389878",
+  "updated": "2026-08-28T11:05:20.390311"
+}

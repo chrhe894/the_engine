@@ -23,7 +23,10 @@
         "17e1d799",
         "06ad04a2",
         "6b0120af",
-        "f58b712c"
+        "f58b712c",
+        "96448b70",
+        "1774db07",
+        "fb19a0fb"
       ],
       "history": [],
       "timestamp": "2026-08-26T14:17:28.591733"
@@ -262,6 +265,61 @@
       "result": null,
       "observations": [],
       "timestamp": "2026-08-26T14:58:03.255522"
+    },
+    {
+      "id": "96448b70",
+      "name": "Local Web Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "Validate a minimal browser-based interaction loop while preserving CaseFile continuity, independent goal lifecycles, and the existing participant decision boundary.",
+      "description": "Create a Python web entry point that loads or initializes the existing CaseFile, serves one HTML page, accepts goal-level or case-level observation submissions, requests a proposal for a selected goal, and processes ACCEPT, MODIFY with participant text, or REJECT. Run it locally through one two-goal interaction with interleaved observations and save the resulting CaseFile using the existing persistence mechanism.",
+      "definition_of_done": [
+        "A local Python command starts the web interface and renders the current goals, observations, and any pending proposal.",
+        "The page can record both goal-level and case-level observations and persist them.",
+        "The page can request a proposal for a selected goal without mutating stored state.",
+        "ACCEPT, MODIFY with participant text, and REJECT produce the existing decision semantics.",
+        "A manual or scripted two-goal interaction demonstrates interleaved observations and persistence after reload."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-28T10:23:24.211662"
+    },
+    {
+      "id": "1774db07",
+      "name": "Minimal Web Loop",
+      "goal_id": "ca6d4a30",
+      "purpose": "Demonstrate the existing CaseFile continuity and independent goal lifecycles through a minimal participant-facing web interaction without introducing production architecture.",
+      "description": "The COMPLETED can have an expandable list, and if Iclick to expand all completed will show otherwise it will be collapsed",
+      "definition_of_done": [
+        "A documented Python command starts the local web server and loads or initializes a CaseFile.",
+        "One page displays both goals, their relevant observations, and the pending proposal when one exists.",
+        "A submitted observation is stored with either a selected goal or case-level scope and survives a reload.",
+        "A proposal can be requested for a selected goal without mutating the stored CaseFile.",
+        "ACCEPT, MODIFY with participant text, and REJECT are handled using the existing decision boundary.",
+        "A local two-goal interaction with interleaved observations produces a saved CaseFile that preserves both goals and the resulting decision."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-28T10:49:49.984215"
+    },
+    {
+      "id": "fb19a0fb",
+      "name": "Minimal Case Page",
+      "goal_id": "ca6d4a30",
+      "purpose": "To establish a small participant-facing web loop that demonstrates continuity, independent goals, proposal decisions, persistence, and manageable mission-list presentation.",
+      "description": "Using Python's standard library unless an existing lightweight framework is already present, serve one local HTML page from the existing CaseFile. Display both goals and their current states, active missions, observations, and any pending proposal. Render completed missions collapsed by default with a control that expands or collapses the full completed list. Add forms for recording a goal-level or case-level observation, requesting a proposal for a selected goal, and deciding ACCEPT, MODIFY with participant text, or REJECT. Run the server locally and perform one two-goal interaction with interleaved observations, then save the CaseFile through the existing persistence mechanism.",
+      "definition_of_done": [
+        "A local Python command starts the web page and loads or initializes a CaseFile.",
+        "The page visibly renders both goals, their observations and states, the pending proposal when present, and completed missions collapsed by default with an expand control.",
+        "The page accepts goal-level and case-level observations and can request a proposal for a selected goal.",
+        "ACCEPT, MODIFY with participant text, and REJECT are handled without bypassing the existing proposal-decision boundary.",
+        "A local two-goal interaction with interleaved observations completes and the resulting CaseFile can be reloaded with both goals and their saved observations intact."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-08-28T10:50:49.956037"
     }
   ],
   "observations": [
@@ -412,6 +470,30 @@
       "context": "Inspect the current Python interfaces, then implement one local web page with a small set of actions: select or create a goal, add an observation, request an Engine proposal, and accept, modify, or reject that proposal. Keep the existing CLI and domain model unchanged where possible.",
       "reason": null,
       "timestamp": "2026-08-26T14:58:03.255450"
+    },
+    {
+      "id": "1c36cb1c",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Inspect the current Python entry points and persistence APIs, then implement a minimal local web server using the standard library unless an existing lightweight framework is already available. Render one case page with goals, observations, and the pending proposal, and add forms for recording observations, requesting a proposal, and deciding ACCEPT, MODIFY, or REJECT.",
+      "reason": null,
+      "timestamp": "2026-08-28T10:23:24.211602"
+    },
+    {
+      "id": "481e21d6",
+      "decision_type": "MODIFY",
+      "goal_id": "ca6d4a30",
+      "context": "The COMPLETED can have an expandable list, and if Iclick to expand all completed will show otherwise it will be collapsed",
+      "reason": null,
+      "timestamp": "2026-08-28T10:49:49.984125"
+    },
+    {
+      "id": "369cfc47",
+      "decision_type": "ACCEPT",
+      "goal_id": "ca6d4a30",
+      "context": "Inspect the current web entry point and persistence API, then implement or complete one minimal local page that renders goals, active missions, completed missions in a collapsed expandable section, observations, and a pending proposal. Keep the existing domain model and CLI unchanged.",
+      "reason": null,
+      "timestamp": "2026-08-28T10:50:49.955957"
     }
   ],
   "history": [
@@ -843,8 +925,62 @@
         "purpose": "Demonstrate the smallest participant-facing executable loop while preserving CaseFile continuity, independent goals, and the Engine-proposes/participant-decides boundary."
       },
       "timestamp": "2026-08-26T14:58:03.255539"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Inspect the current Python entry points and persistence APIs, then implement a minimal local web server using the standard library unless an existing lightweight framework is already available. Render one case page with goals, observations, and the pending proposal, and add forms for recording observations, requesting a proposal, and deciding ACCEPT, MODIFY, or REJECT."
+      },
+      "timestamp": "2026-08-28T10:23:24.211626"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "96448b70",
+        "goal_id": "ca6d4a30",
+        "purpose": "Validate a minimal browser-based interaction loop while preserving CaseFile continuity, independent goal lifecycles, and the existing participant decision boundary."
+      },
+      "timestamp": "2026-08-28T10:23:24.211677"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "MODIFY",
+        "goal_id": "ca6d4a30",
+        "context": "The COMPLETED can have an expandable list, and if Iclick to expand all completed will show otherwise it will be collapsed"
+      },
+      "timestamp": "2026-08-28T10:49:49.984161"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "1774db07",
+        "goal_id": "ca6d4a30",
+        "purpose": "Demonstrate the existing CaseFile continuity and independent goal lifecycles through a minimal participant-facing web interaction without introducing production architecture."
+      },
+      "timestamp": "2026-08-28T10:49:49.984234"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "ca6d4a30",
+        "context": "Inspect the current web entry point and persistence API, then implement or complete one minimal local page that renders goals, active missions, completed missions in a collapsed expandable section, observations, and a pending proposal. Keep the existing domain model and CLI unchanged."
+      },
+      "timestamp": "2026-08-28T10:50:49.955992"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "fb19a0fb",
+        "goal_id": "ca6d4a30",
+        "purpose": "To establish a small participant-facing web loop that demonstrates continuity, independent goals, proposal decisions, persistence, and manageable mission-list presentation."
+      },
+      "timestamp": "2026-08-28T10:50:49.956055"
     }
   ],
   "created": "2026-08-26T14:17:25.073504",
-  "updated": "2026-08-26T14:58:03.255539"
+  "updated": "2026-08-28T10:50:49.956055"
 }

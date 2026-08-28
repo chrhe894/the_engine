@@ -1,0 +1,96 @@
+{
+  "id": "b8664c75",
+  "context": {
+    "description": "Jag bygger en webbapplikation som ska hantera en generell förbättringsprocess.",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Mycket bra, men vi behöver en bra onboarding, något som bygger engagemang och kanske lite gamefication?",
+  "goals": [
+    {
+      "id": "a1331a22",
+      "desired_direction": "Bygg en första prototyp: Skapa en liten fungerande version där användaren kan registrera ett förbättringsområde, lägga till åtgärder och ändra status. Fokusera på kärnflödet i stället för flexibilitet och visualisering i första versionen.",
+      "status": "COMPLETED",
+      "missions": [],
+      "history": [
+        {
+          "event": "completed",
+          "timestamp": "2026-08-28T13:58:27.506748"
+        }
+      ],
+      "timestamp": "2026-08-28T11:51:49.037637"
+    },
+    {
+      "id": "f78eba7f",
+      "desired_direction": "Utveckla hur område definieras, själva onboardingen och hur man engagerar användaren att fortsätta, kanske nyttja gamefication-strukturer?",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-28T12:05:58.349623"
+    }
+  ],
+  "missions": [],
+  "observations": [
+    {
+      "id": "4f2155c1",
+      "text": "Mycket bra, men vi behöver en bra onboarding, något som bygger engagemang och kanske lite gamefication?",
+      "source": "participant",
+      "timestamp": "2026-08-28T12:04:11.526378",
+      "mission_id": null
+    }
+  ],
+  "decisions": [],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Användaren bygger en webbapplikation för att stödja eller hantera en generell förbättringsprocess."
+      },
+      "timestamp": "2026-08-28T11:46:12.333145"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "a1331a22",
+        "direction": "Bygg en första prototyp: Skapa en liten fungerande version där användaren kan registrera ett förbättringsområde, lägga till åtgärder och ändra status. Fokusera på kärnflödet i stället för flexibilitet och visualisering i första versionen."
+      },
+      "timestamp": "2026-08-28T11:51:49.037688"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "4f2155c1",
+        "text": "Mycket bra, men vi behöver en bra onboarding, något som bygger engagemang och kanske lite gamefication?",
+        "mission_id": null
+      },
+      "timestamp": "2026-08-28T12:04:11.526413"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "Användaren bygger en webbapplikation för att stödja eller hantera en generell förbättringsprocess.",
+        "new": "Mycket bra, men vi behöver en bra onboarding, något som bygger engagemang och kanske lite gamefication?"
+      },
+      "timestamp": "2026-08-28T12:04:11.526430"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "f78eba7f",
+        "direction": "Utveckla hur område definieras, själva onboardingen och hur man engagerar användaren att fortsätta, kanske nyttja gamefication-strukturer?"
+      },
+      "timestamp": "2026-08-28T12:05:58.349652"
+    },
+    {
+      "event": "goal_completed",
+      "data": {
+        "goal_id": "a1331a22"
+      },
+      "timestamp": "2026-08-28T13:58:27.506765"
+    }
+  ],
+  "created": "2026-08-28T11:45:00.929833",
+  "updated": "2026-08-28T13:58:27.506765"
+}

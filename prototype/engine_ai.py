@@ -56,8 +56,8 @@ def _load_api_key() -> Optional[str]:
 SYSTEM_PROMPT = """\
 You are the reasoning component of an Adaptive Navigation Engine.
 
-Your role: interpret the current Case File context and propose the next
-meaningful transition for the participant.
+Your role: interpret the current Case File context and propose meaningful
+next steps for the participant.
 
 CONSTRAINTS:
 - You must NEVER invent evidence or claim that a Mission has been completed.
@@ -68,7 +68,28 @@ CONSTRAINTS:
 - If previous observations exist, build on them rather than ignoring them.
 - The participant should not need to understand methodology or internal concepts.
 
-OUTPUT FORMAT (JSON):
+RESPONSE MODE:
+
+You will be asked to respond in one of two modes:
+
+MODE 1 — SUGGEST (when asked to suggest directions):
+Offer 2–4 possible next directions. Each should be distinct and concrete.
+
+OUTPUT FORMAT for SUGGEST mode (JSON):
+{
+  "interpretation": "Your understanding of the current situation",
+  "uncertainty": "What remains unclear",
+  "suggestions": [
+    {"id": "1", "title": "Short title (2-5 words)", "description": "What this direction involves and why it could be useful"},
+    {"id": "2", "title": "Short title", "description": "..."},
+    {"id": "3", "title": "Short title", "description": "..."}
+  ]
+}
+
+MODE 2 — PROPOSE (when asked to propose a specific mission):
+Produce one concrete, executable mission.
+
+OUTPUT FORMAT for PROPOSE mode (JSON):
 {
   "interpretation": "Your understanding of the current situation",
   "uncertainty": "What remains unclear or questionable",
@@ -217,6 +238,134 @@ Respond ONLY with the JSON object."""
             print(f"  [AIEngine] interpret_input failed: {e}")
             return self._fallback.interpret_input(case, user_text)
 
+    def generate_case_name(self, user_input: str, direction: str) -> str:
+        """
+        Generate a creative, memorable project name/slogan for the case.
+        Something personal, fun, and motivating — not corporate.
+        """
+        if not self._client:
+            return direction[:40]
+
+        try:
+            prompt = f"""A person just described what they want to work on:
+
+Input: "{user_input}"
+Chosen direction: "{direction}"
+
+Generate ONE creative, memorable project name or slogan for this journey.
+It should be personal, slightly playful, and motivating — like a name you'd
+give your own project. 2-5 words. Not corporate. Not generic.
+
+Examples of the style:
+- "Code Guru" (for learning programming)
+- "Trimmad som en lax" (for getting fit)
+- "Öland i mitt hjärta" (for developing a festival)
+
+Match the language of the input.
+
+Respond with ONLY the name, nothing else."""
+
+            response = self._client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": "You generate creative project names. Respond with only the name."},
+                    {"role": "user", "content": prompt},
+                ],
+                max_completion_tokens=50,
+            )
+            name = response.choices[0].message.content.strip().strip('"').strip("'")
+            return name
+        except Exception as e:
+            print(f"  [AIEngine] generate_case_name failed: {e}")
+            return direction[:40]
+
+    def suggest(self, case: CaseFile, goal: Goal) -> list:
+        """
+        Produce 2-4 suggestions for possible next directions.
+        Returns a list of dicts with 'id', 'title', 'description'.
+        Falls back to a single generic suggestion on failure.
+        """
+        if not self._client:
+            return [{"id": "1", "title": "Explore further",
+                     "description": f"Take one small step to learn more about: {goal.desired_direction}"}]
+
+        try:
+            context_message = _build_context_message(case, goal)
+            context_message += "\n\nRespond in SUGGEST mode. Offer 2-4 possible next directions."
+
+            response = self._client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": context_message},
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+            )
+
+            raw = response.choices[0].message.content.strip()
+            if raw.startswith("```"):
+                raw = raw.split("\n", 1)[1] if "\n" in raw else raw[3:]
+                if raw.endswith("```"):
+                    raw = raw[:-3]
+                raw = raw.strip()
+
+            result = json.loads(raw)
+            suggestions = result.get("suggestions", [])
+            if suggestions:
+                return suggestions
+        except Exception as e:
+            print(f"  [AIEngine] suggest failed: {e}")
+
+        return [{"id": "1", "title": "Explore further",
+                 "description": f"Take one small step to learn more about: {goal.desired_direction}"}]
+
+    def propose_for_selection(self, case: CaseFile, goal: Goal, selection: dict) -> Proposal:
+        """
+        Produce a concrete mission proposal for a specific selected direction.
+        """
+        if not self._client:
+            return self._fallback.propose(case, goal)
+
+        try:
+            context_message = _build_context_message(case, goal)
+            context_message += f"\n\nThe participant has selected this direction:\n"
+            context_message += f"  Title: {selection.get('title', '')}\n"
+            context_message += f"  Description: {selection.get('description', '')}\n"
+            context_message += f"\nRespond in PROPOSE mode. Create one concrete mission for this selected direction."
+
+            response = self._client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": context_message},
+                ],
+                max_completion_tokens=MAX_COMPLETION_TOKENS,
+            )
+
+            raw = response.choices[0].message.content.strip()
+            if raw.startswith("```"):
+                raw = raw.split("\n", 1)[1] if "\n" in raw else raw[3:]
+                if raw.endswith("```"):
+                    raw = raw[:-3]
+                raw = raw.strip()
+
+            result = json.loads(raw)
+
+            return Proposal(
+                goal_id=goal.id,
+                current=result.get("interpretation", ""),
+                desired=goal.desired_direction,
+                suggestion=result.get("suggestion", ""),
+                reason=result.get("reason", ""),
+                mission_name=result.get("mission_name", ""),
+                mission_description=result.get("mission_description", ""),
+                mission_purpose=result.get("mission_purpose", ""),
+                definition_of_done=result.get("definition_of_done", []),
+            )
+        except Exception as e:
+            print(f"  [AIEngine] propose_for_selection failed: {e}")
+            return self._fallback.propose(case, goal)
+
     def propose(self, case: CaseFile, goal: Goal) -> Proposal:
         """
         Produce a proposal using AI reasoning.
@@ -227,6 +376,7 @@ Respond ONLY with the JSON object."""
 
         try:
             context_message = _build_context_message(case, goal)
+            context_message += "\n\nRespond in PROPOSE mode. Create one concrete mission."
 
             response = self._client.chat.completions.create(
                 model=MODEL,

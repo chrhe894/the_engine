@@ -1,0 +1,26 @@
+{
+  "id": "b5e42858",
+  "context": {
+    "description": "I want to improve my neighbourhood",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "The neighbourhood has areas or aspects the user feels could be improved, though no specific issue has been identified.",
+  "goals": [],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The neighbourhood has areas or aspects the user feels could be improved, though no specific issue has been identified."
+      },
+      "timestamp": "2026-08-28T11:43:36.879381"
+    }
+  ],
+  "created": "2026-08-28T11:43:25.841431",
+  "updated": "2026-08-28T11:43:36.879381"
+}
