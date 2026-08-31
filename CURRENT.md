@@ -67,9 +67,15 @@ the_engine integration (spec: docs/spec/auth/engine-integration-v0.1.md):
     Verified: owner stamped, ownership isolation (user2 can't see/open user1's
     case), admin-only delete. Known limit: global `case` var = single-user only.
 
+Admin utilities in the_auth (used against the real shared DB):
+[x] scripts/set-password.js (hidden prompt, bcrypt, one account)
+[x] scripts/set-role.js (admin|user|demo_user, one account)
+[x] chrhe894 password set + role=admin; verified admin mode in the_engine
+    (sees all cases, "Ta bort" button works). Role is read at login, so
+    role changes require a re-login.
+
 Next:
-[ ] Step 3 — admin tools (templates for routes/challenges, clear cases)
-[ ] Give your account role=admin in the DB when you want to test admin mode
+[ ] Step 3 — admin tools (templates for routes/challenges, bulk clear cases)
 [ ] (If engine ever multi-user concurrent) move `case` off module global
 
 ---

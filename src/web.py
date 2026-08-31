@@ -295,8 +295,8 @@ CASES_HTML = """
         <a class="btn" href="/cases/open/{{ c.id }}">Öppna</a>
         {% if is_admin %}
         <form method="POST" action="/cases/delete/{{ c.id }}" style="display:inline"
-              onsubmit="return confirm('Radera detta case?');">
-          <button type="submit" style="background:#c33;">Radera</button>
+              onsubmit="return confirm('Ta bort detta case?');">
+          <button type="submit" style="background:#c33;">Ta bort</button>
         </form>
         {% endif %}
       </div>
