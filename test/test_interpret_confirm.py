@@ -14,6 +14,15 @@ Verifies:
 Does not depend on exact AI wording — uses structural assertions only.
 """
 
+import sys
+import os
+from pathlib import Path
+
+# Make src/ importable and run from prototype root
+_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(_ROOT / "src"))
+os.chdir(_ROOT)
+
 from case_file import (
     CaseFile, Goal,
     GOAL_ACTIVE,

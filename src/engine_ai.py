@@ -41,13 +41,17 @@ def _load_api_key() -> Optional[str]:
     key = os.environ.get("OPENAI_API_KEY")
     if key:
         return key
-    # Try .env file in prototype directory
-    env_path = Path(__file__).parent / ".env"
-    if env_path.exists():
-        for line in env_path.read_text().splitlines():
-            line = line.strip()
-            if line.startswith("OPENAI_API_KEY="):
-                return line.split("=", 1)[1].strip().strip('"').strip("'")
+    # Try .env file in prototype root (parent of src/) and current dir
+    candidates = [
+        Path(__file__).parent.parent / ".env",  # prototype/.env
+        Path.cwd() / ".env",                     # current working dir
+    ]
+    for env_path in candidates:
+        if env_path.exists():
+            for line in env_path.read_text().splitlines():
+                line = line.strip()
+                if line.startswith("OPENAI_API_KEY="):
+                    return line.split("=", 1)[1].strip().strip('"').strip("'")
     return None
 
 
@@ -153,6 +157,15 @@ def _build_context_message(case: CaseFile, goal: Goal) -> str:
         for o in goal_observations:
             parts.append(f"  - {o.text}")
 
+    # Free-standing participant observations (case-level notes, no mission).
+    # These are context to consider, not instructions. They should inform
+    # the proposal without dictating it.
+    free_observations = [o for o in case.observations if o.mission_id is None]
+    if free_observations:
+        parts.append(f"\nPARTICIPANT NOTES (consider these, but they do not dictate the next step):")
+        for o in free_observations[-5:]:  # last 5
+            parts.append(f"  - {o.text}")
+
     # Recent decisions
     goal_decisions = [d for d in case.decisions if d.goal_id == goal.id]
     if goal_decisions:
@@ -192,6 +205,16 @@ class AIEngine:
     def available(self) -> bool:
         """Whether the AI engine is available."""
         return self._client is not None
+
+    @property
+    def client(self):
+        """Expose the AI client so the Observer can share it."""
+        return self._client
+
+    @property
+    def model(self) -> str:
+        """Expose the model name."""
+        return MODEL
 
     def interpret_input(self, case: CaseFile, user_text: str) -> Interpretation:
         """
@@ -240,11 +263,11 @@ Respond ONLY with the JSON object."""
 
     def generate_case_name(self, user_input: str, direction: str) -> str:
         """
-        Generate a creative, memorable project name/slogan for the case.
-        Something personal, fun, and motivating — not corporate.
+        Generate 3-4 creative, memorable project name suggestions.
+        Returns a list of strings. Personal, fun, motivating — not corporate.
         """
         if not self._client:
-            return direction[:40]
+            return [direction[:40]]
 
         try:
             prompt = f"""A person just described what they want to work on:
@@ -252,32 +275,32 @@ Respond ONLY with the JSON object."""
 Input: "{user_input}"
 Chosen direction: "{direction}"
 
-Generate ONE creative, memorable project name or slogan for this journey.
-It should be personal, slightly playful, and motivating — like a name you'd
-give your own project. 2-5 words. Not corporate. Not generic.
+Generate 4 creative, memorable project names or slogans for this journey.
+Personal, slightly playful, motivating. 2-5 words each. Not corporate.
 
 Examples of the style:
-- "Code Guru" (for learning programming)
-- "Trimmad som en lax" (for getting fit)
-- "Öland i mitt hjärta" (for developing a festival)
+- "Code Guru", "Trimmad som en lax", "Öland i mitt hjärta"
 
 Match the language of the input.
 
-Respond with ONLY the name, nothing else."""
+Respond as a JSON array of strings only, e.g. ["Namn 1", "Namn 2", "Namn 3", "Namn 4"]"""
 
             response = self._client.chat.completions.create(
                 model=MODEL,
                 messages=[
-                    {"role": "system", "content": "You generate creative project names. Respond with only the name."},
+                    {"role": "system", "content": "You generate creative project names. Respond only with a JSON array of strings."},
                     {"role": "user", "content": prompt},
                 ],
-                max_completion_tokens=50,
+                max_completion_tokens=120,
             )
-            name = response.choices[0].message.content.strip().strip('"').strip("'")
-            return name
+            raw = response.choices[0].message.content.strip()
+            if raw.startswith("```"):
+                raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+            names = json.loads(raw)
+            return [n.strip().strip('"') for n in names if n.strip()][:4] or [direction[:40]]
         except Exception as e:
             print(f"  [AIEngine] generate_case_name failed: {e}")
-            return direction[:40]
+            return [direction[:40]]
 
     def suggest(self, case: CaseFile, goal: Goal) -> list:
         """

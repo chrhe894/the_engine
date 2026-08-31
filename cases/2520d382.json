@@ -1,0 +1,19 @@
+{
+  "id": "2520d382",
+  "context": {
+    "description": "",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "",
+  "goals": [],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [],
+  "created": "2026-08-29T12:26:18.082608",
+  "updated": "2026-08-29T12:26:18.082629"
+}

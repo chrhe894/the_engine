@@ -89,6 +89,27 @@ class Decision:
 
 
 @dataclass
+class ObserverEventRecord:
+    """
+    A persisted Observer event. An Engine observation (about reasoning),
+    distinct from a participant Observation (about reality).
+
+    Records what the Observer noticed, which character spoke, and the
+    participant's reaction (if any). The Observer never changes Case File
+    state on its own — only the participant's decision does that.
+    """
+    id: str = field(default_factory=lambda: str(uuid.uuid4())[:8])
+    goal_id: Optional[str] = None
+    character: str = ""          # character id
+    character_name: str = ""     # display name
+    type: str = "observation"    # observation | challenge | provocation
+    reason: str = ""             # why the Observer spoke up
+    content: str = ""            # what the Observer said
+    participant_reaction: Optional[str] = None  # free text or decision, if any
+    timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
+
+
+@dataclass
 class CaseFile:
     """
     The persistent, evolving representation of a situation
@@ -106,6 +127,7 @@ class CaseFile:
     missions: list = field(default_factory=list)  # list of Mission
     observations: list = field(default_factory=list)  # list of Observation
     decisions: list = field(default_factory=list)  # list of Decision
+    observer_events: list = field(default_factory=list)  # list of ObserverEventRecord
     pending_proposals: dict = field(default_factory=dict)  # goal_id -> proposal dict
     history: list = field(default_factory=list)  # chronological event log
     created: str = field(default_factory=lambda: datetime.now().isoformat())
@@ -238,6 +260,42 @@ class CaseFile:
         })
         return decision
 
+    # --- Observer operations ---
+
+    def record_observer_event(self, goal_id: str, character: str,
+                              character_name: str, event_type: str,
+                              reason: str, content: str) -> "ObserverEventRecord":
+        """
+        Record an Observer event. This is an Engine observation about the
+        reasoning process, not a participant observation about reality.
+        It does not change any goal, mission, or situation state.
+        """
+        event = ObserverEventRecord(
+            goal_id=goal_id,
+            character=character,
+            character_name=character_name,
+            type=event_type,
+            reason=reason,
+            content=content,
+        )
+        self.observer_events.append(event)
+        self._log("observer_event", {
+            "goal_id": goal_id,
+            "character": character,
+            "type": event_type,
+            "reason": reason,
+        })
+        return event
+
+    def record_observer_reaction(self, event_id: str, reaction: str):
+        """Record how the participant reacted to an Observer event."""
+        for e in self.observer_events:
+            if e.id == event_id:
+                e.participant_reaction = reaction
+                self._log("observer_reaction", {"event_id": event_id, "reaction": reaction})
+                return e
+        return None
+
     # --- Situation update ---
 
     def update_situation(self, new_situation: str):
@@ -285,6 +343,7 @@ class CaseFile:
             "missions": [asdict(m) for m in self.missions],
             "observations": [asdict(o) for o in self.observations],
             "decisions": [asdict(d) for d in self.decisions],
+            "observer_events": [asdict(e) for e in self.observer_events],
             "pending_proposals": self.pending_proposals,
             "history": self.history,
             "created": self.created,
@@ -302,6 +361,7 @@ class CaseFile:
         cf.missions = [Mission(**m) for m in data.get("missions", [])]
         cf.observations = [Observation(**o) for o in data.get("observations", [])]
         cf.decisions = [Decision(**d) for d in data.get("decisions", [])]
+        cf.observer_events = [ObserverEventRecord(**e) for e in data.get("observer_events", [])]
         cf.pending_proposals = data.get("pending_proposals", {})
         cf.history = data.get("history", [])
         cf.created = data.get("created", "")

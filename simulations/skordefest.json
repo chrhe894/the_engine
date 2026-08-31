@@ -1,0 +1,16 @@
+{
+  "scenario": "scenarios/skordefest.json",
+  "description": "Progressive simulation: festival organisation exploring youth participation",
+  "turns": [
+    {
+      "type": "mission_result",
+      "result": "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling.",
+      "observation": "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival."
+    },
+    {
+      "type": "mission_result",
+      "result": "Ran a follow-up co-design session with eight young people.",
+      "observation": "The group wanted to lead the activity themselves rather than assist adults. They proposed a storytelling route using local landmarks. Two wanted to be paid guides."
+    }
+  ]
+}

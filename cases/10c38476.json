@@ -1,0 +1,93 @@
+{
+  "id": "10c38476",
+  "context": {
+    "description": "Projekt X",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Användaren uttrycker en önskan att lära sig programmering och utvecklas mot att bli programmerare.",
+  "goals": [
+    {
+      "id": "fe8c7266",
+      "desired_direction": "Kartlägg dina intressen: Jämför områden som webbutveckling, appar, spel, dataanalys och automation. Välj det område som känns mest motiverande att prova först.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:49:31.406393"
+    },
+    {
+      "id": "58ed8d4f",
+      "desired_direction": "Prova Python: Gör en kort nybörjarövning i Python för att få en konkret känsla för programmering. Python är lätt att börja med och användbart inom flera områden.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:49:31.406407"
+    },
+    {
+      "id": "1181a4ea",
+      "desired_direction": "Bygg ett miniprojekt: Skapa något litet, till exempel en kalkylator, att-göra-lista eller enkel textbaserad applikation. Det ger praktisk erfarenhet och visar vad du behöver lära dig härnäst.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:49:31.406413"
+    },
+    {
+      "id": "9f20d649",
+      "desired_direction": "Skapa en lärplan: Bestäm en regelbunden studietid, välj en utbildningsresurs och dela upp de första veckorna i grunder, övningar och ett litet projekt.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:49:31.406417"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Användaren uttrycker en önskan att lära sig programmering och utvecklas mot att bli programmerare."
+      },
+      "timestamp": "2026-08-29T20:49:24.644051"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "fe8c7266",
+        "direction": "Kartlägg dina intressen: Jämför områden som webbutveckling, appar, spel, dataanalys och automation. Välj det område som känns mest motiverande att prova först."
+      },
+      "timestamp": "2026-08-29T20:49:31.406401"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "58ed8d4f",
+        "direction": "Prova Python: Gör en kort nybörjarövning i Python för att få en konkret känsla för programmering. Python är lätt att börja med och användbart inom flera områden."
+      },
+      "timestamp": "2026-08-29T20:49:31.406409"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "1181a4ea",
+        "direction": "Bygg ett miniprojekt: Skapa något litet, till exempel en kalkylator, att-göra-lista eller enkel textbaserad applikation. Det ger praktisk erfarenhet och visar vad du behöver lära dig härnäst."
+      },
+      "timestamp": "2026-08-29T20:49:31.406414"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "9f20d649",
+        "direction": "Skapa en lärplan: Bestäm en regelbunden studietid, välj en utbildningsresurs och dela upp de första veckorna i grunder, övningar och ett litet projekt."
+      },
+      "timestamp": "2026-08-29T20:49:31.406418"
+    }
+  ],
+  "created": "2026-08-29T20:49:21.498532",
+  "updated": "2026-08-29T20:49:31.406418"
+}

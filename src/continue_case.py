@@ -16,6 +16,8 @@ Flow:
 7. Save the updated case file.
 """
 
+import _bootstrap  # noqa: F401
+
 import json
 import sys
 from pathlib import Path

@@ -1,0 +1,57 @@
+{
+  "id": "512ff974",
+  "context": {
+    "description": "Historiejakt i centrum",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Du har en idé om att skapa en tävlingspromenad i centrala Linköping där deltagarna navigerar mellan torg och korsningar och identifierar platser utifrån gamla fotografier.",
+  "goals": [
+    {
+      "id": "5344dcca",
+      "desired_direction": "Välj historiska bilder: Samla 8–12 gamla fotografier från Linköpings centrala delar och koppla varje bild till en möjlig plats. Bedöm om detaljer som byggnader, skyltar, gatulinjer eller landmärken fortfarande går att identifiera.",
+      "status": "COMPLETED",
+      "missions": [],
+      "history": [
+        {
+          "event": "completed",
+          "timestamp": "2026-08-29T20:40:13.137883"
+        }
+      ],
+      "timestamp": "2026-08-29T20:39:59.126036"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Du har en idé om att skapa en tävlingspromenad i centrala Linköping där deltagarna navigerar mellan torg och korsningar och identifierar platser utifrån gamla fotografier."
+      },
+      "timestamp": "2026-08-29T20:39:13.884277"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "5344dcca",
+        "direction": "Välj historiska bilder: Samla 8–12 gamla fotografier från Linköpings centrala delar och koppla varje bild till en möjlig plats. Bedöm om detaljer som byggnader, skyltar, gatulinjer eller landmärken fortfarande går att identifiera."
+      },
+      "timestamp": "2026-08-29T20:39:59.126048"
+    },
+    {
+      "event": "goal_completed",
+      "data": {
+        "goal_id": "5344dcca"
+      },
+      "timestamp": "2026-08-29T20:40:13.137893"
+    }
+  ],
+  "created": "2026-08-29T20:37:04.417823",
+  "updated": "2026-08-29T20:40:13.137893"
+}

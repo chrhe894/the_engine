@@ -1,0 +1,7 @@
+{
+  "name": "Development of the Adaptive Navigation Engine",
+  "opening_question": "What are we working on right now?",
+  "time_scope": "ongoing",
+  "geographic_scope": null,
+  "initial_input": "We want to build a working prototype that tests whether our adaptive loop model is correct — and discover where it breaks."
+}

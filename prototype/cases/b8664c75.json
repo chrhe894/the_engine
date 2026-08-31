@@ -41,6 +41,7 @@
     }
   ],
   "decisions": [],
+  "pending_proposals": {},
   "history": [
     {
       "event": "situation_updated",

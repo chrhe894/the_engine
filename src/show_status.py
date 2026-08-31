@@ -6,6 +6,8 @@ Usage:
     python show_status.py                        # shows all cases with active missions
 """
 
+import _bootstrap  # noqa: F401
+
 import json
 import sys
 from pathlib import Path

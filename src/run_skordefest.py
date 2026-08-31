@@ -1,42 +1,25 @@
 """
-Run a scenario through the Engine v0.2 (AI-assisted).
+Skördefesten case --- run through the v0.1 prototype.
 
-Usage:
-    python run_scenario.py                          # default: scenarios/skordefest.json
-    python run_scenario.py scenarios/income.json    # any scenario file
+This script exercises the prototype with the Skördefesten / Södra Öland
+golden case, simulating the participant's decisions non-interactively.
 
-Requires: OPENAI_API_KEY in environment or .env file.
-Falls back to rule-based engine if unavailable.
+It demonstrates the full loop:
+    Context → Input → Interpretation → Proposal → Decision →
+    Mission → Result/Observation → Updated Case → Next Proposal
+
+And multiple goals with independent lifecycles.
 """
 
-import json
-import sys
-from pathlib import Path
+import _bootstrap  # noqa: F401
 
 from case_file import (
     CaseFile,
     GOAL_ACTIVE, GOAL_ABANDONED,
     DECISION_ACCEPT, DECISION_MODIFY, DECISION_GIVE_UP,
 )
-from engine_ai import AIEngine
+from engine import Engine
 
-
-# --- Scenario loading ---
-
-DEFAULT_SCENARIO = Path(__file__).parent / "scenarios" / "skordefest.json"
-
-
-def load_scenario(filepath: str = None) -> dict:
-    """Load scenario configuration from a JSON file."""
-    path = Path(filepath) if filepath else DEFAULT_SCENARIO
-    if not path.exists():
-        print(f"  ERROR: Scenario file not found: {path}")
-        sys.exit(1)
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-# --- Display helpers ---
 
 def separator(title=""):
     if title:
@@ -48,44 +31,29 @@ def separator(title=""):
 
 
 def main():
-    # Load scenario configuration
-    scenario_path = sys.argv[1] if len(sys.argv) > 1 else None
-    scenario = load_scenario(scenario_path)
+    separator("SKÖRDEFESTEN / SÖDRA ÖLAND — GOLDEN CASE")
 
-    scenario_name = scenario["name"]
-    separator(f"{scenario_name.upper()} v0.2 — AI-ASSISTED ENGINE")
-
-    engine = AIEngine()
-
-    if engine.available:
-        print(f"\n  Engine: AI (gpt-5.6-luna)")
-    else:
-        print(f"\n  Engine: FALLBACK (rule-based, no API key)")
-        print(f"  Set OPENAI_API_KEY to run with AI reasoning.")
-
-    # ─────────────────────────────────────────────────────────────────
-    # Setup: context from scenario configuration
-    # ─────────────────────────────────────────────────────────────────
+    engine = Engine()
     case = CaseFile()
     case.context = {
-        "description": scenario["name"],
-        "opening_question": scenario["opening_question"],
-        "time_scope": scenario.get("time_scope", "ongoing"),
-        "geographic_scope": scenario.get("geographic_scope"),
+        "description": "Skördefesten / Södra Öland",
+        "opening_question": "What would make Södra Öland an even better place to live, work and visit?",
+        "time_scope": "2026-09 to 2026-10",
+        "geographic_scope": "Södra Öland",
     }
 
     print(f"\n  Case ID: {case.id}")
     print(f"  Context: {case.context['description']}")
     print(f"  Time: {case.context['time_scope']}")
     print(f"  Geography: {case.context['geographic_scope']}")
-    print(f"  Opening question: {case.context['opening_question']}")
+    print(f"\n  Opening question: {case.context['opening_question']}")
 
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 1: Initial input from scenario configuration
+    # PHASE 1: Initial input
     # ─────────────────────────────────────────────────────────────────
     separator("PHASE 1: Initial Input")
 
-    user_input = scenario["initial_input"]
+    user_input = "We want more young people to become involved in the festival"
     print(f"\n  Participant: \"{user_input}\"")
 
     interpretation = engine.interpret_input(case, user_input)
@@ -96,6 +64,7 @@ def main():
     print(f"    Direction:   {interpretation.possible_direction}")
     print(f"    Uncertainty: {interpretation.uncertainty}")
 
+    # Create first goal
     goal_youth = case.add_goal(desired_direction="Increase meaningful youth participation in the festival")
     print(f"\n  Goal created: {goal_youth.desired_direction}")
     print(f"    ID: {goal_youth.id}")
@@ -103,10 +72,8 @@ def main():
 
     # ─────────────────────────────────────────────────────────────────
     # PHASE 2: First proposal
-    # In v0.1 this was "Explore what X means concretely" — generic.
-    # In v0.2 the AI should produce something more specific.
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 2: First Proposal (AI vs baseline)")
+    separator("PHASE 2: First Proposal")
 
     proposal_1 = engine.propose(case, goal_youth)
     print(f"\n  ENGINE PROPOSAL:")
@@ -115,26 +82,48 @@ def main():
     print(f"    Suggestion: {proposal_1.suggestion}")
     print(f"    Reason:     {proposal_1.reason}")
     print(f"    Mission:    {proposal_1.mission_description}")
-    print(f"    Purpose:    {proposal_1.mission_purpose}")
     print(f"    Done when:  {proposal_1.definition_of_done}")
 
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 3: Decision — ACCEPT directly
-    # In v0.1 the participant had to MODIFY the generic proposal.
-    # In v0.2 we test whether the AI proposal is good enough to accept
-    # without modification. This is the A/B comparison point.
+    # PHASE 3: Decision — MODIFY
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 3: Decision — ACCEPT (no MODIFY needed?)")
+    separator("PHASE 3: Decision — MODIFY")
 
-    print(f"\n  [A/B COMPARISON POINT]")
-    print(f"  v0.1 required MODIFY to make the proposal useful.")
-    print(f"  v0.2 tests whether the AI proposal is directly acceptable.")
+    print(f"\n  Participant decides: MODIFY")
+    print(f"  Modification: \"Young people should help design the activity, not just participate.\"")
+
+    case.record_decision(
+        DECISION_MODIFY,
+        goal_id=goal_youth.id,
+        context=proposal_1.suggestion,
+        reason="Young people should help design the activity, not just participate.",
+    )
+
+    # Update proposal with modification
+    proposal_1.mission_description = "Co-design one small festival activity together with young people"
+    proposal_1.mission_purpose = "Let young people shape the activity rather than only attend"
+    proposal_1.definition_of_done = [
+        "Young participants involved in design",
+        "One pilot activity defined",
+        "Pilot tested",
+        "Observations recorded",
+    ]
+
+    print(f"\n  Updated proposal:")
+    print(f"    Mission: {proposal_1.mission_description}")
+    print(f"    Done when: {proposal_1.definition_of_done}")
+
+    # ─────────────────────────────────────────────────────────────────
+    # PHASE 4: Decision — ACCEPT modified proposal
+    # ─────────────────────────────────────────────────────────────────
+    separator("PHASE 4: Decision — ACCEPT")
+
     print(f"\n  Participant decides: ACCEPT")
 
     case.record_decision(
         DECISION_ACCEPT,
         goal_id=goal_youth.id,
-        context=proposal_1.suggestion,
+        context=proposal_1.mission_description,
     )
 
     mission_1 = case.add_mission(
@@ -151,12 +140,11 @@ def main():
     print(f"    Done when: {mission_1.definition_of_done}")
 
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 4: Mission result (same simulated result as v0.1)
-    # The participant provides this — never the AI.
+    # PHASE 5: Mission result and observation
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 4: Mission Result (participant provides)")
+    separator("PHASE 5: Mission Result")
 
-    print(f"\n  [Simulating: the mission was executed]")
+    print(f"\n  [Simulating: the pilot activity was run]")
 
     result_text = "Pilot completed. Five young people co-designed a guided night walk combining local nature and storytelling."
     observation_text = "Young people were highly engaged when they had creative control. The proposed evening time worked well. Three participants said they would return for the festival."
@@ -174,26 +162,32 @@ def main():
     print(f"\n  Updated situation: {case.current_situation}")
 
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 5: Next proposal (CONTINUITY TEST)
-    # v0.1 quoted the observation verbatim.
-    # v0.2 should reason about what it means and propose accordingly.
+    # PHASE 6: Next proposal (CONTINUITY TEST)
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 5: Next Proposal (Continuity — AI reasoning)")
+    separator("PHASE 6: Next Proposal (Continuity Test)")
 
     proposal_2 = engine.propose(case, goal_youth)
-    print(f"\n  ENGINE PROPOSAL (after observation):")
+    print(f"\n  ENGINE PROPOSAL (based on previous observation):")
     print(f"    Current:    {proposal_2.current}")
     print(f"    Desired:    {proposal_2.desired}")
     print(f"    Suggestion: {proposal_2.suggestion}")
     print(f"    Reason:     {proposal_2.reason}")
     print(f"    Mission:    {proposal_2.mission_description}")
-    print(f"    Purpose:    {proposal_2.mission_purpose}")
     print(f"    Done when:  {proposal_2.definition_of_done}")
 
+    # Verify continuity
+    contains_obs = (
+        "highly engaged" in proposal_2.suggestion or
+        "highly engaged" in proposal_2.mission_description or
+        observation_text[:30] in proposal_2.suggestion or
+        observation_text[:30] in proposal_2.mission_description
+    )
+    print(f"\n  Continuity check: proposal references previous observation? {contains_obs}")
+
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 6: Add more goals + GIVE UP (same as v0.1)
+    # PHASE 7: Add two more goals
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 6: Multiple Goals")
+    separator("PHASE 7: Multiple Goals")
 
     goal_business = case.add_goal(desired_direction="Strengthen cooperation between local businesses during the festival")
     goal_transport = case.add_goal(desired_direction="Improve evening transport options for visitors")
@@ -202,21 +196,10 @@ def main():
     for g in case.goals:
         print(f"    [{g.status}] {g.desired_direction} (id: {g.id})")
 
-    # Get a proposal for the business goal (tests multi-goal context)
-    separator("PHASE 6b: Proposal for business goal")
-
-    proposal_biz = engine.propose(case, goal_business)
-    print(f"\n  ENGINE PROPOSAL (business cooperation):")
-    print(f"    Current:    {proposal_biz.current}")
-    print(f"    Suggestion: {proposal_biz.suggestion}")
-    print(f"    Reason:     {proposal_biz.reason}")
-    print(f"    Mission:    {proposal_biz.mission_description}")
-    print(f"    Done when:  {proposal_biz.definition_of_done}")
-
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 7: GIVE UP on transport goal (same as v0.1)
+    # PHASE 8: GIVE UP on transport goal
     # ─────────────────────────────────────────────────────────────────
-    separator("PHASE 7: GIVE UP on transport goal")
+    separator("PHASE 8: GIVE UP on transport goal")
 
     print(f"\n  Participant decides: GIVE UP on \"{goal_transport.desired_direction}\"")
     print(f"  Reason: \"Municipality won't fund evening buses this year.\"")
@@ -228,6 +211,7 @@ def main():
         reason="Municipality won't fund evening buses this year.",
     )
 
+    # Reassessment
     reassessment = engine.propose_after_give_up(case, goal_transport)
     print(f"\n  Engine reassessment:")
     print(f"    Message: {reassessment['message']}")
@@ -235,11 +219,43 @@ def main():
     for opt in reassessment['options']:
         print(f"      • {opt['label']}")
 
+    # Participant chooses: done
     print(f"\n  Participant chooses: \"I'm done.\"")
     case.abandon_goal(goal_transport.id, reason="Municipality won't fund evening buses this year.")
 
     # ─────────────────────────────────────────────────────────────────
-    # PHASE 8: Final state
+    # PHASE 9: Verify goal independence
+    # ─────────────────────────────────────────────────────────────────
+    separator("PHASE 9: Verify Goal Independence")
+
+    print(f"\n  All goals:")
+    for g in case.goals:
+        marker = {"ACTIVE": "●", "COMPLETED": "✓", "ABANDONED": "✗"}[g.status]
+        print(f"    {marker} [{g.status}] {g.desired_direction}")
+
+    print(f"\n  Active goals: {len(case.active_goals())}")
+    assert goal_youth.status == GOAL_ACTIVE
+    assert goal_business.status == GOAL_ACTIVE
+    assert goal_transport.status == GOAL_ABANDONED
+    print(f"  Youth goal: {goal_youth.status} ✓")
+    print(f"  Business goal: {goal_business.status} ✓")
+    print(f"  Transport goal: {goal_transport.status} ✓")
+
+    # Youth goal history is intact
+    youth_missions = [m for m in case.missions if m.goal_id == goal_youth.id]
+    youth_observations = [o for o in case.observations if o.mission_id in [m.id for m in youth_missions]]
+    print(f"\n  Youth goal history:")
+    print(f"    Missions: {len(youth_missions)}")
+    print(f"    Observations: {len(youth_observations)}")
+    print(f"    Latest observation: {youth_observations[-1].text[:80]}...")
+
+    # Business goal can still receive proposals
+    proposal_biz = engine.propose(case, goal_business)
+    print(f"\n  Business goal can still get proposals:")
+    print(f"    Suggestion: {proposal_biz.suggestion}")
+
+    # ─────────────────────────────────────────────────────────────────
+    # PHASE 10: Final case summary
     # ─────────────────────────────────────────────────────────────────
     separator("FINAL CASE FILE STATE")
 
@@ -261,10 +277,7 @@ def main():
 
     print(f"\n  Decisions ({len(case.decisions)}):")
     for d in case.decisions:
-        line = f"    [{d.decision_type}] {d.context[:60]}"
-        if d.reason:
-            line += f" — {d.reason[:40]}"
-        print(line)
+        print(f"    [{d.decision_type}] {d.context[:60]}")
 
     print(f"\n  History events: {len(case.history)}")
 
@@ -272,29 +285,7 @@ def main():
     filepath = case.save(directory="cases")
     print(f"\n  Saved to: {filepath}")
 
-    # ─────────────────────────────────────────────────────────────────
-    # A/B COMPARISON SUMMARY
-    # ─────────────────────────────────────────────────────────────────
-    separator("A/B COMPARISON SUMMARY")
-
-    print(f"""
-  v0.1 (rule-based):
-    First proposal: "Explore what X means concretely."
-    Required MODIFY: Yes — participant had to rewrite the mission.
-    Continuity: Quoted observation verbatim.
-    Business goal: "Explore what X means concretely." (same template)
-
-  v0.2 (AI-assisted):
-    First proposal: {proposal_1.suggestion[:70]}...
-    Required MODIFY: Not tested (accepted directly for comparison)
-    Continuity: {proposal_2.suggestion[:70]}...
-    Business goal: {proposal_biz.suggestion[:70]}...
-
-  Goal independence: {"VERIFIED" if goal_youth.status == GOAL_ACTIVE and goal_transport.status == GOAL_ABANDONED else "FAILED"}
-  AI fabrication check: Mission completion provided by participant only.
-""")
-
-    separator(f"{scenario_name.upper()} v0.2 COMPLETE")
+    separator("SKÖRDEFESTEN CASE COMPLETE")
 
 
 if __name__ == "__main__":

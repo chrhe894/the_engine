@@ -1,0 +1,105 @@
+{
+  "id": "6d41beab",
+  "context": {
+    "description": "Linköping då och nu",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Användaren planerar en utmanande stadspromenad i centrala Linköping där deltagarna ska identifiera 10 platser genom att jämföra 10 gamla fotografier med dagens miljö.",
+  "goals": [
+    {
+      "id": "586eb06d",
+      "desired_direction": "Välj tio platser: Ta fram en första lista över 10 centrala platser i Linköping som har tydliga historiska förändringar och som ligger inom en rimlig promenadrutt.",
+      "status": "COMPLETED",
+      "missions": [],
+      "history": [
+        {
+          "event": "completed",
+          "timestamp": "2026-08-29T21:20:17.483273"
+        }
+      ],
+      "timestamp": "2026-08-29T21:20:00.583055"
+    },
+    {
+      "id": "c62be744",
+      "desired_direction": "Bygg fotounderlag: Samla och granska historiska fotografier för de tänkta platserna. Notera fotografiets ungefärliga perspektiv, motiv och vilka detaljer deltagarna kan använda för identifiering.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T21:20:00.583117"
+    },
+    {
+      "id": "b495b00d",
+      "desired_direction": "Skapa rutt och ledtrådar: Planera ordningen mellan platserna och skriv en första ledtråd eller fråga till varje stopp, med fokus på att göra promenaden utmanande men möjlig att lösa.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T21:20:00.583147"
+    },
+    {
+      "id": "10fdfe45",
+      "desired_direction": "Gör ett pilottest: Sätt ihop en enkel testversion med några fotografier och låt en person prova den. Använd resultatet för att bedöma svårighetsgrad, tydlighet, tidsåtgång och behovet av facit.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T21:20:00.583208"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Användaren planerar en utmanande stadspromenad i centrala Linköping där deltagarna ska identifiera 10 platser genom att jämföra 10 gamla fotografier med dagens miljö."
+      },
+      "timestamp": "2026-08-29T21:19:39.782890"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "586eb06d",
+        "direction": "Välj tio platser: Ta fram en första lista över 10 centrala platser i Linköping som har tydliga historiska förändringar och som ligger inom en rimlig promenadrutt."
+      },
+      "timestamp": "2026-08-29T21:20:00.583083"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "c62be744",
+        "direction": "Bygg fotounderlag: Samla och granska historiska fotografier för de tänkta platserna. Notera fotografiets ungefärliga perspektiv, motiv och vilka detaljer deltagarna kan använda för identifiering."
+      },
+      "timestamp": "2026-08-29T21:20:00.583126"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "b495b00d",
+        "direction": "Skapa rutt och ledtrådar: Planera ordningen mellan platserna och skriv en första ledtråd eller fråga till varje stopp, med fokus på att göra promenaden utmanande men möjlig att lösa."
+      },
+      "timestamp": "2026-08-29T21:20:00.583153"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "10fdfe45",
+        "direction": "Gör ett pilottest: Sätt ihop en enkel testversion med några fotografier och låt en person prova den. Använd resultatet för att bedöma svårighetsgrad, tydlighet, tidsåtgång och behovet av facit."
+      },
+      "timestamp": "2026-08-29T21:20:00.583215"
+    },
+    {
+      "event": "goal_completed",
+      "data": {
+        "goal_id": "586eb06d"
+      },
+      "timestamp": "2026-08-29T21:20:17.483283"
+    }
+  ],
+  "created": "2026-08-29T21:18:07.218367",
+  "updated": "2026-08-29T21:20:17.483283"
+}

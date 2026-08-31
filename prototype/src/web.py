@@ -9,11 +9,22 @@ Usage:
 Opens at http://localhost:5000
 """
 
+import _bootstrap  # noqa: F401  (path + cwd setup)
+
 import json
+import os
 import sys
+from functools import wraps
 from pathlib import Path
 
-from flask import Flask, render_template_string, request, redirect, url_for
+from dotenv import load_dotenv
+from flask import (
+    Flask, render_template_string, request, redirect, url_for, session
+)
+
+import auth_client
+
+load_dotenv()
 
 from case_file import (
     CaseFile, Goal,
@@ -23,9 +34,13 @@ from case_file import (
     MISSION_ACTIVE, MISSION_COMPLETED,
 )
 from engine_ai import AIEngine
+from observer import Observer
 
 app = Flask(__name__)
+# Secret for signing the Flask session cookie (holds the auth token + user).
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-insecure-flask-secret")
 engine = AIEngine()
+observer = Observer(client=engine.client, model=engine.model)
 case: CaseFile = None
 case_filepath: str = None
 
@@ -57,6 +72,66 @@ def save_case():
     global case_filepath
     filepath = case.save(directory="cases")
     case_filepath = str(filepath)
+
+
+# --- Case ownership & listing ---
+
+CASES_DIR = Path("cases")
+
+
+def _read_case_meta(path):
+    """Return (id, owner_id, description, updated) for a case file, or None."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    return {
+        "id": data.get("id", path.stem),
+        "owner_id": data.get("owner_id"),
+        "description": data.get("context", {}).get("description", "") or "(namnlöst)",
+        "updated": data.get("updated", ""),
+        "path": str(path),
+    }
+
+
+def list_cases_for(user):
+    """List case metadata visible to this user. Admin sees all; a user sees
+    their own cases plus legacy unowned cases (owner_id is None)."""
+    if not CASES_DIR.exists():
+        return []
+    is_admin = user.get("role") == "admin"
+    uid = user.get("id")
+    metas = []
+    for f in sorted(CASES_DIR.glob("*.json")):
+        meta = _read_case_meta(f)
+        if not meta:
+            continue
+        if is_admin or meta["owner_id"] == uid or meta["owner_id"] is None:
+            metas.append(meta)
+    metas.sort(key=lambda m: m["updated"], reverse=True)
+    return metas
+
+
+def can_access_case(user, meta):
+    """True if the user may open/modify the given case."""
+    if user.get("role") == "admin":
+        return True
+    return meta["owner_id"] in (user.get("id"), None)
+
+
+def load_selected_case():
+    """Load the case named in the session into the global `case`.
+    Returns True if a case is loaded, False if none selected/found."""
+    global case, case_filepath
+    case_id = session.get("case_id")
+    if not case_id:
+        return False
+    path = CASES_DIR / f"{case_id}.json"
+    if not path.exists():
+        return False
+    case = CaseFile.load(str(path))
+    case_filepath = str(path)
+    return True
 
 
 # --- HTML Template ---
@@ -93,6 +168,10 @@ HTML = r"""
 
         .proposal { background: #eef4ff; border: 1px solid #b3d0ff; border-radius: 6px; padding: 16px; margin: 16px 0; }
         .proposal h3 { margin: 0 0 8px 0; color: #1a5276; }
+        .observer { background: #fff4e6; border: 1px dashed #e0a44e; border-radius: 6px; padding: 14px 16px; margin: 16px 0; }
+        .observer-character { font-weight: bold; color: #b5651d; margin-bottom: 6px; }
+        .observer-content { font-size: 1.05em; }
+        .observer-meta { font-size: 0.75em; color: #999; margin-top: 8px; font-style: italic; }
         .dod { margin: 8px 0; padding-left: 20px; }
         .dod li { margin: 4px 0; }
 
@@ -121,6 +200,14 @@ HTML = r"""
     </style>
 </head>
 <body>
+
+{% if current_user %}
+<div style="text-align:right; font-size:0.8rem; color:#666; padding:4px 0;">
+    {{ current_user.username }}{% if current_user.role %} ({{ current_user.role }}){% endif %}
+    &nbsp;·&nbsp;<a href="/cases">Mina cases</a>
+    &nbsp;·&nbsp;<a href="/logout">Logga ut</a>
+</div>
+{% endif %}
 
 {% if flash_message %}
 <div class="flash">{{ flash_message }}</div>
@@ -266,6 +353,14 @@ HTML = r"""
 {% endif %}
 
 <!-- ==================== PROPOSAL (any view) ==================== -->
+{% if observer_event %}
+<div class="observer">
+    <div class="observer-character">{{ observer_event.character_name }} says:</div>
+    <div class="observer-content">{{ observer_event.content }}</div>
+    <div class="observer-meta">A perspective, not a decision. You decide what matters.</div>
+</div>
+{% endif %}
+
 {% if proposal %}
 <h2>Proposal</h2>
 <div class="proposal">
@@ -323,6 +418,7 @@ HTML = r"""
 def render(view="tree", **kwargs):
     defaults = {
         "case": case,
+        "current_user": get_current_user(),
         "view": view,
         "proposal": None,
         "suggestions": None,
@@ -331,10 +427,246 @@ def render(view="tree", **kwargs):
         "active_goal": None,
         "suggested_name": "",
         "direction": "",
+        "observer_event": None,
         "flash_message": "",
     }
     defaults.update(kwargs)
     return render_template_string(HTML, **defaults)
+
+
+# --- Auth helpers ---
+
+def get_current_user():
+    """Return the logged-in user dict from the session, or None."""
+    return session.get("user")
+
+
+def login_required(f):
+    """Decorator: redirects to /login if not authenticated."""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not get_current_user():
+            return redirect(url_for("login_page"))
+        return f(*args, **kwargs)
+    return decorated
+
+
+# Endpoints that do not require a selected case (auth + case management).
+_NO_CASE_ENDPOINTS = {
+    "login_page", "do_login", "logout", "static",
+    "cases_list", "cases_new", "cases_open", "cases_delete",
+}
+
+
+@app.before_request
+def guard():
+    endpoint = request.endpoint
+    # 1. Public endpoints
+    if endpoint in ("login_page", "do_login", "static"):
+        return
+    # 2. Must be logged in
+    if not get_current_user():
+        return redirect(url_for("login_page"))
+    # 3. Engine routes need a selected, accessible case loaded into the global.
+    if endpoint not in _NO_CASE_ENDPOINTS:
+        if not load_selected_case():
+            return redirect(url_for("cases_list"))
+
+
+LOGIN_HTML = """
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logga in — The Engine</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 400px; margin: 80px auto; padding: 0 20px; }
+  h1 { font-size: 1.3rem; }
+  label { display: block; margin-top: 12px; font-weight: 500; }
+  input[type=text], input[type=password] {
+    width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;
+    border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;
+  }
+  button { margin-top: 20px; padding: 10px 24px; font-size: 1rem;
+    background: #333; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #555; }
+  .error { color: #c33; margin-top: 12px; }
+  .user-info { font-size: 0.85rem; color: #666; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <h1>The Engine</h1>
+  <form method="POST" action="/login">
+    <label for="username">Användarnamn</label>
+    <input id="username" name="username" type="text" required autofocus
+           value="{{ username or '' }}">
+    <label for="password">Lösenord</label>
+    <input id="password" name="password" type="password" required>
+    <button type="submit">Logga in</button>
+  </form>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+</body>
+</html>
+"""
+
+
+@app.route("/login")
+def login_page():
+    # Already logged in? Go to index.
+    if get_current_user():
+        return redirect(url_for("index"))
+    return render_template_string(LOGIN_HTML, error=None, username=None)
+
+
+@app.route("/login", methods=["POST"])
+def do_login():
+    username = request.form.get("username", "").strip()
+    password = request.form.get("password", "")
+    if not username or not password:
+        return render_template_string(
+            LOGIN_HTML, error="Användarnamn och lösenord krävs", username=username
+        )
+    try:
+        data = auth_client.login(username, password)
+    except auth_client.AuthError as exc:
+        return render_template_string(LOGIN_HTML, error=str(exc), username=username)
+
+    session["token"] = data["token"]
+    session["user"] = data["user"]
+    return redirect(url_for("index"))
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("login_page"))
+
+
+# --- Case management (per user) ---
+
+CASES_HTML = """
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mina cases — The Engine</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+  .topbar { text-align:right; font-size:0.8rem; color:#666; }
+  h1 { font-size: 1.3rem; }
+  ul { list-style: none; padding: 0; }
+  li { border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px; margin-bottom: 8px;
+       display: flex; justify-content: space-between; align-items: center; }
+  .meta { font-size: 0.8rem; color: #888; }
+  a.btn { padding: 6px 14px; background:#333; color:#fff; text-decoration:none; border-radius:4px; }
+  a.btn:hover { background:#555; }
+  .danger { color:#c33; font-size:0.8rem; margin-left:10px; }
+  form.new { margin-top: 24px; padding-top: 16px; border-top: 1px solid #eee; }
+  input[type=text] { padding:8px; width:70%; border:1px solid #ccc; border-radius:4px; }
+  button { padding:8px 16px; background:#2a7; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    {{ current_user.username }}{% if current_user.role %} ({{ current_user.role }}){% endif %}
+    &nbsp;·&nbsp;<a href="/logout">Logga ut</a>
+  </div>
+  <h1>Mina cases</h1>
+  {% if flash %}<p style="color:#2a7;">{{ flash }}</p>{% endif %}
+  {% if cases %}
+  <ul>
+    {% for c in cases %}
+    <li>
+      <div>
+        <strong>{{ c.description }}</strong>
+        <div class="meta">
+          id {{ c.id }}
+          {% if c.owner_id is none %} · <em>legacy/oägt</em>{% endif %}
+          {% if is_admin and c.owner_id and c.owner_id != current_user.id %} · annans{% endif %}
+          {% if c.updated %} · uppdaterad {{ c.updated[:16] }}{% endif %}
+        </div>
+      </div>
+      <div>
+        <a class="btn" href="/cases/open/{{ c.id }}">Öppna</a>
+        {% if is_admin %}
+        <form method="POST" action="/cases/delete/{{ c.id }}" style="display:inline"
+              onsubmit="return confirm('Radera detta case?');">
+          <button type="submit" style="background:#c33;">Radera</button>
+        </form>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>Inga cases än. Skapa ett nytt nedan.</p>
+  {% endif %}
+
+  <form class="new" method="POST" action="/cases/new">
+    <label>Nytt case</label><br><br>
+    <input type="text" name="description" placeholder="Kort beskrivning (valfritt)">
+    <button type="submit">Skapa</button>
+  </form>
+</body>
+</html>
+"""
+
+
+@app.route("/cases")
+def cases_list():
+    user = get_current_user()
+    flash = request.args.get("flash", "")
+    return render_template_string(
+        CASES_HTML,
+        cases=list_cases_for(user),
+        current_user=user,
+        is_admin=(user.get("role") == "admin"),
+        flash=flash,
+    )
+
+
+@app.route("/cases/new", methods=["POST"])
+def cases_new():
+    global case, case_filepath
+    user = get_current_user()
+    description = request.form.get("description", "").strip()
+    new_case = CaseFile()
+    new_case.owner_id = user.get("id")
+    new_case.context["description"] = description
+    filepath = new_case.save(directory="cases")
+    session["case_id"] = new_case.id
+    return redirect(url_for("index", flash="Nytt case skapat."))
+
+
+@app.route("/cases/open/<case_id>")
+def cases_open(case_id):
+    user = get_current_user()
+    path = CASES_DIR / f"{case_id}.json"
+    if not path.exists():
+        return redirect(url_for("cases_list", flash="Case hittades inte."))
+    meta = _read_case_meta(path)
+    if not meta or not can_access_case(user, meta):
+        return redirect(url_for("cases_list", flash="Du har inte åtkomst till det caset."))
+    session["case_id"] = case_id
+    return redirect(url_for("index"))
+
+
+@app.route("/cases/delete/<case_id>", methods=["POST"])
+def cases_delete(case_id):
+    user = get_current_user()
+    # Only admin can delete (per spec step 3; guarded here too).
+    if user.get("role") != "admin":
+        return redirect(url_for("cases_list", flash="Endast admin kan radera cases."))
+    path = CASES_DIR / f"{case_id}.json"
+    if path.exists():
+        path.unlink()
+        if session.get("case_id") == case_id:
+            session.pop("case_id", None)
+    return redirect(url_for("cases_list", flash="Case raderat."))
 
 
 # --- Routes ---
@@ -358,8 +690,15 @@ def goal_view(goal_id):
     if pending:
         from engine import Proposal
         proposal = Proposal(**pending)
+    # Show the most recent observer event for this goal that has no reaction yet
+    observer_event = None
+    for e in reversed(case.observer_events):
+        if e.goal_id == goal_id and not e.participant_reaction:
+            observer_event = e
+            break
     flash = request.args.get("flash", "")
-    return render("goal", active_goal=goal, proposal=proposal, flash_message=flash)
+    return render("goal", active_goal=goal, proposal=proposal,
+                  observer_event=observer_event, flash_message=flash)
 
 
 @app.route("/start", methods=["POST"])
@@ -444,8 +783,24 @@ def select():
         "mission_purpose": proposal.mission_purpose,
         "definition_of_done": proposal.definition_of_done,
     }
+
+    # Observer may notice something and offer a perspective.
+    # It never changes Case File state — only records an event.
+    observer_event = observer.observe(case, goal, proposal)
+    event_record = None
+    if observer_event:
+        event_record = case.record_observer_event(
+            goal_id=goal_id,
+            character=observer_event.character,
+            character_name=observer_event.character_name,
+            event_type=observer_event.type,
+            reason=observer_event.reason,
+            content=observer_event.content,
+        )
+
     save_case()
     return render("goal", active_goal=goal, proposal=proposal,
+                  observer_event=event_record,
                   flash_message=f"Proposal for: {selection['title']}")
 
 
@@ -462,6 +817,12 @@ def decide():
     from engine import Proposal
     pending = case.pending_proposals.get(goal_id, {})
     proposal = Proposal(**pending) if pending else engine.propose(case, goal)
+
+    # If there's an unreacted observer event for this goal, record the reaction.
+    for e in reversed(case.observer_events):
+        if e.goal_id == goal_id and not e.participant_reaction:
+            case.record_observer_reaction(e.id, decision)
+            break
 
     if decision == "ACCEPT":
         case.record_decision(DECISION_ACCEPT, goal_id=goal_id, context=proposal.suggestion)
@@ -529,8 +890,10 @@ def observe():
     goal_id = request.form.get("goal_id", "").strip()
     if not observation_text:
         return redirect(url_for("index", flash="No observation."))
+    # Record the observation into the Case File. It becomes context for the
+    # next proposal, but it does NOT overwrite the current situation and does
+    # NOT trigger a new goal automatically. The participant stays in control.
     case.add_observation(observation_text, mission_id=None)
-    case.update_situation(observation_text)
     save_case()
     if goal_id:
         return redirect(f"/goal/{goal_id}?flash=Observation+recorded.")
@@ -564,29 +927,10 @@ def abandon_goal(goal_id):
 # --- Startup ---
 
 def main():
-    global case, case_filepath
-
-    if len(sys.argv) > 1 and sys.argv[1] == "--new":
-        case = CaseFile()
-        case.context["description"] = ""
-    elif len(sys.argv) > 1:
-        query = sys.argv[1]
-        filepath = find_case_file(query)
-        if filepath:
-            case = CaseFile.load(filepath)
-            case_filepath = filepath
-            print(f"  Loaded: {case.context.get('description', case.id)}")
-        else:
-            print(f"  No case matching '{query}'. Starting fresh.")
-            case = CaseFile()
-            case.context["description"] = ""
-    else:
-        case = CaseFile()
-        case.context["description"] = ""
-
-    save_case()
-    print(f"  Case ID: {case.id}")
+    # Cases are now selected per user via the web UI (login -> /cases).
+    # No global case is created at startup.
     print(f"  Open: http://localhost:5000")
+    print(f"  Log in, then pick or create a case.")
     print(f"  Ctrl+C to stop.\n")
     app.run(debug=False, port=5000)
 

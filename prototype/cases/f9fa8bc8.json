@@ -1,0 +1,128 @@
+{
+  "id": "f9fa8bc8",
+  "context": {
+    "description": "Individual occupational exploration",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": "Sweden"
+  },
+  "current_situation": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+  "goals": [
+    {
+      "id": "b132f979",
+      "desired_direction": "Learn programming and find a starting point",
+      "status": "ACTIVE",
+      "missions": [
+        "aa8acafd"
+      ],
+      "history": [],
+      "timestamp": "2026-08-29T11:19:19.436773"
+    }
+  ],
+  "missions": [
+    {
+      "id": "aa8acafd",
+      "name": "",
+      "goal_id": "b132f979",
+      "purpose": "To gain a first hands-on programming experience and collect enough information to choose a suitable next learning path.",
+      "description": "Open an online Python editor such as Python Tutor or Replit. Spend 30–45 minutes learning just enough Python to create and run a program that asks for a name and age, then prints a greeting and a message stating whether the person is under or over 18. Save the code and briefly note what felt interesting, confusing, or frustrating.",
+      "definition_of_done": [
+        "You have opened an online Python coding environment and run code successfully.",
+        "Your program accepts a name and an age as input.",
+        "Your program prints a personalized greeting.",
+        "Your program uses a condition to give different output for an age below 18 and an age of 18 or above.",
+        "You have written down one aspect you enjoyed and one question or difficulty you encountered."
+      ],
+      "status": "COMPLETED",
+      "result": "Completed. Tried a Python tutorial for 30 minutes.",
+      "observations": [
+        "c68f0fc8"
+      ],
+      "timestamp": "2026-08-29T11:19:24.675628"
+    }
+  ],
+  "observations": [
+    {
+      "id": "c68f0fc8",
+      "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+      "source": "participant",
+      "timestamp": "2026-08-29T11:19:24.675684",
+      "mission_id": "aa8acafd"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "7e1331a8",
+      "decision_type": "ACCEPT",
+      "goal_id": "b132f979",
+      "context": "Complete a short beginner experiment in Python using an online coding environment. Write a small program that asks for a person's name and age, then prints a personalized message and whether they are an adult.",
+      "reason": null,
+      "timestamp": "2026-08-29T11:19:24.675586"
+    }
+  ],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The individual is interested in learning programming but lacks a clear starting point or learning path."
+      },
+      "timestamp": "2026-08-29T11:19:19.436745"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "b132f979",
+        "direction": "Learn programming and find a starting point"
+      },
+      "timestamp": "2026-08-29T11:19:19.436776"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "b132f979",
+        "context": "Complete a short beginner experiment in Python using an online coding environment. Write a small program that asks for a person's name and age, then prints a personalized message and whether they are an adult."
+      },
+      "timestamp": "2026-08-29T11:19:24.675603"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "aa8acafd",
+        "goal_id": "b132f979",
+        "purpose": "To gain a first hands-on programming experience and collect enough information to choose a suitable next learning path."
+      },
+      "timestamp": "2026-08-29T11:19:24.675638"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "aa8acafd",
+        "result": "Completed. Tried a Python tutorial for 30 minutes."
+      },
+      "timestamp": "2026-08-29T11:19:24.675663"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "c68f0fc8",
+        "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+        "mission_id": "aa8acafd"
+      },
+      "timestamp": "2026-08-29T11:19:24.675693"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The individual is interested in learning programming but lacks a clear starting point or learning path.",
+        "new": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next."
+      },
+      "timestamp": "2026-08-29T11:19:24.675700"
+    }
+  ],
+  "created": "2026-08-29T11:19:17.024275",
+  "updated": "2026-08-29T11:19:24.675700"
+}

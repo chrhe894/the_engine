@@ -1,0 +1,126 @@
+{
+  "id": "70e6b42a",
+  "context": {
+    "description": "Individual occupational exploration",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": "Sweden"
+  },
+  "current_situation": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+  "goals": [
+    {
+      "id": "88958e82",
+      "desired_direction": "Learn programming and find a starting point",
+      "status": "ACTIVE",
+      "missions": [
+        "12c322b2"
+      ],
+      "history": [],
+      "timestamp": "2026-08-29T12:15:02.393666"
+    }
+  ],
+  "missions": [
+    {
+      "id": "12c322b2",
+      "name": "",
+      "goal_id": "88958e82",
+      "purpose": "To gain first-hand experience with programming and identify whether Python is a suitable starting point for continued learning.",
+      "description": "Choose one beginner-friendly Python lesson or interactive coding exercise, complete 30–45 minutes of it, and create or modify a small working program. Afterwards, write a short note about what you enjoyed, what was difficult, and what you would like to try next.",
+      "definition_of_done": [
+        "You have completed one beginner Python lesson or interactive exercise.",
+        "You have created or modified a small program that runs and produces an output.",
+        "You have recorded one aspect you enjoyed, one difficulty, and one possible next topic."
+      ],
+      "status": "COMPLETED",
+      "result": "Completed. Tried a Python tutorial for 30 minutes.",
+      "observations": [
+        "e8b4a4ba"
+      ],
+      "timestamp": "2026-08-29T12:15:08.021019"
+    }
+  ],
+  "observations": [
+    {
+      "id": "e8b4a4ba",
+      "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+      "source": "participant",
+      "timestamp": "2026-08-29T12:15:08.021039",
+      "mission_id": "12c322b2"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "9bbe7c0c",
+      "decision_type": "ACCEPT",
+      "goal_id": "88958e82",
+      "context": "Try one beginner-level Python lesson or interactive exercise. Spend 30–45 minutes learning basic concepts such as variables, conditions, and loops, then write or modify a very small program, such as a number-guessing game or a simple calculator.",
+      "reason": null,
+      "timestamp": "2026-08-29T12:15:08.020999"
+    }
+  ],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The individual is interested in learning programming but lacks a clear starting point, learning path, or chosen area of focus."
+      },
+      "timestamp": "2026-08-29T12:15:02.393642"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "88958e82",
+        "direction": "Learn programming and find a starting point"
+      },
+      "timestamp": "2026-08-29T12:15:02.393669"
+    },
+    {
+      "event": "decision_recorded",
+      "data": {
+        "type": "ACCEPT",
+        "goal_id": "88958e82",
+        "context": "Try one beginner-level Python lesson or interactive exercise. Spend 30–45 minutes learning basic concepts such as variables, conditions, and loops, then write or modify a very small program, such as a number-guessing game or a simple calculator."
+      },
+      "timestamp": "2026-08-29T12:15:08.021008"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "12c322b2",
+        "goal_id": "88958e82",
+        "purpose": "To gain first-hand experience with programming and identify whether Python is a suitable starting point for continued learning."
+      },
+      "timestamp": "2026-08-29T12:15:08.021023"
+    },
+    {
+      "event": "mission_completed",
+      "data": {
+        "mission_id": "12c322b2",
+        "result": "Completed. Tried a Python tutorial for 30 minutes."
+      },
+      "timestamp": "2026-08-29T12:15:08.021032"
+    },
+    {
+      "event": "observation_added",
+      "data": {
+        "observation_id": "e8b4a4ba",
+        "text": "Python felt approachable. The interactive exercises were motivating. I want to try building something small next.",
+        "mission_id": "12c322b2"
+      },
+      "timestamp": "2026-08-29T12:15:08.021042"
+    },
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "The individual is interested in learning programming but lacks a clear starting point, learning path, or chosen area of focus.",
+        "new": "First programming attempt completed. Python felt approachable. The interactive exercises were motivating. I want to try building something small next."
+      },
+      "timestamp": "2026-08-29T12:15:08.021045"
+    }
+  ],
+  "created": "2026-08-29T12:14:58.243013",
+  "updated": "2026-08-29T12:15:08.021045"
+}

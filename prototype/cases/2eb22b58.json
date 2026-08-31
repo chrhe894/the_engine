@@ -1,0 +1,67 @@
+{
+  "id": "2eb22b58",
+  "context": {
+    "description": "",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "",
+  "goals": [
+    {
+      "id": "f77cfa9d",
+      "desired_direction": "Test goal",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T11:11:25.528544"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [
+    {
+      "id": "dd4dddcf",
+      "goal_id": "f77cfa9d",
+      "character": "zebra",
+      "character_name": "The Zebra",
+      "type": "provocation",
+      "reason": "test reason",
+      "content": "test content",
+      "participant_reaction": "EXPLORE_FURTHER",
+      "timestamp": "2026-08-29T11:11:25.528555"
+    }
+  ],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "f77cfa9d",
+        "direction": "Test goal"
+      },
+      "timestamp": "2026-08-29T11:11:25.528547"
+    },
+    {
+      "event": "observer_event",
+      "data": {
+        "goal_id": "f77cfa9d",
+        "character": "zebra",
+        "type": "provocation",
+        "reason": "test reason"
+      },
+      "timestamp": "2026-08-29T11:11:25.528557"
+    },
+    {
+      "event": "observer_reaction",
+      "data": {
+        "event_id": "dd4dddcf",
+        "reaction": "EXPLORE_FURTHER"
+      },
+      "timestamp": "2026-08-29T11:11:25.528840"
+    }
+  ],
+  "created": "2026-08-29T11:11:25.528510",
+  "updated": "2026-08-29T11:11:25.528840"
+}

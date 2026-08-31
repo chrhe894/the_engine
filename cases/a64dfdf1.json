@@ -1,0 +1,65 @@
+{
+  "id": "a64dfdf1",
+  "context": {
+    "description": "Test",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "",
+  "goals": [
+    {
+      "id": "793aec77",
+      "desired_direction": "Mål A",
+      "status": "COMPLETED",
+      "missions": [],
+      "history": [
+        {
+          "event": "completed",
+          "timestamp": "2026-08-29T20:31:15.336528"
+        }
+      ],
+      "timestamp": "2026-08-29T20:31:15.181730"
+    },
+    {
+      "id": "ea2e63ea",
+      "desired_direction": "Mål B",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:31:15.181739"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "793aec77",
+        "direction": "Mål A"
+      },
+      "timestamp": "2026-08-29T20:31:15.181732"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "ea2e63ea",
+        "direction": "Mål B"
+      },
+      "timestamp": "2026-08-29T20:31:15.181741"
+    },
+    {
+      "event": "goal_completed",
+      "data": {
+        "goal_id": "793aec77"
+      },
+      "timestamp": "2026-08-29T20:31:15.336552"
+    }
+  ],
+  "created": "2026-08-29T20:31:15.181696",
+  "updated": "2026-08-29T20:31:15.336552"
+}

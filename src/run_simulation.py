@@ -39,6 +39,8 @@ If interpretation_response is absent, the interpretation is accepted as-is
 (backward compatible).
 """
 
+import _bootstrap  # noqa: F401
+
 import json
 import sys
 from pathlib import Path

@@ -12,6 +12,8 @@ The loop:
     observation → case update → next proposal
 """
 
+import _bootstrap  # noqa: F401
+
 import sys
 from pathlib import Path
 

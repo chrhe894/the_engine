@@ -1,0 +1,61 @@
+{
+  "id": "10bb03cc",
+  "context": {
+    "description": "Projekt X",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "The user is considering a transition toward programming but has not provided details about their current skills, experience, or situation.",
+  "goals": [
+    {
+      "id": "9745b240",
+      "desired_direction": "Lär dig grunderna: Börja koda",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:33:08.242404"
+    },
+    {
+      "id": "9187e340",
+      "desired_direction": "Bygg ett projekt",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-08-29T20:33:08.244365"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "The user is considering a transition toward programming but has not provided details about their current skills, experience, or situation."
+      },
+      "timestamp": "2026-08-29T20:33:01.517059"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "9745b240",
+        "direction": "Lär dig grunderna: Börja koda"
+      },
+      "timestamp": "2026-08-29T20:33:08.242413"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "9187e340",
+        "direction": "Bygg ett projekt"
+      },
+      "timestamp": "2026-08-29T20:33:08.244372"
+    }
+  ],
+  "created": "2026-08-29T20:32:57.615104",
+  "updated": "2026-08-29T20:33:08.244372"
+}

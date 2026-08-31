@@ -1,3 +1,5 @@
 prototype/api_key.txt
 prototype/.env
+.env
+api_key.txt
 __pycache__/

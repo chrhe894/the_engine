@@ -11,6 +11,8 @@ It demonstrates the full loop:
 And multiple goals with independent lifecycles.
 """
 
+import _bootstrap  # noqa: F401
+
 from case_file import (
     CaseFile,
     GOAL_ACTIVE, GOAL_ABANDONED,
