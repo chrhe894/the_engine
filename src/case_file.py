@@ -116,6 +116,7 @@ class CaseFile:
     and its transition through time.
     """
     id: str = field(default_factory=lambda: str(uuid.uuid4())[:8])
+    owner_id: Optional[str] = None  # id of the user who owns this case (None = legacy/unowned)
     context: dict = field(default_factory=lambda: {
         "description": "",
         "opening_question": "What are we working on right now?",
@@ -337,6 +338,7 @@ class CaseFile:
         """Serialize to a plain dict."""
         return {
             "id": self.id,
+            "owner_id": self.owner_id,
             "context": self.context,
             "current_situation": self.current_situation,
             "goals": [asdict(g) for g in self.goals],
@@ -355,6 +357,7 @@ class CaseFile:
         """Deserialize from a plain dict."""
         cf = cls()
         cf.id = data["id"]
+        cf.owner_id = data.get("owner_id")  # None for legacy case files
         cf.context = data.get("context", cf.context)
         cf.current_situation = data.get("current_situation", "")
         cf.goals = [Goal(**g) for g in data.get("goals", [])]

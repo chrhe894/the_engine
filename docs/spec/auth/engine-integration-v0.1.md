@@ -53,9 +53,13 @@ per-request-scope (t.ex. Flask `g`) i stället för en global. Uppskjutet.
 - **Konfiguration** (i `prototype/.env`, ej i git):
   - `AUTH_BASE_URL` = `https://the-auth.onrender.com`
   - `FLASK_SECRET_KEY` = långt slumpmässigt värde
-- **Filer:** `prototype/src/auth_client.py` (HTTP mot the_auth),
-  auth-wiring i `prototype/src/web.py` (`login_required`, `before_request`-grind,
-  `/login`, `/logout`, login-sida).
+- **Filer:** `src/auth_client.py` (HTTP mot the_auth), auth-wiring i `src/web.py`
+  (`login_required`, `before_request`-grind, `/login`, `/logout`, login-sida),
+  `owner_id` i `src/case_file.py`.
+- **Not:** den gamla `prototype/`-mappen är övergiven och omdöpt till
+  `prototype_obsolete/`. All aktiv kod ligger i repo-roten (`src/`). En tidig
+  version av auth-arbetet hamnade av misstag i `prototype/` (committades i "Auth
+  ok") och återskapades korrekt i `src/`.
 
 ## Verifierat (Steg 1)
 
