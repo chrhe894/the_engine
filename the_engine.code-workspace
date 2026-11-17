@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../the_app"
+		},
+		{
+			"path": "../card_generator"
+		}
+	],
+	"settings": {
+		"markdown.extension.tableFormatter.enabled": false,
+		"markdown.extension.completion.enabled": false
+	}
+}

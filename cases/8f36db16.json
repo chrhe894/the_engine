@@ -1,0 +1,94 @@
+{
+  "id": "8f36db16",
+  "owner_id": "6c8a8880-e7b7-4aad-880b-44d31f0cc537",
+  "context": {
+    "description": "Från idé till kort",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null
+  },
+  "current_situation": "Användaren vill utveckla en generator för att skapa digitala spelkort.",
+  "goals": [
+    {
+      "id": "10f6cdc8",
+      "desired_direction": "Definiera MVP: Bestäm den minsta fungerande versionen: exempelvis en kortmall med redigerbart namn, bild, färg, beskrivning och export. Detta ger en tydlig första leverans att bygga och testa.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-09-01T09:53:37.359433"
+    },
+    {
+      "id": "b000b77d",
+      "desired_direction": "Skissa användarflödet: Beskriv eller skissa stegen från att skapa ett nytt kort till att förhandsgranska, spara och exportera det. Detta klargör vilka vyer och funktioner generatorn behöver.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-09-01T09:53:37.359484"
+    },
+    {
+      "id": "d23c025e",
+      "desired_direction": "Planera kortmodellen: Lista vilka fält och visuella egenskaper ett spelkort ska ha, till exempel titel, illustration, kostnad, typ, regler, symboler och layout. Detta skapar en stabil grund för både gränssnitt och generering.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-09-01T09:53:37.359515"
+    },
+    {
+      "id": "17e352b7",
+      "desired_direction": "Bygg visuell prototyp: Ta fram en enkel prototyp där användaren fyller i kortets innehåll och ser ändringarna direkt i en kortförhandsvisning. Detta testar snabbt om den centrala designupplevelsen fungerar.",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-09-01T09:53:37.359545"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "situation_updated",
+      "data": {
+        "old": "",
+        "new": "Användaren vill utveckla en generator för att skapa digitala spelkort."
+      },
+      "timestamp": "2026-09-01T09:51:52.978498"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "10f6cdc8",
+        "direction": "Definiera MVP: Bestäm den minsta fungerande versionen: exempelvis en kortmall med redigerbart namn, bild, färg, beskrivning och export. Detta ger en tydlig första leverans att bygga och testa."
+      },
+      "timestamp": "2026-09-01T09:53:37.359453"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "b000b77d",
+        "direction": "Skissa användarflödet: Beskriv eller skissa stegen från att skapa ett nytt kort till att förhandsgranska, spara och exportera det. Detta klargör vilka vyer och funktioner generatorn behöver."
+      },
+      "timestamp": "2026-09-01T09:53:37.359494"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "d23c025e",
+        "direction": "Planera kortmodellen: Lista vilka fält och visuella egenskaper ett spelkort ska ha, till exempel titel, illustration, kostnad, typ, regler, symboler och layout. Detta skapar en stabil grund för både gränssnitt och generering."
+      },
+      "timestamp": "2026-09-01T09:53:37.359522"
+    },
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "17e352b7",
+        "direction": "Bygg visuell prototyp: Ta fram en enkel prototyp där användaren fyller i kortets innehåll och ser ändringarna direkt i en kortförhandsvisning. Detta testar snabbt om den centrala designupplevelsen fungerar."
+      },
+      "timestamp": "2026-09-01T09:53:37.359551"
+    }
+  ],
+  "created": "2026-09-01T09:51:00.525579",
+  "updated": "2026-09-01T09:53:37.359551"
+}

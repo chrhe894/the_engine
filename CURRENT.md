@@ -80,6 +80,50 @@ Next:
 
 ---
 
+## Skolan-caset / konceptträd (planerat, inget påbörjat)
+Bakgrund och resonemang: `LAST_SESSION.md` (avsnitt 2-10).
+Metod: en mening in, fyra punkter ut, ägaren väljer, upprepas. Konceptläge är
+det som gav koncept; dagens `suggest` ger uppgifter.
+
+Att realisera:
+[ ] Konceptläge: egen prompt/funktion som tar lägesuppfattning + idealtillstånd
+    + vald mening och ger 4 punkter (separat från `suggest`).
+    BESLUT: en nod = namn + ren, redigerbar text. Inga fasta fält i lagringen.
+    Prompten ber fortfarande modellen ta med vilken funktion i dagens skola
+    punkten ersätter/bevarar, hur den möter idealtillståndet och största risk
+    (det var det som gav djupet), men svaret sparas och redigeras som text.
+    Fält extraheras först när en vy behöver dem (t.ex. täckningsvyn), på begäran.
+    Ej testat om fri text ger samma djup som de fem fälten; jämför vid bygget.
+[ ] Per nod: välja *dela upp* eller *variera*.
+[ ] Redigera varje av de fyra förslagen (ändra text, byta ut, lägga till, dela,
+    slå ihop) och **parkera** det som inte väljs.
+[ ] Knapp "Deep mode" när de fyra har kommit fram: 4-5 körningar, var och en med
+    en egen lins (kort, fast beskrivning), AI kan variera indatan mellan körningarna.
+    Resultat grupperat i stabila och varianter (lins angiven). Ägaren väljer 4-5.
+[ ] Linsbibliotek (hypotes, ej testat): koncept, mål/resultat, filosofisk,
+    byggare, den berörde, systemtänkare, regelverk/resurser, kritiker/provokatör.
+    Lins = hur indatan läses; läge = vilken sorts utdata.
+[ ] Täckningsvy: vilka idealtillstånd ingen nod möter, vilka linser som inte
+    använts, återkommande risker över grenar.
+[ ] Lagring: träd av noder i CaseFile med standardvärde så att gamla ärenden
+    laddas (kontrollera `_from_dict`, och överväg versionsnyckel).
+[ ] Mänsklig kontroll: motorn föreslår, ägaren bestämmer. Allt modellen säger
+    märks som antagande, inga påhittade belägg.
+[ ] Integritet: skicka bara sammanfattade punkter till AI-tjänsten, inte berättelser.
+
+Öppet innan eller vid sidan av:
+[ ] Köra nivåidén ("nivåer med kvitto") som koncept i motorn.
+[ ] Linstest på pakt-punkten för att se om linser ger olika svar.
+[ ] Vilken är öppningsfrågan? (läge + önskan + perspektiv, se LAST_SESSION §9)
+[ ] Begreppet "identitet" -> "lägesuppfattning" i det användaren ser?
+
+Kända fel i motorn (ej åtgärdade, se LAST_SESSION §6): Observer kraschar utan
+API-nyckel (`_generate_intervention` anropar `_fallback_intervention` med fel
+argument), GIVE UP i webben saknar omprövning, strikt laddning bryter gamla
+ärenden, inga tester för web/Observer/spara-ladda.
+
+---
+
 # Model work (parallel track)
 
 [ ] Reality / Model Assessment
