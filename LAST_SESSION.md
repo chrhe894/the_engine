@@ -489,3 +489,83 @@ Konkreta punkter att realisera är lagda i `CURRENT.md`. Inget är påbörjat i
 koden. Öppet: köra nivåidén som koncept; köra ett linstest på pakt-punkten
 (byggare, den berörde, systemtänkare) för att se om linserna ger olika svar;
 nästa nivå ner på någon av de fyra pakt-punkterna.
+
+### 10.18 Slutprodukten: tolkas, visas, kan ändras (byggt)
+Frågan: behöver motorn en regel eller en fråga till ägaren om det inte framgår vad som ska
+tillverkas? Prov på sex texter (programvara, programvara utan typord, skola, cykelställe, Mars,
+"må bättre"): tolkningen blev rimlig i alla, säkerheten låg bara för den vaga texten, som
+också gav en bra fråga. Slutsats: ingen regel för själva tolkningen, men tolkningen ska synas och
+kunna ändras, och motorn frågar bara när säkerheten är låg eller tolkningarna skiljer sig i art.
+Skilj på *vad som finns när det är nått* och *vad som kan framställas härifrån* (i alla sex fall
+en plan, modell eller specifikation). Byggt enligt CURRENT.md. Cykelstället gav i riktig
+körning en motsägelse (tolkat som "placeringsplan", men handlingarna blev att flytta cyklarna),
+vilket är precis den fråga motorn då också ställde.
+
+### 10.17 Startlista: från träd till görbara handlingar (byggt)
+Christer: grunden är de två texterna (lägesuppfattning, önskat läge), som kan vara enorma
+eller enkla; motorn ska hitta vägar framåt därifrån, och ge en "ping" när det finns tillräckligt
+konkret att börja med. Min första formulering ("idealtexten säger att det är programvara, därför
+kom repot") var inte belagd: första försöket med samma text gav inget repo, det kom först när
+prompten uttryckligen bad om ett grundlager. Byggt enligt CURRENT.md. Ett öppet problem: stegen
+efter grunden är fortfarande "definiera/fastställ X" (designartefakter), inte handlingar i
+världen, och motorn flaggade inga punkter som för övergripande.
+
+### 10.16 Förstärk, Spikad och trädvy (byggt)
+Se `CURRENT.md`. Viktigaste lärdomar från riktiga körningar:
+- Förstärk gav först alla fyra spikdelar även för ett helt systemförslag, med
+  generiska formuleringar ("en personlig lärresa formuleras..."). Det hade gjort
+  det för lätt att spika för tidigt. Prompten ändrades så att övergripande förslag
+  får tomma delar och beskedet "dela upp först". Efter ändringen: övergripande
+  förslag tomt, tredje nivån (Synliga kunskapsnivåer) fick ifyllt.
+- Ägarens idé om nivåer i stället för betyg dök upp av sig själv som ett förslag på
+  tredje nivån, utan att vi bett om det.
+- Modellen gör ibland små JSON-fel (radbrytning i sträng, avslutande kommatecken).
+  Tolkningen tål dem nu. Det finns ännu ingen automatisk omkörning vid fel.
+
+### 10.15 Från träd till spikade mål (idé, delvis byggt: se 10.16)
+Christer: *Förstärk* = förtydliga och göra konkretare, närma sig en nivå där man kan
+utföra uppdrag eller spika ett mål. Målet är ett träd/nätverk där varje gren slutar
+i något konkret att arbeta med. Han jämförde med *simulated annealing*: bred
+utforskning tidigt, allt snävare och mer konkret senare.
+Tolkning: temperatur = hur mycket varians vi ber om (Variera, deep mode, slumpad
+lins). Den sänks med djupet. Acceptans = *Behåll* eller *Lägg undan* (ägaren är
+kriteriet). Omvärmning = gå upp till en förälder och variera igen när man kört fast.
+Det är ett processmönster, inte en algoritm, eftersom det saknas en mätbar
+målfunktion. Möjlig proxy: täckning av de tio idealpunkterna och hur konkret noden är.
+Hur många *Dela upp*? Inget fast antal. Tre till fem nivåer är rimligt (idé, mekanism,
+komponent, mål, aktivitet), och beskärning (behåll/lägg undan) är nödvändig eftersom
+4 gånger 4 gånger 4 växer snabbt. Stoppregeln är "spikad" (se CURRENT).
+
+### 10.14 Varians: mätning och Variera
+Christer märkte att deep mode (alla fyra delpunkter behållna efter redigering,
+nivån under "Intressebaserade uppdrag") gav 4 bekräftade och 2 nya, av samma
+kvalitet. Skrivskyddad mätning mot riktiga AI visade: 16 punkter från fyra linser
+blev 5 grupper (4 matchade befintliga, 1 ny). Orsak: "dela upp" konvergerar mot
+samma delar, linsen är en svag knuff, och körningarna får inte veta vad som finns.
+Test med "visa det som finns och kräv skillnad i mekanism längs namngivna axlar":
+16 punkter -> 12 grupper, 8 nya. Det byggdes in i deep mode (alltid "variera",
+på alla nivåer, valfri vinkel) och som *Variera* per förslag. Medvetet val: den
+första omgången i ett nytt case behåller det mjuka läget, eftersom de första
+förslagen var bra. Midjourney-liknelsen: Variera = bredd, Förstärk = djup (ej byggt),
+Dela upp = nedbrytning. Observera att redigering behåller ett förslag, vilket kan
+göra att alla öppna platser plötsligt är behållna. (Ändrat efteråt: redigering
+behåller inte längre, bara *Behåll*.)
+
+### 10.13 Bandit-flödet och ny första sida
+Efter 10.12 byggdes en ny första sida (två frågor, dolt rotmål, ingen målvy) och
+ett bandit-flöde: förslagen är fyra platser med *Behåll*, *Dela upp*, *Redigera*,
+*Lägg undan*; *Kör om de andra* ersätter obehållna platser med nya förslag genom
+en slumpad lins; ersatta förslag ligger kvar under *Tidigare förslag*. Se
+`CURRENT.md`. Ordet "Parkera" byttes mot *Lägg undan* och *Behåll* efter att
+Christer påpekade att det var otydligt. Slumpade linser finns bara vid omkörning,
+inte vid första omgången. Linsernas effekt på kvaliteten är fortfarande otestad.
+
+### 10.12 Bygget efter sessionen (konceptläge, redigering, deep mode)
+Byggt i `src/engine_concepts.py` (ny), `src/case_file.py` (`ConceptNode`,
+`CaseFile.concepts`), `src/web.py` (routes under `/concepts/...`, vy, knapp i
+målvyn) och `src/i18n.py`. Se `CURRENT.md` för vad som är klart och inte.
+Verifierat: routes, redigering, parkering och att gamla ärenden laddas (fejkad AI),
+samt en riktig körning (generate ~16 s, deep med 3 linser ~20 s, båda lyckades).
+Inte gjort: kvalitetsjämförelse mot experimenten (ger ren text samma djup som de
+fem fälten?), utvärdering av hur bra modellens gruppering är, täckningsvyn,
+att slå ihop punkter, och att AI varierar indatan mellan deep-körningarna.

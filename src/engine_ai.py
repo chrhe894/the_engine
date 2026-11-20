@@ -28,6 +28,9 @@ from case_file import (
     GOAL_ACTIVE, MISSION_COMPLETED,
 )
 from engine import Engine, Proposal, Interpretation
+from app_log import get_logger
+
+log = get_logger("ai")
 
 
 # --- Configuration ---
@@ -198,7 +201,7 @@ class AIEngine:
                 from openai import OpenAI
                 self._client = OpenAI(api_key=self._api_key)
             except Exception as e:
-                print(f"  [AIEngine] OpenAI client init failed: {e}")
+                log.warning(f"OpenAI client init failed: {e}")
                 self._client = None
 
     @property
@@ -258,7 +261,7 @@ Respond ONLY with the JSON object."""
                 uncertainty=result.get("uncertainty", "high"),
             )
         except Exception as e:
-            print(f"  [AIEngine] interpret_input failed: {e}")
+            log.warning(f"interpret_input failed: {e}")
             return self._fallback.interpret_input(case, user_text)
 
     def generate_case_name(self, user_input: str, direction: str) -> str:
@@ -299,7 +302,7 @@ Respond as a JSON array of strings only, e.g. ["Namn 1", "Namn 2", "Namn 3", "Na
             names = json.loads(raw)
             return [n.strip().strip('"') for n in names if n.strip()][:4] or [direction[:40]]
         except Exception as e:
-            print(f"  [AIEngine] generate_case_name failed: {e}")
+            log.warning(f"generate_case_name failed: {e}")
             return [direction[:40]]
 
     def suggest(self, case: CaseFile, goal: Goal) -> list:
@@ -337,7 +340,7 @@ Respond as a JSON array of strings only, e.g. ["Namn 1", "Namn 2", "Namn 3", "Na
             if suggestions:
                 return suggestions
         except Exception as e:
-            print(f"  [AIEngine] suggest failed: {e}")
+            log.warning(f"suggest failed: {e}")
 
         return [{"id": "1", "title": "Explore further",
                  "description": f"Take one small step to learn more about: {goal.desired_direction}"}]
@@ -386,7 +389,7 @@ Respond as a JSON array of strings only, e.g. ["Namn 1", "Namn 2", "Namn 3", "Na
                 definition_of_done=result.get("definition_of_done", []),
             )
         except Exception as e:
-            print(f"  [AIEngine] propose_for_selection failed: {e}")
+            log.warning(f"propose_for_selection failed: {e}")
             return self._fallback.propose(case, goal)
 
     def propose(self, case: CaseFile, goal: Goal) -> Proposal:
@@ -432,8 +435,8 @@ Respond as a JSON array of strings only, e.g. ["Namn 1", "Namn 2", "Namn 3", "Na
                 definition_of_done=result.get("definition_of_done", []),
             )
         except Exception as e:
-            print(f"  [AIEngine] propose failed: {e}")
-            print(f"  [AIEngine] Falling back to rule-based engine.")
+            log.warning(f"propose failed: {e}")
+            log.warning(f"Falling back to rule-based engine.")
             return self._fallback.propose(case, goal)
 
     def propose_after_give_up(self, case: CaseFile, goal: Goal) -> dict:
@@ -495,5 +498,5 @@ Respond with the same JSON format as a normal proposal."""
                 definition_of_done=result.get("definition_of_done", []),
             )
         except Exception as e:
-            print(f"  [AIEngine] propose_challenge failed: {e}")
+            log.warning(f"propose_challenge failed: {e}")
             return self._fallback.propose_challenge(case, goal)

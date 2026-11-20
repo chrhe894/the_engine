@@ -22,6 +22,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from case_file import CaseFile, Goal
+from app_log import get_logger
+
+log = get_logger("observer")
 
 
 # --- Character library ---
@@ -206,7 +209,7 @@ Respond with ONLY your character's remark. No preamble."""
             )
             return response.choices[0].message.content.strip().strip('"')
         except Exception as e:
-            print(f"  [Observer] intervention failed: {e}")
+            log.warning(f"observer intervention failed: {e}")
             return self._fallback_intervention(character_id)
 
     def _fallback_intervention(self, character_id: str) -> str:

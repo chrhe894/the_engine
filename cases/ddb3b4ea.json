@@ -1,0 +1,1664 @@
+{
+  "id": "ddb3b4ea",
+  "owner_id": "6c8a8880-e7b7-4aad-880b-44d31f0cc537",
+  "context": {
+    "description": "Projekt 13",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null,
+    "identity_text": "# IDENTITY -- Stryktips som komplext och adaptivt beslutsproblem\r\n\r\n**Version:** 1.0\\\r\n**Status:** Första utgångsläge för the_engine\r\n\r\n## 1. Beskrivning av objektet\r\n\r\nStryktipset är ett återkommande beslutsproblem där målet är att över tid\r\nuppnå ett positivt ekonomiskt resultat genom att analysera\r\nfotbollsmatcher, bedöma sannolikheter och konstruera ändamålsenliga\r\nspelmodeller.\r\n\r\nProblemet är komplext eftersom det saknar en känd metod som garanterar\r\nframgång. Det påverkas av många samverkande faktorer, ofullständig\r\ninformation, slumpmässiga händelser, föränderliga förutsättningar och\r\nandra spelares bedömningar.\r\n\r\nProblemet behöver därför hanteras genom kontinuerlig\r\ninformationsinhämtning, analys, experiment, utvärdering och anpassning.\r\n\r\n## 2. Problemets egenskaper\r\n\r\n-   Varje vecka presenteras en ny omgång med 13 fotbollsmatcher.\r\n-   Varje match har tre möjliga tipstecken: 1, X och 2.\r\n-   Tillgänglig information är omfattande men varierar i kvalitet och\r\n    aktualitet.\r\n-   Matchresultat är osäkra även när det finns goda statistiska\r\n    underlag.\r\n-   Spelbolagens odds och svenska folkets streckfördelning representerar\r\n    olika typer av marknadsinformation.\r\n-   Sannolikheten för ett utfall och dess potentiella utdelningsvärde är\r\n    två olika dimensioner.\r\n-   Spelstrategier och systemkonstruktion påverkar det slutliga\r\n    resultatet.\r\n-   Resultat från enskilda omgångar ger begränsad information om en\r\n    strategis långsiktiga kvalitet.\r\n\r\n## 3. Kunskapsområden\r\n\r\nProblemet omfattar flera sammanhängande kunskapsområden:\r\n\r\n### Fotbollskunskap\r\n\r\n-   Lag, spelare, tränare och ligor.\r\n-   Spelstilar, taktik och matchförutsättningar.\r\n-   Lagform, skador, avstängningar och laguppställningar.\r\n-   Historiska prestationer och statistiska egenskaper.\r\n\r\n### Statistik och sannolikhetslära\r\n\r\n-   Sannolikhetsbedömningar för matchutfall.\r\n-   Elo, Poisson, Expected Goals och andra analysmodeller.\r\n-   Simuleringar, modellkombinationer och kalibrering.\r\n-   Osäkerhet och prognoskvalitet.\r\n\r\n### Spelstrategi och systemkonstruktion\r\n\r\n-   Matematiska och reducerade system.\r\n-   Spikar, halv- och helgarderingar.\r\n-   R-, U- och andra systemtyper.\r\n-   Villkor, radbegränsningar och systemoptimering.\r\n-   Insatsnivåer, risk och utdelningspotential.\r\n\r\n### Erfarenhets- och metodkunskap\r\n\r\n-   Historiska analyser och utfall.\r\n-   Tidigare hypoteser och experiment.\r\n-   Strategiers prestation över tid.\r\n-   Mänskliga observationer och bedömningar.\r\n-   Kunskap om styrkor och svagheter hos olika analysmetoder.\r\n\r\n## 4. Informationsmiljö\r\n\r\nRelevant information finns i flera externa och interna källor.\r\n\r\nExterna informationskällor kan exempelvis vara:\r\n\r\n-   Fotbollsdatabaser och statistikleverantörer.\r\n-   Spelbolagens odds och oddsutveckling.\r\n-   Svenska folkets streckfördelning.\r\n-   Nyheter om lag, spelare och tränare.\r\n-   Fotbollsforskning och analysmetoder.\r\n-   Dokumentation och kunskap om systemkonstruktion.\r\n\r\nIntern information uppstår genom egna analyser, observationer,\r\nexperiment, prognoser och utvärderingar.\r\n\r\nKunskapen behöver kunna tillföras både genom kontinuerlig extern\r\nomvärldsbevakning och genom egna erfarenheter.\r\n\r\n## 5. Mänsklig och maskinell kunskap\r\n\r\nMänsklig intuition, erfarenhet och egna observationer är relevanta\r\ninformationskällor.\r\n\r\nStatistiska modeller, marknadsinformation och mänskliga bedömningar kan\r\nge olika och ibland motstridiga resultat.\r\n\r\nDessa skillnader ska kunna undersökas och utvärderas snarare än\r\nautomatiskt betraktas som fel.\r\n\r\n## 6. Problemets dynamik\r\n\r\nDet finns ingen anledning att förutsätta att en viss analysmetod eller\r\nspelstrategi alltid är bäst.\r\n\r\nNya förutsättningar, nya datakällor, förändrade marknadsförhållanden och\r\ntidigare erfarenheter kan motivera nya angreppssätt.\r\n\r\nProblemet behöver därför betraktas som en kontinuerlig process snarare\r\nän ett avgränsat optimeringsproblem med en slutlig lösning.\r\n\r\n## 7. Övergripande ambition\r\n\r\nAtt utveckla en systematisk förmåga att förstå, analysera och hantera\r\nStryktipset på ett sätt som över tid kan skapa bättre beslutsunderlag\r\noch möjliggöra positiv avkastning.\r\n\r\nDen ekonomiska utvecklingen ska följas i en fiktiv spelmiljö. Resultat\r\nska bedömas över tid och med hänsyn till slump, osäkerhet och statistisk\r\ntillförlitlighet.",
+    "ideal_text": "# IDEAL STATE -- En intelligent och lärande Stryktipsapplikation\r\n\r\n**Version:** 1.0\\\r\n**Status:** Första målbild för the_engine\r\n\r\n## 1. Vision\r\n\r\nDet önskade tillståndet är en Pythonbaserad applikation som fungerar som\r\nett intelligent analys-, besluts- och lärandesystem för Stryktipset.\r\n\r\nApplikationen ska kontinuerligt samla och utveckla kunskap om fotboll,\r\nmatchutfall, sannolikheter, spelstrategier och systemkonstruktion.\r\n\r\nDen ska varje vecka kunna analysera den aktuella Stryktipsomgången,\r\nidentifiera intressanta möjligheter, föreslå alternativa spelmodeller\r\noch presentera genomförbara spelalternativ med olika insatser och\r\nrisknivåer.\r\n\r\nSystemet ska samtidigt lära av sina egna analyser och resultat, utveckla\r\nsina metoder och förbättra beslutsunderlagen över tid.\r\n\r\nDet långsiktiga målet är att uppnå ett positivt ekonomiskt resultat i en\r\nfiktiv spelportfölj.\r\n\r\n## 2. Kontinuerlig kunskapsbas\r\n\r\nApplikationen ska ha tillgång till en gemensam och långsiktigt utvecklad\r\nkunskapsbas.\r\n\r\nDen ska inte vara organiserad enbart kring enskilda veckoomgångar.\r\n\r\nKunskapsbasen ska kunna omfatta:\r\n\r\n-   Generell fotbollskunskap.\r\n-   Lag-, spelar- och ligainformation.\r\n-   Statistik och historiska matchresultat.\r\n-   Odds och marknadsinformation.\r\n-   Svenska folkets streckfördelning.\r\n-   Analysmodeller och sannolikhetsbedömningar.\r\n-   Kunskap om olika spel- och systemkonstruktioner.\r\n-   Egna hypoteser, observationer och slutsatser.\r\n-   Historiska prognoser och experiment.\r\n-   Resultat och erfarenheter från tidigare omgångar.\r\n-   Extern forskning och nya analysmetoder.\r\n\r\nKunskapen ska kunna tillföras från både externa informationskällor och\r\negna experiment.\r\n\r\nDet ska gå att skilja mellan verifierade fakta, observationer,\r\nhypoteser, modellresultat och slutsatser.\r\n\r\nDen tekniska lösningen för kunskapshanteringen är inte förutbestämd.\r\nDatabas, filbaserad lagring eller kombinationer av olika lösningar kan\r\nutvärderas under utvecklingsprocessen.\r\n\r\n## 3. Veckovis analysförmåga\r\n\r\nApplikationen ska kunna genomföra en samlad analys av samtliga 13\r\nmatcher i en aktuell omgång.\r\n\r\nFör varje match ska den kunna:\r\n\r\n-   Samla in relevant information.\r\n-   Bedöma lagens förutsättningar.\r\n-   Göra sannolikhetsbedömningar för 1, X och 2.\r\n-   Jämföra egna bedömningar med odds och folkets streck.\r\n-   Identifiera möjliga spelvärden.\r\n-   Redovisa osäkerheter och motstridiga uppgifter.\r\n-   Förklara vilka faktorer som påverkat bedömningen.\r\n\r\nAnalysen ska kunna kombinera flera modeller och informationskällor.\r\n\r\n## 4. Strategi- och systemkonstruktion\r\n\r\nApplikationen ska kunna förstå och föreslå olika typer av spelmodeller\r\noch system.\r\n\r\nDen ska bland annat kunna hantera:\r\n\r\n-   Matematiska system.\r\n-   Reducerade system.\r\n-   R- och U-system.\r\n-   Spikar och olika typer av garderingar.\r\n-   System med villkor och begränsningar.\r\n-   Olika kombinationer av sannolikhet och utdelningspotential.\r\n-   Alternativa strategier för olika risknivåer.\r\n\r\nSystemet ska kunna föreslå flera alternativ för samma omgång, exempelvis\r\nen försiktig, en balanserad och en offensiv modell.\r\n\r\nVarje förslag ska redovisa:\r\n\r\n-   Strategins grundidé.\r\n-   Valda tecken och garderingar.\r\n-   Systemtyp och reduceringsprincip.\r\n-   Antal rader.\r\n-   Kostnad och insats.\r\n-   Relevanta sannolikhets- och riskbedömningar.\r\n-   Styrkor, svagheter och antaganden.\r\n\r\nSystemen ska vara praktiskt genomförbara. Applikationen ska inte föreslå\r\nkonstruktioner som kräver orimligt omfattande manuell registrering.\r\nAntalet rader och arbetsinsatsen ska kunna begränsas.\r\n\r\n## 5. Mänsklig interaktion\r\n\r\nAnvändaren ska vara en aktiv del av analys- och beslutsprocessen.\r\n\r\nApplikationen ska ge möjlighet att:\r\n\r\n-   Tillföra egna observationer och bedömningar.\r\n-   Registrera intuition och hypoteser.\r\n-   Kommentera och ifrågasätta modellernas resultat.\r\n-   Jämföra mänskliga bedömningar med statistiska prognoser.\r\n-   Utforska alternativa strategier.\r\n-   Påverka vilka experiment som ska genomföras.\r\n\r\nMänniskans bedömningar ska kunna följas upp och utvärderas över tid.\r\n\r\n## 6. Kontinuerligt lärande och utvärdering\r\n\r\nVarje omgång ska bidra till en gemensam och växande erfarenhetsbas.\r\n\r\nApplikationen ska kunna:\r\n\r\n-   Spara prognoser och analyser före spelstopp.\r\n-   Dokumentera använda modeller och strategier.\r\n-   Registrera verkliga matchresultat.\r\n-   Beräkna spelresultat och ekonomisk utveckling.\r\n-   Utvärdera prognosernas kvalitet.\r\n-   Identifiera återkommande fel och framgångsfaktorer.\r\n-   Formulera nya hypoteser.\r\n-   Jämföra olika strategier över tid.\r\n-   Föreslå förändringar och nya experiment.\r\n\r\nFlera strategier ska kunna testas parallellt under samma\r\nförutsättningar.\r\n\r\nSystemet ska kunna skilja mellan tillfälliga resultatvariationer och mer\r\nlångsiktiga förbättringar.\r\n\r\nHistoriska bedömningar och beslut ska bevaras så att\r\nefterhandsinformation inte påverkar utvärderingen av tidigare prognoser.\r\n\r\n## 7. Omvärldsbevakning och kunskapsutveckling\r\n\r\nApplikationen ska kunna dra nytta av nya externa kunskaper och metoder.\r\n\r\nDet kan exempelvis handla om:\r\n\r\n-   Ny fotbollsforskning.\r\n-   Nya statistiska analysmetoder.\r\n-   Förbättrade prognosmodeller.\r\n-   Nya datakällor.\r\n-   Nya metoder för systemkonstruktion.\r\n-   Förändrade förutsättningar på spelmarknaden.\r\n\r\nNy kunskap ska kunna utvärderas och vid behov omsättas i nya hypoteser\r\noch experiment.\r\n\r\n## 8. Användargränssnitt\r\n\r\nApplikationen ska ha ett användargränssnitt som stödjer analys,\r\nutforskning, beslutsfattande och lärande.\r\n\r\nGränssnittet ska ge en överblick över:\r\n\r\n-   Den aktuella lägesbilden.\r\n-   Veckans matcher och analyser.\r\n-   Möjligheter och hinder.\r\n-   Prognoser och sannolikheter.\r\n-   Alternativa spelmodeller.\r\n-   Historiska resultat.\r\n-   Strategiernas utveckling.\r\n-   Nya hypoteser och lärdomar.\r\n\r\nDet ska vara möjligt att förstå hur systemet kommit fram till sina\r\nrekommendationer och vilka osäkerheter som finns.\r\n\r\nGränssnittet ska inte bara visa färdiga svar utan också stödja\r\nanvändaren i att utforska problem och utveckla nya perspektiv.\r\n\r\n## 9. Ekonomisk målsättning\r\n\r\nEn fiktiv spelportfölj ska användas för att mäta utvecklingen.\r\n\r\nDen ska ha:\r\n\r\n-   En definierad startbudget.\r\n-   Förutbestämda insatsramar.\r\n-   Dokumenterade spelbeslut.\r\n-   Löpande resultatredovisning.\r\n-   Ackumulerad vinst eller förlust.\r\n-   Avkastningsmått.\r\n-   Risk- och nedgångsanalys.\r\n\r\nFlera parallella portföljer kan användas för att jämföra strategier.\r\n\r\nPositiv avkastning är ett eftersträvat resultat, men ska inte förväxlas\r\nmed en garanti eller med bevis på att en metod är långsiktigt hållbar.\r\n\r\n## 10. Önskat slutläge\r\n\r\nApplikationen ska ha utvecklats till ett fungerande system som\r\nsjälvständigt kan:\r\n\r\n1.  Bygga och uppdatera en relevant lägesbild.\r\n2.  Analysera veckans Stryktipsomgång.\r\n3.  Bedöma sannolikheter och identifiera möjligheter.\r\n4.  Konstruera och jämföra olika spelmodeller.\r\n5.  Presentera praktiskt genomförbara förslag.\r\n6.  Dokumentera beslut och prognoser.\r\n7.  Utvärdera resultat.\r\n8.  Utveckla kunskap och nya hypoteser.\r\n9.  Förbättra analys- och beslutsprocessen över tid.\r\n\r\n## 11. Avgränsning och utvecklingsprincip\r\n\r\nMålbilden beskriver ett önskat framtida tillstånd, inte en beslutad\r\nteknisk lösning eller en färdig kravspecifikation.\r\n\r\nUtvecklingen ska ske genom en utforskande och iterativ process med stöd\r\nav the_engine.\r\n\r\nKonkreta mål, uppdrag och implementationer ska växa fram genom\r\nprocessen. Exempelvis val av datakällor, arkitektur, lagringslösning,\r\nPythonbibliotek och gränssnitt ska inte låsas i förväg.\r\n\r\nMålbilden får omprövas och kompletteras när nya insikter uppstår.\r\n\r\n**Det övergripande slutmålet är en kunskapsdriven, adaptiv och praktiskt\r\nanvändbar applikation som kan utveckla sin egen analysförmåga och\r\nsystematiskt förbättra beslutsfattandet kring Stryktipset.**",
+    "root_goal_id": "c5f0992d",
+    "actions_assumptions": [
+      "Det är önskat att börja med en teknisk prototyp i Python, eftersom målbilden beskriver en Pythonbaserad applikation.",
+      "Ingen befintlig projektstruktur eller datamodell har förutsatts.",
+      "Första arbetsversionen behöver inte omfatta alla 13 matcher samtidigt; en match används som avgränsad prototyp.",
+      "Val av konkret lagringslösning lämnas öppet tills informationsmodellerna är definierade."
+    ]
+  },
+  "current_situation": "",
+  "goals": [
+    {
+      "id": "c5f0992d",
+      "desired_direction": "Projekt 13",
+      "status": "ACTIVE",
+      "missions": [
+        "b4989c21"
+      ],
+      "history": [],
+      "timestamp": "2026-11-20T09:18:54.872757"
+    }
+  ],
+  "missions": [
+    {
+      "id": "b4989c21",
+      "name": "Skapa Pythonprojekt",
+      "goal_id": "c5f0992d",
+      "purpose": "Grundförutsättning för hela ärendet",
+      "description": "Skapa Pythonprojekt",
+      "definition_of_done": [
+        "En projektmapp innehåller en körbar Pythonstartpunkt, en dokumentationsfil och en definierad plats för tester."
+      ],
+      "status": "ACTIVE",
+      "result": null,
+      "observations": [],
+      "timestamp": "2026-11-20T13:04:40.805946"
+    }
+  ],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "concepts": [
+    {
+      "id": "da153698",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Proveniensbaserad beslutsbok",
+      "text": "Idén är att varje sannolikhet, analys och systemidé behandlas som ett spårbart påstående med källa, tidpunkt, antaganden, osäkerhet och efterhandsstatus. Applikationen blir därmed mindre en samling svar och mer en beslutsbok som visar hur kunskap förändras utan att tidigare bedömningar skrivs över.\n\nPunkten kommer ur målbildens krav på att skilja fakta, observationer, hypoteser, modellresultat och slutsatser samt bevara prognoser före spelstopp. Den möter önskat läge genom att göra förklarbarhet, historisk integritet och kontinuerligt lärande till systemets grundstruktur. Den bevarar funktionen hos kunskapsbasen och utvärderingen, men ersätter en huvudsakligen innehållsorienterad lagring med en evidens- och versionsorienterad modell. Största risken är att spårbarheten blir så omfattande att den skymmer helhetsbilden och gör analysen svår att använda.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": null,
+      "theme": "",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:19:13.141599"
+    },
+    {
+      "id": "3f1199d4",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Oenighetsmotor",
+      "text": "Systemet ska för varje match visa var modeller, odds, streckfördelning och mänskliga bedömningar skiljer sig, vilka alternativa tolkningar skillnaderna ger upphov till och hur de påverkar olika spelmodeller.\n\nAnalysen organiseras alltså inte först kring en enda sammanvägd prognos. I stället får systemet och användaren se varje informationskällas bedömning separat, en strukturerad beskrivning av oenigheten och konsekvenserna för möjliga strategier. Funktionen hos modellkombinationer och mänsklig interaktion bevaras, medan en enda huvudprognos ersätts av ett jämförbart spektrum av synsätt. Det gör osäkerhet och motstridiga uppgifter observerbara före systemkonstruktionen. Den största risken är att många alternativa tolkningar försvårar beslut eller att själva oenigheten felaktigt behandlas som spelvärde.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "theme": "Jämförelse och attribution",
+      "spec": {
+        "goal": "Att göra skillnader mellan informationskällornas bedömningar till ett separat och jämförbart beslutsunderlag för varje match.",
+        "done": "För varje analyserad match finns en redovisning av respektive bedömning, de identifierade skillnaderna, alternativa tolkningar och deras konsekvenser för de presenterade spelmodellerna.",
+        "actor": "Applikationen sammanställer och presenterar oenigheten; användaren kan jämföra tolkningarna med sina egna bedömningar.",
+        "first_step": "En analysvy där modellernas, oddsens, streckfördelningens och den mänskliga bedömningens tecken och sannolikheter visas sida vid sida tillsammans med skillnaderna mellan dem."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:19:13.141663"
+    },
+    {
+      "id": "f2cc63a9",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Portfölj av hypoteser",
+      "text": "Idén är att varje analysmetod och spelstrategi betraktas som en separat hypotesportfölj med egen prognos, riskprofil, kostnadsbild och historik. Den fiktiva ekonomin blir då ett jämförelseverktyg för konkurrerande förklaringar, inte bara ett mått på den senast valda strategins resultat.\n\nPunkten kommer ur önskemålet om parallella strategier, definierade insatsramar och förmåga att skilja slumpvariation från långsiktig förbättring. Den möter målbilden genom att göra strategiutvärdering och experiment jämförbara under samma omgångar, samtidigt som flera risknivåer kan representeras. Den bevarar funktionen hos den fiktiva spelportföljen men ersätter en möjlig enkel resultatrad med ett parallellt experimentlandskap. Största risken är överanpassning efter historiska utfall, särskilt om många hypoteser jämförs utan tillräcklig återhållsamhet i tolkningen.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": "3f1199d4",
+      "theme": "Jämförelse och attribution",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:19:13.141698"
+    },
+    {
+      "id": "5ae5f525",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Skuggomgångar",
+      "text": "Idén är att applikationen regelbundet upprätthåller alternativa, aldrig genomförda omgångar där varje modell får behålla sina egna tecken och systemvillkor, även när bara ett begränsat huvudalternativ visas. Dessa skuggomgångar fungerar som kontrafaktiska berättelser om vad olika synsätt hade inneburit under samma verkliga utfall.\n\nPunkten hämtar sin grund från målbildens ambition att utforska alternativa strategier och bevara historiska beslut, men går längre genom att låta icke-valda alternativ fortsätta vara analytiskt levande. Den möter önskat läge genom att minska beroendet av ett enda veckobeslut och ge lärandet en rikare jämförelsebas. Den bevarar funktionen hos parallella experiment men ersätter enbart efterhandsjämförelser med en mer explicit kontrafaktisk struktur. Största risken är att skuggresultat skapar illusionen av säkra missade möjligheter, trots att alternativen aldrig hade varit säkra vid beslutstillfället.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": null,
+      "theme": "",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:19:13.141725"
+    },
+    {
+      "id": "f0394a71",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Tidslåsta prognoslager",
+      "text": "Applikationen ska spara varje omgång som flera tidslåsta prognoslager. Varje lager ska innehålla omgångens sannolikheter, systemval och osäkerheter vid ett bestämt informationsläge och därefter inte kunna ändras. Lagrade lager ska kunna visas både var för sig och som en förändring över tid.\n\nDetta ersätter den enda veckovisa analysversionen med bevarade prognoser från flera informationslägen, samtidigt som historiska bedömningar skyddas från efterhandsinformation. Den faktiska förändringen blir att applikationen sparar och visar separata, oföränderliga prognosversioner i stället för att bara visa den slutliga bedömningen. Förslaget gör det möjligt att observera hur nya uppgifter påverkar sannolikheter, systemval och osäkerheter. Spänningen är att flera lager kan ge skenbar precision, och att sena förändringar kan framstå som mer betydelsefulla än underlaget motiverar.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "outcome",
+      "stability": "variant",
+      "seen_in": [
+        "outcome"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "theme": "Tids- och kunskapskontroll",
+      "spec": {
+        "goal": "Att representera varje omgång med flera oföränderliga prognoslager kopplade till olika informationslägen.",
+        "done": "En omgång kan visas med sina separata prognoslager, där varje lager innehåller sannolikheter, systemval och osäkerheter samt kan jämföras med de andra lagren.",
+        "actor": "Applikationen sparar, låser och visar prognoslager; användaren eller analysprocessen tillför innehållet för respektive informationsläge.",
+        "first_step": "Den första avgränsningen är att definiera vilka uppgifter ett prognoslager måste innehålla och hur ett informationsläge markeras innan lagret låses."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.440925"
+    },
+    {
+      "id": "8228d8d8",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Paretofront för system",
+      "text": "Idén är att systemförslag organiseras som en Paretofront där inget alternativ samtidigt är billigare, mer täckande, mindre riskfyllt och mindre arbetskrävande än ett annat. Resultatet visas som tydliga avvägningspunkter mellan exempelvis kostnad, sannolik vinstträff, utdelningspotential, koncentrerad risk och manuell registrering, snarare än som en enda rangordning.\n\nPunkten kommer ur målbildens krav på flera praktiskt genomförbara spelmodeller med olika insatsnivåer och riskprofiler. Den möter det önskade läget genom att göra målkonflikter explicita och visa varför ett alternativ är attraktivt utan att låtsas att alla mål kan maximeras samtidigt. Den ersätter en förenklad rekommendationslista men bevarar möjligheten att presentera försiktiga, balanserade och offensiva alternativ. Största risken är att de valda måtten eller deras antagna samband styr fronten på ett missvisande sätt.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "outcome",
+      "stability": "variant",
+      "seen_in": [
+        "outcome"
+      ],
+      "edited": false,
+      "variant_of": null,
+      "theme": "",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.440979"
+    },
+    {
+      "id": "0d80174c",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Adversariell granskningspanel",
+      "text": "Idén är att varje större spelmodell får möta särskilda granskningsroller som försöker hitta motsägande matchbilder, känsliga antaganden, felaktig sannolikhetskalibrering och praktiska systembrister. Panelen producerar inte en gemensam kompromiss, utan ett separat motunderlag och en redovisning av vilka invändningar huvudmodellen kan eller inte kan bära.\n\nPunkten kommer ur målbildens krav på mänskligt ifrågasättande, alternativa strategier och synliggörande av styrkor, svagheter och antaganden. Den möter det önskade läget genom att göra robusthet till ett observerbart resultat före beslutet, inte bara genom att visa att modeller är oeniga. Den ersätter en tyst konsensus- eller enkel granskningsfunktion men bevarar oenighet som informationskälla. Största risken är att granskningsrollerna blir systematiskt negativa eller att invändningar får större tyngd än deras faktiska relevans.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "outcome",
+      "stability": "variant",
+      "seen_in": [
+        "outcome"
+      ],
+      "edited": false,
+      "variant_of": null,
+      "theme": "",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441025"
+    },
+    {
+      "id": "97cefae8",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Förfallande kunskapsstatus",
+      "text": "Idén är att påståenden, modeller och datakällor får en aktiv status som kan försvagas när deras aktualitet, kalibrering eller miljölikhet försämras, utan att den historiska versionen raderas. Systemet visar därmed både vad som fortfarande bär analysen och vad som endast finns kvar som historiskt jämförelsematerial; förfallshastigheten behandlas som ett antagande som kan prövas.\n\nPunkten kommer ur behovet av en gemensam kunskapsbas som utvecklas när lag, marknad, datakällor och analysmetoder förändras. Den möter det önskade läget genom att skilja historisk erfarenhet från aktuell beslutsrelevans och minska risken att gammal kunskap används som om den vore tidlös. Den ersätter en statisk kunskapsbank men bevarar historik och möjligheten att återupptäcka tidigare idéer. Största risken är att verkligt långlivade signaler felaktigt förklaras föråldrade, särskilt om systemet saknar tillräckligt underlag för att bedöma förändring.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "outcome",
+      "stability": "variant",
+      "seen_in": [
+        "outcome"
+      ],
+      "edited": false,
+      "variant_of": "f0394a71",
+      "theme": "Tids- och kunskapskontroll",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441060"
+    },
+    {
+      "id": "3f3a93f9",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Informationsvärdesmotor",
+      "text": "Systemet jämför två möjliga informationsuppdateringar för en match och rangordnar dem efter förväntad påverkan på tecken, system eller riskbedömning i förhållande till kostnaden att hämta eller bearbeta informationen.\n\nDetta gör informationsvärdesmotorn prövbar utan att bygga hela omvärldsbevakningen. Den bevarar funktionen att upptäcka relevant ny information men ersätter bred och likformig bevakning med en jämförelse mellan konkreta informationsalternativ. För en match ska varje alternativ beskrivas med vilken osäkerhet det berör, vilken beslutspåverkan som kan förväntas och vilken kostnad som är förknippad med att undersöka det. Den största risken är att värdet, kostnaden eller den möjliga beslutspåverkan uppskattas med större precision än underlaget tillåter.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "builder",
+      "stability": "variant",
+      "seen_in": [
+        "builder"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "theme": "Informations- och resursprioritering",
+      "spec": {
+        "goal": "Att välja vilken av två möjliga informationsuppdateringar för en match som har högst förväntat informationsvärde i förhållande till sin kostnad.",
+        "done": "En jämförelse för en match visar de två informationsalternativen, berörd osäkerhet, förväntad påverkan på tecken, system eller riskbedömning, uppskattad kostnad samt vilket alternativ som rangordnas högst.",
+        "actor": "Analysmotorn.",
+        "first_step": "En avgränsad prototyp för en match där två informationsalternativ registreras och jämförs enligt samma beskrivningsform."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441102"
+    },
+    {
+      "id": "751f553c",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Motexempelrevisor",
+      "text": "En fristående motexempelrevisor granskar varje föreslaget system mot en syntetisk kupong och returnerar antingen ett godkännande med verifierade formella egenskaper eller ett maskinläsbart motexempel som visar vilken rad, kostnad, begränsning eller täckningsregel som inte håller.\n\nKonstruktören producerar systemförslaget och revisorn granskar det separat, så att systemets formella giltighet inte bygger på implicit tillit till generatorn. Det som faktiskt ändras är att varje systemförslag får ett observerbart granskningsresultat: godkänt eller underkänt med ett konkret felobjekt. Därmed bevaras konstruktörens möjlighet att föreslå olika systemtyper, medan dess påståenden om rader, kostnader, villkor och täckning ersätts av verifierade egenskaper eller motexempel. Granskningen säger däremot inget i sig om ekonomisk eller spelmässig kvalitet.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "builder",
+      "stability": "variant",
+      "seen_in": [
+        "builder"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "theme": "Robusthet och granskning",
+      "spec": {
+        "goal": "Att göra varje föreslaget systems formella rader, kostnader, begränsningar och täckningsregler granskningsbara genom en separat motexempelkontroll.",
+        "done": "För ett systemförslag på en syntetisk kupong finns antingen ett godkännande med verifierade egenskaper eller ett maskinläsbart motexempel som pekar ut den egenskap som inte håller.",
+        "actor": "En systemkonstruktör producerar systemförslaget och en separat motexempelrevisor granskar det.",
+        "first_step": "Definiera den minsta syntetiska kupongen, systemförslagets maskinläsbara representation samt formatet för godkännande och motexempel."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441144"
+    },
+    {
+      "id": "955978fb",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Kalibreringsarena",
+      "text": "Idén är en separat historisk arena där prognoser låses före matchstart och bedöms med sannolikhetsmått mot enkla och marknadsbaserade jämförelser, oberoende av om ett spel råkade ge vinst. Den minsta prövbara formen är en tidsordnad serie av frysta sannolikheter för en modell och en baslinje, där träffsäkerhet och kalibrering visas sida vid sida.\n\nPunkten kommer ur målbildens krav på att skilja tillfälliga utfall från långsiktig förbättring och att utvärdera prognoskvalitet. En särskild utvärderingsarena bestämmer inte spelstrategin utan skapar ett jämförbart prestationsmått för modeller före ekonomiska beslut. Den bevarar den fiktiva portföljens funktion som strategijämförelse men kompletterar den med en mer direkt prövning av sannolikhetsprognoser. Största risken är att mått och baslinjer väljs så att en modell ser bättre ut utan att den faktiskt ger bättre beslut eller utdelningsvärde.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "builder",
+      "stability": "variant",
+      "seen_in": [
+        "builder"
+      ],
+      "edited": false,
+      "variant_of": null,
+      "theme": "",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441176"
+    },
+    {
+      "id": "ccaf5e2c",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Känslighetskarta",
+      "text": "Idén är att varje huvudförslag visas tillsammans med en karta över hur små förändringar i sannolikheter, streck, odds eller kostnadsram påverkar teckenval, systemtyp och riskprofil. Den minsta prövbara formen är att variera en matchs sannolikheter inom ett definierat intervall och markera brytpunkten där rekommendationen ändras.\n\nPunkten kommer ur målbildens krav på synliga osäkerheter, antaganden och förklaringar, men fokuserar på beslutets stabilitet snarare än på källornas ursprung eller modellernas oenighet. Systemet sammanfattar resultatet som stabila zoner, känsliga zoner och brytpunkter i gränssnittet. Den ersätter visningen av ett enda skenbart exakt förslag men bevarar möjligheten att välja ett praktiskt huvudalternativ. Största risken är att valet av perturbationer blir godtyckligt och att kartan blir så komplex att den försvårar snarare än förbättrar förståelsen.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "builder",
+      "stability": "variant",
+      "seen_in": [
+        "builder"
+      ],
+      "edited": false,
+      "variant_of": "751f553c",
+      "theme": "Robusthet och granskning",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441208"
+    },
+    {
+      "id": "b689a777",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Informationsvärde per match",
+      "text": "Idén är att analysdjupet fördelas efter varje matchs förväntade informationsvärde, i stället för att alla matcher behandlas lika. Systemet kan väga samman osäkerhet, modellskillnader, datakvalitet, möjlig utdelningspåverkan och hur känsligt systemförslaget är för just matchen. Resultatet blir en adaptiv fördelning mellan översiktlig och fördjupad analys.\n\nPunkten kommer ur spänningen mellan kravet på samlad analys av 13 matcher och den begränsade mängden uppmärksamhet, data och beräkningskapacitet. Den möter det önskade läget genom att göra analysprocessen mer praktiskt genomförbar utan att förutsätta att varje match har samma betydelse. Den ersätter en dold funktion i likformig behandling, nämligen känslan av fullständighet, men bevarar täckningen av hela omgången. Största risken är att systemet missar lågprioriterade matcher där en svårupptäckt faktor senare visar sig ha hög betydelse.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "systems",
+      "stability": "variant",
+      "seen_in": [
+        "systems"
+      ],
+      "edited": false,
+      "variant_of": "3f3a93f9",
+      "theme": "Informations- och resursprioritering",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441245"
+    },
+    {
+      "id": "0f7c3405",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Adversariell robusthetsprovning",
+      "text": "Idén är att varje spelmodell bedöms genom kontrollerade störningar av sina centrala antaganden, exempelvis förändrad laguppställningssäkerhet, förskjutna odds, osäkra sannolikheter eller ändrade utdelningsförhållanden. Systemet visar då inte bara ett huvudresultat utan också vilka delar av modellen som överlever olika påfrestningar. Robusthet blir en egen egenskap bredvid förväntad avkastning.\n\nPunkten kommer ur målbildens krav på osäkerhetsredovisning, alternativa strategier och åtskillnad mellan verklig förbättring och slumpmässiga resultat. Den möter det önskade läget genom att göra svagheter i modeller synliga innan ett enskilt utfall får dominera lärandet. Den ersätter funktionen hos ett enda sammanfattande prognosvärde men bevarar möjligheten att jämföra modeller under samma antaganden. Största risken är att störningarna blir godtyckliga eller överdrivet pessimistiska och därmed gynnar modeller som är försiktiga snarare än faktiskt träffsäkra.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "systems",
+      "stability": "variant",
+      "seen_in": [
+        "systems"
+      ],
+      "edited": false,
+      "variant_of": "751f553c",
+      "theme": "Robusthet och granskning",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441275"
+    },
+    {
+      "id": "a8861b5e",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Kunskapens glömskeväxel",
+      "text": "Idén är att kunskap inte bara lagras utan också får en föränderlig giltighetsstatus som kan försvagas när datamiljö, liga, marknad eller informationskälla förändras. Äldre observationer kan därför väga mindre, hamna i karantän eller återaktiveras först när nya förhållanden liknar de ursprungliga. Systemets lärande omfattar på så sätt både minne och kontrollerad glömska.\n\nPunkten kommer ur problemets dynamik och risken att historiska resultat eller etablerade samband fortsätter styra efter att deras förutsättningar förändrats. Den möter det önskade läget genom att göra kunskapsbasen adaptiv i stället för en växande samling antaganden som alltid får fortsatt auktoritet. Den ersätter en dold funktion i permanent historik, nämligen kontinuitet, men bevarar historiken som arkiv och jämförelsematerial. Största risken är att systemet tolkar normal slumpvariation som ett regimskifte och därmed glömmer användbar kunskap för tidigt.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "systems",
+      "stability": "variant",
+      "seen_in": [
+        "systems"
+      ],
+      "edited": false,
+      "variant_of": "f0394a71",
+      "theme": "Tids- och kunskapskontroll",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441306"
+    },
+    {
+      "id": "8fb804e7",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Resultatets orsaksbokföring",
+      "text": "Idén är att varje ekonomiskt utfall delas upp i separata bidrag från sannolikhetsbedömning, värdebedömning, teckenval, systemkonstruktion, insatsnivå och utdelningsmiljö. En modell kan då ha haft god matchprognos men dålig systemdesign, eller tvärtom, utan att allt reduceras till vinst eller förlust. Framsteg visas som en kedja av bidrag snarare än som ett enda portföljmått.\n\nPunkten kommer ur målbildens krav på att utvärdera prognoser, strategier, system och ekonomisk utveckling över tid utan att blanda ihop deras effekter. Den möter det önskade läget genom att göra det möjligt att se var i beslutsprocessen en förbättring eller försämring uppstår. Den ersätter funktionen hos ett samlat resultatmått som ensam lärsignal men bevarar ekonomiskt resultat som slutlig konsekvens. Största risken är att uppdelningen ger en skenbar kausal precision, eftersom delarna ofta påverkar varandra och inte kan separeras helt från samma slumpmässiga utfall.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "systems",
+      "stability": "variant",
+      "seen_in": [
+        "systems"
+      ],
+      "edited": false,
+      "variant_of": "3f1199d4",
+      "theme": "Jämförelse och attribution",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441336"
+    },
+    {
+      "id": "ee1ad106",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Resursbudgeterad beslutslinje",
+      "text": "Idén är att varje analys- och systemförslag bär en synlig resursprofil för datatillgång, beräkning, manuell registrering och fiktiv insats. En policykomponent översätter dessa begränsningar till genomförbarhetsnivåer, så att alternativ som kräver mer resurser än den aktuella ramen behandlas som särskilda eller ofullständiga förslag. Resursramen blir därmed en del av beslutets innehåll, inte en efterhandskontroll.\n\nPunkten kommer ur målbildens krav på praktiskt genomförbara system, begränsad arbetsinsats och definierade insatsramar. Den bevarar funktionen att jämföra strategier ekonomiskt men ersätter den underförstådda idén om obegränsad data-, beräknings- och uppmärksamhetskapacitet. Regelverk, datalicenser, API-begränsningar och manuella arbetskostnader kan uttryckas som beroenden i samma resursprofil. Största risken är att resursmodellen ger en falsk känsla av precision eller gör billigare, men sämre, analysvägar oproportionerligt attraktiva.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "constraints",
+      "stability": "variant",
+      "seen_in": [
+        "constraints"
+      ],
+      "edited": false,
+      "variant_of": "3f3a93f9",
+      "theme": "Informations- och resursprioritering",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441373"
+    },
+    {
+      "id": "59766084",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Tidslåst utvärderingsseparation",
+      "text": "Idén är att prognosproduktion, beslutsfrysning och facitåtkomst placeras i separata tids- och behörighetszoner. En modell kan därför inte få tillgång till resultat eller efterhandsinformation innan den egna prognosen är låst, medan utvärderingen sker i en annan zon efter spelstopp. Systemet kan samtidigt behålla flera parallella, förseglade prognosversioner från samma informationsläge.\n\nPunkten kommer ur kravet att historiska bedömningar ska kunna utvärderas utan att efterhandsinformation påverkar dem. Den bevarar beslutsbokens funktion att göra tidigare beslut spårbara men ersätter enbart dokumentation som skydd mot efterhandsläckage med faktisk åtkomstseparation. Mekanismen stödjer rättvis jämförelse mellan modeller och gör tidpunkten för tillgänglig information till en regelbunden del av experimentmiljön. Största risken är att tidszoner, sena laguppgifter och korrigerade resultat skapar konflikter mellan informationsrättvisa och aktualitet.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "constraints",
+      "stability": "variant",
+      "seen_in": [
+        "constraints"
+      ],
+      "edited": false,
+      "variant_of": "f0394a71",
+      "theme": "Tids- och kunskapskontroll",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441403"
+    },
+    {
+      "id": "5ef7b95b",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Källkontrakt med degradering",
+      "text": "Idén är att varje extern källa behandlas som ett villkorat källkontrakt med angivna användningsrättigheter, uppdateringsintervall, tillgänglighetskrav, begränsningar och kända bortfallsfall. När en källa saknas eller bryter mot sin förväntade kvalitet går analysen över till ett uttryckligt degraderat läge i stället för att tyst fylla luckan. Alternativa källor kan bära olika delar av analysen, men deras ersättningsroll och kvarvarande osäkerhet visas separat.\n\nPunkten kommer ur målbildens beroende av externa odds-, statistik- och nyhetskällor samt kravet att kunna skilja fakta, observationer och modellresultat. Den bevarar informationsmångfalden och oenighetsmotorns möjlighet att jämföra signaler, men ersätter antagandet om stabil och obegränsad källtillgång med en regelstyrd försörjningsmodell. Licenser, användarvillkor, rate limits, kostnader och förändrade leverantörsformat blir då strukturella beroenden snarare än tekniska överraskningar. Största risken är att fallback-källor är systematiskt lika varandra eller sämre på ett sätt som degraderingsmarkeringen inte fullt ut fångar.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "constraints",
+      "stability": "variant",
+      "seen_in": [
+        "constraints"
+      ],
+      "edited": false,
+      "variant_of": "751f553c",
+      "theme": "Robusthet och granskning",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441434"
+    },
+    {
+      "id": "8de44602",
+      "goal_id": "c5f0992d",
+      "parent_id": null,
+      "title": "Uppmärksamhetsauktion",
+      "text": "Idén är att mänsklig analyskapacitet behandlas som en begränsad veckovis resurs som fördelas mellan matcher, påståenden och systemförslag. En intern prioriteringsmekanism kan väga samman osäkerhet, möjlig konsekvens, informationskostnad och hur mycket ett mänskligt omdöme faktiskt kan förändra beslutet. Resultatet visas som täckningsgrad, obelysta riskområden och den analys som valdes bort, snarare än som ett krav på att allt ska granskas lika mycket.\n\nPunkten kommer ur målbildens krav på aktiv mänsklig interaktion samtidigt som alla 13 matcher, alternativa modeller och praktisk arbetsinsats ska rymmas i en återkommande process. Den bevarar människans roll som källa till observationer, invändningar och hypoteser men ersätter jämn eller intuitiv uppmärksamhetsfördelning med en synlig konkurrens om begränsad analystid. Mekanismen gör en ovanlig kostnad synlig: inte bara pengar och beräkning, utan också mänsklig koncentration. Största risken är att lågprioriterade men gemensamt korrelerade fel förbises, eller att systemet börjar värdera det som är lätt att granska högre än det som är viktigt.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "constraints",
+      "stability": "variant",
+      "seen_in": [
+        "constraints"
+      ],
+      "edited": false,
+      "variant_of": "3f3a93f9",
+      "theme": "Informations- och resursprioritering",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T09:22:35.441463"
+    },
+    {
+      "id": "5f099ad1",
+      "goal_id": "c5f0992d",
+      "parent_id": "3f1199d4",
+      "title": "Separata bedömningsprofiler",
+      "text": "Systemet ska för varje match lagra och visa separata bedömningsprofiler för modeller, odds, streckfördelning och mänskliga bedömningar. Varje profil ska innehålla bedömningen av 1, X och 2 samt tillhörande osäkerhet, aktualitet och antaganden. Profilerna ska presenteras sida vid sida och inte först omvandlas till en gemensam huvudprognos.\n\nDetta gör skillnader mellan informationskällorna observerbara i den form där de uppstår och bevarar deras skilda roller inför analys och systemkonstruktion. Modellresultat, marknadsinformation och mänskliga bedömningar kan då jämföras utan att en sammanvägning döljer oenigheten. Funktionen hos modellkombinationer bevaras som jämförelse mellan perspektiv, medan rollen som en enda auktoritativ prognos ersätts av ett strukturerat spektrum. Den största risken är att skillnader i datakvalitet, aktualitet eller uttrycksform tolkas som verklig saklig oenighet.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "theme": "",
+      "spec": {
+        "goal": "Att göra varje informationskällas bedömning, osäkerhet, aktualitet och antaganden separat jämförbara för varje match och utfall.",
+        "done": "För en analyserad match visas en separat profil för varje relevant informationskälla med bedömningarna för 1, X och 2 samt fält för osäkerhet, aktualitet och antaganden, utan att en gemensam huvudprognos krävs.",
+        "actor": "Systemet representerar, lagrar och visar profilerna; mänskliga bedömningar tillförs som en egen profil.",
+        "first_step": "Fastställ en gemensam profilform som anger vilka uppgifter varje källa ska lämna för 1, X och 2 samt hur osäkerhet, aktualitet och antaganden ska visas."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T10:32:26.933988"
+    },
+    {
+      "id": "0dc2b1e1",
+      "goal_id": "c5f0992d",
+      "parent_id": "3f1199d4",
+      "title": "Oenighetens struktur",
+      "text": "Systemet ska för varje match klassificera oenigheten mellan modeller, odds, streckfördelning och mänskliga bedömningar efter typ, riktning och styrka, ange vilka antaganden som ligger bakom skillnaderna och visa vilka alternativa tolkningar och spelmodeller skillnaderna kan leda till.\n\nDet gör oenigheten konkretare än enbart numeriska avvikelser genom att systemet beskriver vad källorna faktiskt är oense om, åt vilket håll de skiljer sig och hur tydlig skillnaden är. Användaren kan då se sambandet mellan en informationsskillnad, dess bakomliggande antaganden och möjliga strategiska konsekvenser. Funktionen hos separata informationskällor, mänskliga bedömningar och modelljämförelser bevaras, medan en odifferentierad sammanvägning ersätts av en strukturerad och jämförbar redovisning. Den största risken är att kategoriseringen och styrkebedömningen ger en falsk precision när orsaken till oenigheten egentligen är okänd.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "theme": "",
+      "spec": {
+        "goal": "Att göra skillnader mellan informationskällornas bedömningar jämförbara genom att beskriva deras typ, riktning, styrka och bakomliggande antaganden.",
+        "done": "För varje match finns en redovisning där varje identifierad skillnad har en angiven oenighetstyp, riktning, styrka och koppling till minst en alternativ tolkning eller spelmodell.",
+        "actor": "Systemet strukturerar och redovisar oenigheten; användaren kan tillföra eller granska de mänskliga bedömningarna och antagandena.",
+        "first_step": "Att beskriva en enhetlig redovisningsform för varje match där källornas bedömningar ställs bredvid varandra och varje skillnad märks med typ, riktning, styrka, antaganden och möjliga strategiska konsekvenser."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T10:32:26.934021"
+    },
+    {
+      "id": "9d91a09c",
+      "goal_id": "c5f0992d",
+      "parent_id": "3f1199d4",
+      "title": "Strategiska konsekvenskartor",
+      "text": "Systemet ska för varje identifierad central oenighet skapa en jämförelsetabell där de berörda tolkningarna kopplas till deras konsekvenser för spikar, garderingar, systemtyper, radantal och risknivåer. Användaren ska kunna jämföra hur samma match och oenighet leder till olika spelmodeller innan ett system väljs.\n\nDetta gör strategiska konsekvenser observerbara i en konkret och jämförbar form, utan att systemet först behöver ersätta de separata bedömningarna med en huvudprognos. Funktionen hos alternativ spelkonstruktion bevaras, medan den faktiska förändringen blir att varje relevant tolkning redovisas tillsammans med den eller de spelmodeller som tolkningen stöder eller försvagar. Den största risken är fortfarande att jämförelsen blir svår att överblicka eller att skillnader mellan tolkningar felaktigt behandlas som spelvärde.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "theme": "",
+      "spec": {
+        "goal": "Att koppla varje central oenighet i en match till jämförbara konsekvenser för möjliga spelmodeller.",
+        "done": "För varje behandlad oenighet finns en synlig jämförelse där tolkningarna och deras påverkan på spikar, garderingar, systemtyper, radantal och risknivåer redovisas separat.",
+        "actor": "Systemet strukturerar oenigheten och beräknar eller redovisar konsekvenserna; användaren granskar och jämför de presenterade spelmodellerna.",
+        "first_step": "Utforma en gemensam mall för en konsekvenskarta som för en match innehåller oenigheten, de alternativa tolkningarna och respektive påverkan på spikar, garderingar, systemtyper, radantal och risknivåer."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T10:32:26.934040"
+    },
+    {
+      "id": "4a9f58db",
+      "goal_id": "c5f0992d",
+      "parent_id": "3f1199d4",
+      "title": "Oenighet som lärdata",
+      "text": "Oenighetsmotorn ska för varje match spara varje källas bedömning, de tolkningar som valdes och hur dessa påverkade spelmodellerna. Före spelstopp registrerar systemet underlaget och användarens val i en jämförbar analys, och efter matchen kopplas utfallet till samma analys.\n\nDet gör oenighet till ett bevarat och uppföljningsbart analysobjekt i stället för något som försvinner i en sammanvägd prognos. Funktionen hos kontinuerligt lärande bevaras, men det som kan utvärderas utökas från enbart slutresultat till även källornas avvikelser, valda tolkningar och deras strategiska konsekvenser. Den största risken är att tidigare framgångsrika avvikelser senare behandlas som tillförlitliga utan tillräckligt underlag, eller att efterhandskunskap påverkar den ursprungliga dokumentationen.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "theme": "",
+      "spec": {
+        "goal": "Att skapa ett jämförbart historiskt underlag där oenighet, valda tolkningar och deras strategiska följder kan följas från analys före spelstopp till utfall efter matchen.",
+        "done": "För varje analyserad match finns en bevarad post med separata källbedömningar, dokumenterade alternativa tolkningar, valt alternativ eller valda alternativ, berörda spelmodeller och det faktiska matchutfallet.",
+        "actor": "Systemet registrerar och kopplar samman uppgifterna, medan användaren anger eller bekräftar vilka alternativa tolkningar som används i spelmodellerna.",
+        "first_step": "En gemensam postform för en match definieras, med separata fält för källbedömningar, oenighet, valda tolkningar, strategisk påverkan och senare matchutfall."
+      },
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-20T10:32:26.934053"
+    }
+  ],
+  "actions": [
+    {
+      "id": "1a3fc0a9",
+      "goal_id": "c5f0992d",
+      "title": "Skapa Pythonprojekt",
+      "done_when": "En projektmapp innehåller en körbar Pythonstartpunkt, en dokumentationsfil och en definierad plats för tester.",
+      "layer": "base",
+      "serves": [],
+      "needs": [],
+      "first": true,
+      "order": 0,
+      "status": "ACCEPTED",
+      "mission_id": "b4989c21",
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610594"
+    },
+    {
+      "id": "059c74bf",
+      "goal_id": "c5f0992d",
+      "title": "Avgränsa första prototypen",
+      "done_when": "Ett dokument anger att första prototypen hanterar en match, utfallen 1, X och 2 samt de informationsfält som behövs för den första analysen.",
+      "layer": "base",
+      "serves": [],
+      "needs": [
+        "1a3fc0a9"
+      ],
+      "first": false,
+      "order": 1,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610622"
+    },
+    {
+      "id": "7f5a0762",
+      "goal_id": "c5f0992d",
+      "title": "Definiera gemensam match- och källmodell",
+      "done_when": "En maskinläsbar modell beskriver omgång, match, utfall, informationskälla, informationsläge, tidsstämpel och sannolikheter.",
+      "layer": "points",
+      "serves": [
+        "3f1199d4",
+        "f0394a71",
+        "3f3a93f9",
+        "5f099ad1",
+        "0dc2b1e1",
+        "4a9f58db"
+      ],
+      "needs": [
+        "059c74bf"
+      ],
+      "first": false,
+      "order": 2,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610634"
+    },
+    {
+      "id": "4576c876",
+      "goal_id": "c5f0992d",
+      "title": "Definiera bedömningsprofil",
+      "done_when": "En profilmall innehåller fält för källa, tecken och sannolikhet för 1, X och 2 samt osäkerhet, aktualitet och antaganden.",
+      "layer": "points",
+      "serves": [
+        "3f1199d4",
+        "5f099ad1",
+        "0dc2b1e1",
+        "4a9f58db"
+      ],
+      "needs": [
+        "7f5a0762"
+      ],
+      "first": false,
+      "order": 3,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610647"
+    },
+    {
+      "id": "81a464a4",
+      "goal_id": "c5f0992d",
+      "title": "Definiera tidslåst prognoslager",
+      "done_when": "En lagerdefinition anger obligatoriska uppgifter, informationsläge, låstidpunkt och regler för att ett lager blir oföränderligt.",
+      "layer": "points",
+      "serves": [
+        "f0394a71",
+        "4a9f58db"
+      ],
+      "needs": [
+        "7f5a0762",
+        "4576c876"
+      ],
+      "first": false,
+      "order": 4,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610656"
+    },
+    {
+      "id": "5648802e",
+      "goal_id": "c5f0992d",
+      "title": "Definiera jämförelseform för informationsalternativ",
+      "done_when": "En prototypmall kan registrera två informationsalternativ för samma match med beskrivning, kostnad, förväntad informationsvinst och efterföljande utvärdering.",
+      "layer": "points",
+      "serves": [
+        "3f3a93f9"
+      ],
+      "needs": [
+        "7f5a0762"
+      ],
+      "first": false,
+      "order": 5,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610664"
+    },
+    {
+      "id": "8d50b563",
+      "goal_id": "c5f0992d",
+      "title": "Definiera maskinläsbar system- och kupongmodell",
+      "done_when": "En modell beskriver syntetisk kupong, tecken per match, rader, kostnad, begränsningar, täckningsregler samt format för godkännande och motexempel.",
+      "layer": "points",
+      "serves": [
+        "751f553c",
+        "9d91a09c"
+      ],
+      "needs": [
+        "7f5a0762"
+      ],
+      "first": false,
+      "order": 6,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610674"
+    },
+    {
+      "id": "08f7ef38",
+      "goal_id": "c5f0992d",
+      "title": "Definiera oenighets- och konsekvensformat",
+      "done_when": "En gemensam post kan registrera källornas bedömningar, oenighetens typ, riktning och styrka, antaganden, alternativa tolkningar, påverkan på systemval samt senare utfall.",
+      "layer": "points",
+      "serves": [
+        "3f1199d4",
+        "0dc2b1e1",
+        "9d91a09c",
+        "4a9f58db"
+      ],
+      "needs": [
+        "4576c876",
+        "81a464a4",
+        "8d50b563"
+      ],
+      "first": false,
+      "order": 7,
+      "status": "PROPOSED",
+      "mission_id": null,
+      "edited": false,
+      "timestamp": "2026-11-20T12:53:08.610682"
+    }
+  ],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "c5f0992d",
+        "direction": "Projekt 13"
+      },
+      "timestamp": "2026-11-20T09:18:54.873244"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "da153698",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:19:13.141617"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "3f1199d4",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:19:13.141673"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "f2cc63a9",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:19:13.141705"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "5ae5f525",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:19:13.141731"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "f0394a71",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.440940"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "8228d8d8",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.440989"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "0d80174c",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441034"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "97cefae8",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441072"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "3f3a93f9",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441111"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "751f553c",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441153"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "955978fb",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441184"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "ccaf5e2c",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441216"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "b689a777",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441252"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "0f7c3405",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441282"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "a8861b5e",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441314"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "8fb804e7",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441348"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "ee1ad106",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441381"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "59766084",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441411"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "5ef7b95b",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441441"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "8de44602",
+        "goal_id": "c5f0992d",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T09:22:35.441470"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "da153698",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T09:26:40.930972"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "5ae5f525",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T09:27:19.324092"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "8228d8d8",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T09:28:06.212790"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "0d80174c",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T09:28:40.136726"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "955978fb",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T09:30:23.953057"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "f0394a71",
+        "theme": "Tids- och kunskapskontroll"
+      },
+      "timestamp": "2026-11-20T10:20:41.904647"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "97cefae8",
+        "theme": "Tids- och kunskapskontroll"
+      },
+      "timestamp": "2026-11-20T10:20:41.904656"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "97cefae8",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904663"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "a8861b5e",
+        "theme": "Tids- och kunskapskontroll"
+      },
+      "timestamp": "2026-11-20T10:20:41.904667"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "a8861b5e",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904672"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "59766084",
+        "theme": "Tids- och kunskapskontroll"
+      },
+      "timestamp": "2026-11-20T10:20:41.904675"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "59766084",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904678"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "3f3a93f9",
+        "theme": "Informations- och resursprioritering"
+      },
+      "timestamp": "2026-11-20T10:20:41.904682"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "b689a777",
+        "theme": "Informations- och resursprioritering"
+      },
+      "timestamp": "2026-11-20T10:20:41.904685"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "b689a777",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904688"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "ee1ad106",
+        "theme": "Informations- och resursprioritering"
+      },
+      "timestamp": "2026-11-20T10:20:41.904691"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "ee1ad106",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904696"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "8de44602",
+        "theme": "Informations- och resursprioritering"
+      },
+      "timestamp": "2026-11-20T10:20:41.904699"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "8de44602",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904702"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "751f553c",
+        "theme": "Robusthet och granskning"
+      },
+      "timestamp": "2026-11-20T10:20:41.904705"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "ccaf5e2c",
+        "theme": "Robusthet och granskning"
+      },
+      "timestamp": "2026-11-20T10:20:41.904708"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "ccaf5e2c",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904710"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "0f7c3405",
+        "theme": "Robusthet och granskning"
+      },
+      "timestamp": "2026-11-20T10:20:41.904713"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "0f7c3405",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904716"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "5ef7b95b",
+        "theme": "Robusthet och granskning"
+      },
+      "timestamp": "2026-11-20T10:20:41.904719"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "5ef7b95b",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904721"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "3f1199d4",
+        "theme": "Jämförelse och attribution"
+      },
+      "timestamp": "2026-11-20T10:20:41.904724"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "f2cc63a9",
+        "theme": "Jämförelse och attribution"
+      },
+      "timestamp": "2026-11-20T10:20:41.904726"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "f2cc63a9",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904728"
+    },
+    {
+      "event": "concept_theme",
+      "data": {
+        "concept_id": "8fb804e7",
+        "theme": "Jämförelse och attribution"
+      },
+      "timestamp": "2026-11-20T10:20:41.904731"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "8fb804e7",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-20T10:20:41.904733"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "3f1199d4",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T10:24:47.216253"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "f0394a71",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T10:24:49.444789"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "3f3a93f9",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T10:24:59.164022"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "751f553c",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T10:25:02.309560"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "3f1199d4"
+      },
+      "timestamp": "2026-11-20T10:25:18.443479"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "3f3a93f9"
+      },
+      "timestamp": "2026-11-20T10:26:36.120354"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "f0394a71"
+      },
+      "timestamp": "2026-11-20T10:26:57.228550"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "751f553c"
+      },
+      "timestamp": "2026-11-20T10:27:11.544469"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "3f1199d4",
+        "old_title": "Oenighetsmotor",
+        "old_text": "Idén är att systemet medvetet organiserar analysen kring skillnader mellan modeller, odds, streckfördelning och mänskliga bedömningar. I stället för att snabbt väga samman motstridiga signaler presenteras oenigheten som ett eget beslutsobjekt med alternativa tolkningar och konsekvenser.\n\nPunkten bygger på lägesbildens beskrivning av motstridiga informationskällor och målbildens krav på att redovisa osäkerheter samt jämföra mänskliga och statistiska prognoser. Den möter det önskade läget genom att stödja alternativa strategier och göra osäkerhet synlig innan systemkonstruktionen väljs. Den bevarar funktionen hos modellkombinationer och mänsklig interaktion, men ersätter idén om en enda sammanvägd huvudprognos med ett strukturerat spektrum av plausibla synsätt. Största risken är beslutsförlamning eller att oenighet feltolkas som spelvärde även när signalerna är svaga."
+      },
+      "timestamp": "2026-11-20T10:31:21.996781"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "3f1199d4"
+      },
+      "timestamp": "2026-11-20T10:31:21.996799"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "f0394a71",
+        "old_title": "Tidslåsta prognoslager",
+        "old_text": "Idén är att varje omgång representeras av flera prognoslager som låses vid olika informationslägen, exempelvis tidigt, efter nya laguppgifter och nära spelstopp. Varje lager behåller sina egna sannolikheter, systemval och osäkerheter, så att resultatet kan visas både som en slutprognos och som en förändringskurva.\n\nPunkten kommer ur kravet på att skilja förhandsbedömningar från efterhandsinformation och att förstå hur nya uppgifter påverkar beslut. Den möter det önskade läget genom att göra informationsvärde, prognosstabilitet och sena förändringar synliga över tid. Den ersätter en enda veckovis analysversion men bevarar behovet av historiskt oförändrade prognoser. Största risken är att flera tidslager skapar skenbar precision eller att sena förändringar övervärderas trots svagt underlag."
+      },
+      "timestamp": "2026-11-20T10:31:27.919188"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "f0394a71"
+      },
+      "timestamp": "2026-11-20T10:31:27.919202"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "3f3a93f9",
+        "old_title": "Informationsvärdesmotor",
+        "old_text": "Idén är att systemet rangordnar osäkerheter efter vilket informationsvärde en ytterligare uppgift kan ha för beslutet, i relation till kostnaden att hämta eller bearbeta den. Den minsta prövbara formen är en enda match där två möjliga informationsuppdateringar jämförs utifrån om de sannolikt förändrar tecken, system eller riskbedömning.\n\nPunkten kommer ur målbildens krav på kontinuerlig omvärldsbevakning, men organiserar den som selektiv resursallokering snarare än som generell informationsinsamling. Systemet bestämmer vilka osäkerheter som förtjänar uppmärksamhet och visar ett beslutsträd över möjliga informationsvinster. Den bevarar funktionen hos omvärldsbevakningen men ersätter en bred och likformig bevakningslogik. Största risken är att informationsvärdet modelleras med falsk precision och att relevanta men svårvärderade signaler sorteras bort."
+      },
+      "timestamp": "2026-11-20T10:31:31.150423"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "3f3a93f9"
+      },
+      "timestamp": "2026-11-20T10:31:31.150439"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "751f553c",
+        "old_title": "Motexempelrevisor",
+        "old_text": "Idén är en fristående granskningsroll som försöker hitta ett konkret motexempel till varje föreslaget system: en rad, kostnad, begränsning eller täckningsregel som inte håller. Den minsta prövbara formen är en liten syntetisk kupong där en konstruktör producerar ett system och revisorn returnerar antingen godkännande eller ett maskinläsbart motexempel.\n\nPunkten kommer ur målbildens krav på praktiskt genomförbara system med korrekta villkor, kostnader och reduceringsprinciper. Konstruktören och revisorn hålls organisatoriskt åtskilda, och resultatet visas som verifierade egenskaper plus konkreta felobjekt snarare än som ännu en strategisk rekommendation. Den ersätter implicit tillit till systemgeneratorn men bevarar dess möjlighet att föreslå många systemtyper. Största risken är att revisorn endast bevisar formell giltighet och därmed ger en falsk trygghet om ekonomisk eller spelmässig kvalitet."
+      },
+      "timestamp": "2026-11-20T10:31:35.045353"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "751f553c"
+      },
+      "timestamp": "2026-11-20T10:31:35.045363"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "5f099ad1",
+        "goal_id": "c5f0992d",
+        "parent_id": "3f1199d4",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T10:32:26.933999"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "0dc2b1e1",
+        "goal_id": "c5f0992d",
+        "parent_id": "3f1199d4",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T10:32:26.934027"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "9d91a09c",
+        "goal_id": "c5f0992d",
+        "parent_id": "3f1199d4",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T10:32:26.934043"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "4a9f58db",
+        "goal_id": "c5f0992d",
+        "parent_id": "3f1199d4",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-20T10:32:26.934057"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "5f099ad1"
+      },
+      "timestamp": "2026-11-20T12:13:53.542870"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "0dc2b1e1"
+      },
+      "timestamp": "2026-11-20T12:14:27.781254"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "9d91a09c"
+      },
+      "timestamp": "2026-11-20T12:14:51.852636"
+    },
+    {
+      "event": "concept_draft",
+      "data": {
+        "concept_id": "4a9f58db"
+      },
+      "timestamp": "2026-11-20T12:15:10.886808"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "5f099ad1",
+        "old_title": "Separata bedömningsprofiler",
+        "old_text": "Varje informationskälla ska representeras som en egen bedömningsprofil för matchens 1, X och 2, med tillhörande osäkerhet, aktualitet och antaganden. Modeller, odds, streckfördelning och mänskliga bedömningar ska kunna jämföras utan att först reduceras till en gemensam prognos.\n\nPunkten kommer ur kravet att skilja mellan verifierade fakta, modellresultat, marknadsinformation och mänskliga bedömningar. Den möter det önskade läget genom att göra underlaget transparent och jämförbart inför analys och systemkonstruktion. Funktionen hos modellkombinationer och mänsklig interaktion bevaras som separata perspektiv, medan rollen som en enda auktoritativ huvudprognos ersätts. Den största risken är att skillnader i datakvalitet eller uttrycksform misstolkas som verklig oenighet."
+      },
+      "timestamp": "2026-11-20T12:15:17.037034"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "5f099ad1"
+      },
+      "timestamp": "2026-11-20T12:15:17.037049"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "0dc2b1e1",
+        "old_title": "Oenighetens struktur",
+        "old_text": "Oenighet ska beskrivas efter typ, riktning och styrka snarare än enbart som numeriska avvikelser. Systemet kan skilja mellan exempelvis sannolikhetskonflikt, värdekonflikt, informationskonflikt och tidsrelaterad konflikt, samt visa vilka antaganden som ligger bakom varje skillnad.\n\nPunkten bygger på målbildens krav att redovisa osäkerheter, motstridiga uppgifter och faktorer som påverkat bedömningen. Den möter det önskade läget genom att göra oenighet begriplig nog att undersökas, följas upp och kopplas till hypoteser. Den bevarar funktionen hos erfarenhetskunskap och externa informationskällor, men ersätter en odifferentierad sammanvägning med en strukturerad tolkning av varför källorna skiljer sig. Den största risken är att kategorierna ger en falsk känsla av precision när orsaken till oenigheten egentligen är okänd."
+      },
+      "timestamp": "2026-11-20T12:15:21.068256"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "0dc2b1e1"
+      },
+      "timestamp": "2026-11-20T12:15:21.068289"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "9d91a09c",
+        "old_title": "Strategiska konsekvenskartor",
+        "old_text": "Varje central oenighet ska kunna kopplas till hur olika tolkningar påverkar spikar, garderingar, systemtyper, radantal och risknivåer. Resultatet blir en karta över vilka spelmodeller som gynnas eller försvagas av olika synsätt, utan att systemet måste utse en enda korrekt tolkning.\n\nPunkten kommer ur målbildens krav på alternativa spelmodeller med olika kombinationer av sannolikhet, utdelningspotential och risk. Den möter det önskade läget genom att översätta analysens motstridigheter till praktiskt jämförbara systemalternativ. Funktionen hos strategisk systemkonstruktion bevaras, medan beslutet inte längre behöver bygga på en ensam prognos. Den största risken är att många konsekvensalternativ gör beslutsunderlaget svåröverskådligt eller att oenighet felaktigt framstår som spelvärde."
+      },
+      "timestamp": "2026-11-20T12:15:26.523583"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "9d91a09c"
+      },
+      "timestamp": "2026-11-20T12:15:26.523596"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "4a9f58db",
+        "old_title": "Oenighet som lärdata",
+        "old_text": "Oenighetsmotorn ska bevara vilka källor som avvek, vilka tolkningar som valdes och hur varje alternativ föll ut efter matcherna. Över tid kan systemet jämföra om vissa typer av oenighet, källkombinationer eller mänskliga invändningar återkommande förbättrar eller försämrar prognoser och strategier.\n\nPunkten hämtas från målbildens krav på att spara prognoser före spelstopp, jämföra strategier och skilja tillfälliga variationer från mer långsiktiga förbättringar. Den möter det önskade läget genom att göra själva oenigheten till ett objekt för utvärdering och kunskapsutveckling. Funktionen hos kontinuerligt lärande bevaras, men lärandet flyttas från enbart slutresultat till även analysens konflikter och val mellan perspektiv. Den största risken är efterhandsförklaringar eller överanpassning, särskilt om systemet börjar favorisera tidigare framgångsrika avvikelser utan tillräckligt underlag."
+      },
+      "timestamp": "2026-11-20T12:15:29.995954"
+    },
+    {
+      "event": "concept_draft_used",
+      "data": {
+        "concept_id": "4a9f58db"
+      },
+      "timestamp": "2026-11-20T12:15:29.995980"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "5f099ad1",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T12:15:44.285907"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "0dc2b1e1",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T12:15:47.419933"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "9d91a09c",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T12:15:55.936365"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "4a9f58db",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-20T12:15:59.181370"
+    },
+    {
+      "event": "actions_collected",
+      "data": {
+        "goal_id": "c5f0992d",
+        "count": 8,
+        "replaced": 0
+      },
+      "timestamp": "2026-11-20T12:53:08.610698"
+    },
+    {
+      "event": "mission_added",
+      "data": {
+        "mission_id": "b4989c21",
+        "goal_id": "c5f0992d",
+        "purpose": "Grundförutsättning för hela ärendet"
+      },
+      "timestamp": "2026-11-20T13:04:40.805962"
+    },
+    {
+      "event": "action_accepted",
+      "data": {
+        "action_id": "1a3fc0a9",
+        "mission_id": "b4989c21"
+      },
+      "timestamp": "2026-11-20T13:04:40.805968"
+    }
+  ],
+  "created": "2026-11-20T09:17:36.500679",
+  "updated": "2026-11-20T13:04:40.805968"
+}

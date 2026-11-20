@@ -1,0 +1,815 @@
+{
+  "id": "a990768e",
+  "owner_id": "6c8a8880-e7b7-4aad-880b-44d31f0cc537",
+  "context": {
+    "description": "Ny skola för hemmasittare",
+    "opening_question": "What are we working on right now?",
+    "time_scope": "ongoing",
+    "geographic_scope": null,
+    "identity_text": "Lägesuppfattning (elevperspektiv, sammanfattat från ca 200 berättelser om hemmasittare):\r\n1. Överbelastning: ljud, människor, intryck och miljö blir för mycket.\r\n2. Brist på trygghet: eleven känner oro, stress eller rädsla inför skoldagen.\r\n3. Brist på tillhörighet: eleven upplever sig inte passa in i gruppen eller skolans sammanhang.\r\n4. Att inte bli sedd: elevens signaler, behov och svårigheter uppmärksammas inte.\r\n5. Bristande inflytande: eleven har liten möjlighet att påverka sin situation eller sitt arbetssätt.\r\n6. Felaktiga förväntningar: samma krav och arbetssätt används trots olika förutsättningar.\r\n7. Brist på begriplighet: det är oklart vad eleven ska göra, hur eller varför.\r\n8. Förlorad motivation: skolarbetet upplevs som meningslöst, ointressant eller omöjligt.\r\n9. Upplevelse av misslyckande: eleven får återkommande erfarenheter av att inte räcka till.\r\n10. Förlorad framtidstro: skolan leder till uppgivenhet, frånvaro eller känslan av att framtiden stängs.",
+    "ideal_text": "Idealtillstånd (elevens röst):\r\n1. Trygghet: jag känner mig trygg och behöver inte kämpa för att orka vara här.\r\n2. Tillhörighet: jag har en självklar plats och är accepterad som jag är.\r\n3. Individuell anpassning: skolan fungerar med mina förutsättningar, inte tvärtom.\r\n4. Meningsfullhet: jag förstår varför jag lär mig något och vad jag kan använda det till.\r\n5. Nyfikenhet: jag får utforska sådant som väcker mitt intresse.\r\n6. Utveckling: jag får utmaningar som hjälper mig att växa, oavsett var jag börjar.\r\n7. Självbestämmande: jag har inflytande över hur jag lär mig och kan påverka min väg.\r\n8. Begriplighet: jag förstår målet, nästa steg och vad som förväntas av mig.\r\n9. Framsteg och självtillit: jag får uppleva att jag kan, lyckas och komma vidare.\r\n10. Framtidstro: jag ser möjligheter och kan föreställa mig en framtid som känns värdefull.\r\n\r\nSlutmål: alla som gått i skolan upp till 9 eller 12 år ska uppfylla både en form av fostran och\r\nkunskapsnivåer motsvarande dagens skola, eller bättre. Full frihet från allt dagens skola erbjuder:\r\nklassrum, lektioner, lärare, schema, närvaroplikt, betyg, nationella prov med mera.",
+    "root_goal_id": "51d4ce7f"
+  },
+  "current_situation": "",
+  "goals": [
+    {
+      "id": "51d4ce7f",
+      "desired_direction": "Ny skola för hemmasittare",
+      "status": "ACTIVE",
+      "missions": [],
+      "history": [],
+      "timestamp": "2026-11-17T21:52:58.040153"
+    }
+  ],
+  "missions": [],
+  "observations": [],
+  "decisions": [],
+  "observer_events": [],
+  "concepts": [
+    {
+      "id": "6c35e768",
+      "goal_id": "51d4ce7f",
+      "parent_id": null,
+      "title": "Trygga läröar",
+      "text": "Skolan ersätts av ett nätverk av små, valbara läröar: tysta rum, digitala miljöer, naturplatser och enskilda möten där samma elev kan röra sig mellan olika sammanhang utan att behöva återvända till en stor skolbyggnad. Varje ö har en tydlig värdrelation, låg sensorisk belastning och begriplig information om mål, nästa steg och valmöjligheter. \r\n\r\nPunkten kommer ur överbelastning, otrygghet, bristande tillhörighet, osynliggjorda behov och otydliga förväntningar. Den bevarar funktionen att ge kontinuerlig vägledning, social fostran och kunskapsprogression, men ersätter klassrum, fast schema, gemensam skolnärvaro och närvaroplikt med en flexibel närvarostruktur. Det önskade läget stärks genom trygghet, individuell anpassning, självbestämmande, begriplighet och möjlighet att uppleva framsteg utan att först klara skolans vanliga miljö. Kunskapsnivåer motsvarande eller bättre än dagens kan säkras genom att varje lärö synliggör vilka förmågor och ämnesområden som täcks, medan fostran sker genom gemensamma överenskommelser och ansvar mellan människor. Största risken är att flexibiliteten blir isolering: eleven kan få lugn men för lite tillhörighet, motstånd och gemensam värld.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T21:53:13.123209"
+    },
+    {
+      "id": "80b16ea0",
+      "goal_id": "51d4ce7f",
+      "parent_id": null,
+      "title": "Intressebaserade uppdrag",
+      "text": "Utbildningen organiseras som en karta av verkliga och fiktiva uppdrag som eleven kan välja, forma om och kombinera: exempelvis att undersöka vattenkvalitet, skapa ett spel, tolka en historisk konflikt eller bygga en hållbar budget. Varje uppdrag innehåller flera möjliga svårighetsnivåer och kan ge belägg för matematik, språk, naturvetenskap, samhällskunskap och etiska resonemang utan att ämnesgränserna behöver styra upplevelsen. \r\n\r\nPunkten kommer ur förlorad motivation, brist på begriplighet, felaktiga förväntningar, upplevelse av misslyckande och förlorad framtidstro. Den bevarar funktionen att utveckla och bedöma motsvarande kunskaper, men ersätter lektioner, läroboksstyrning, enhetliga arbetsformer och traditionella betyg med synliga kompetensprofiler och portföljer. Meningsfullhet, nyfikenhet, utveckling, självbestämmande och självtillit kan då byggas kring något som faktiskt väcker intresse. Fostran bevaras genom att uppdragen även rymmer samarbete, ansvar, perspektivtagande och hantering av konflikter. Största risken är att valfriheten förstärker ojämlikhet: den som saknar stöd, språk eller tillgång till intressanta sammanhang kan få en smalare utbildning än andra.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T21:53:13.123245"
+    },
+    {
+      "id": "be608d26",
+      "goal_id": "51d4ce7f",
+      "parent_id": null,
+      "title": "Lärandegemenskaper",
+      "text": "En lärandegemenskap består av små, åldersblandade grupper med en stabil vuxenrelation och ett gemensamt lokalt sammanhang, men utan krav på traditionella klasser eller daglig fysisk närvaro. Gruppen kan samlas kring en verkstad, förening, arbetsplats, kulturmiljö eller digital mötesplats och växla mellan enskilt arbete, samarbete och återhämtning. Vuxna fungerar som mentorer, ämneskunniga och konfliktmedlare snarare än som lektionshållare. \r\n\r\nPunkten kommer ur brist på tillhörighet, otrygghet, att inte bli sedd, liten påverkan och upplevelse av misslyckande. Den bevarar skolans funktion som gemensam social och kunskapsmässig infrastruktur samt dess fostrande roll, men ersätter klassen, lärarrollens ensidiga auktoritet, schemat och standardiserad gruppnärvaro. Det önskade läget möts genom en självklar plats, relationell trygghet, inflytande, social utveckling och konkreta möjligheter att bidra. Motsvarande kunskapsnivåer kan uttryckas genom gemensamma kunskapskartor och återkommande, varierade kunskapsdemonstrationer snarare än prov. Största risken är att gruppens trygghet blir beroende av enskilda vuxna eller att gruppnormer skapar en ny form av exkludering för den som inte passar in.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T21:53:13.123259"
+    },
+    {
+      "id": "cbda7d4e",
+      "goal_id": "51d4ce7f",
+      "parent_id": null,
+      "title": "Framtidsverkstäder",
+      "text": "Utbildningens kärna blir personliga framtidsverkstäder där eleven under återkommande perioder får gestalta möjliga liv, samhällen och identiteter genom simulering, rollspel, berättelser, praktiskt skapande och möten med olika generationer. En elev kan exempelvis prova att vara stadsplanerare i en klimatkris, vårdnadshavare i en fiktiv framtid eller konstruktör av ett samhälle med andra regler, och därefter jämföra konsekvenserna med verklig historia och vardag. \r\n\r\nPunkten kommer ur förlorad framtidstro, men också ur brist på mening, nyfikenhet, inflytande och begriplighet. Den bevarar funktionen att utveckla ämneskunskaper, omdöme, empati och samhällsfostran, men ersätter traditionella lektioner, lärobokens ordningsföljd, skolbyggnaden och betygets roll som huvudsakligt kvitto. Kunskaper kan visas genom resonemang, skapade modeller, källkritik och förmågan att revidera sina ställningstaganden. Trygghet kräver att eleven kan lämna en värld, göra om och välja avstånd utan social bestraffning. Största risken är att den upplevelsebaserade formen blir så fängslande eller symbolisk att den verkliga ämnesbredden, vardagsfärdigheterna och kontakten med andra människor blir otillräckliga.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T21:53:13.123270"
+    },
+    {
+      "id": "6dbaf981",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Uppdragslandskap med mening",
+      "text": "Punkten innebär att utbildningen förstås som ett sammanhängande landskap av uppdrag snarare än som en följd av lektioner eller lärobokskapitel. Uppdragen kan vara praktiska, undersökande, skapande, fiktiva eller samhällsinriktade och ge flera vägar in i samma kunskapsområden. \r\n\r\nDen kommer ur förlorad motivation, brist på begriplighet och förlorad framtidstro, eftersom lärandet knyts till frågor som kan upplevas som verkliga och betydelsefulla. Den möter önskat läge genom meningsfullhet, nyfikenhet och begriplighet: eleven kan se varför ett kunnande behövs, vad det kan användas till och hur olika delar hänger ihop. Funktionen att erbjuda en sammanhållen kunskapsprogression bevaras, medan lektionens och ämnesgränsernas funktion som huvudsaklig organiserande form ersätts. Uppdragen behöver ändå tillsammans kunna bära fostran och kunskaper motsvarande dagens skola eller bättre. Största risken är att uppdragens autenticitet blir ytlig eller att vissa intressen får större utbildningsvärde än andra, så att vägen mot en bred och likvärdig utbildning blir oklar.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "stable",
+      "seen_in": [
+        "outcome",
+        "builder",
+        "systems"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T22:38:41.336964"
+    },
+    {
+      "id": "a6dea1fc",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Valbara vägar med gemensam kärna",
+      "text": "Punkten innebär att samma övergripande utbildningsmål kan nås genom olika uppdrag, uttrycksformer och svårighetsnivåer. Ett uppdrag om exempelvis vatten, spel, historia eller ekonomi kan formas efter elevens frågor, tidigare erfarenheter och sätt att visa kunnande, samtidigt som en gemensam kärna av språk, matematik, naturvetenskap, samhällskunskap och etiska perspektiv finns tillgänglig. \r\n\r\nPunkten kommer ur felaktiga förväntningar, bristande inflytande och upplevelse av misslyckande. Den möter önskat läge genom individuell anpassning, självbestämmande, utveckling och framsteg: eleven behöver inte börja på samma plats eller arbeta på samma sätt för att nå jämförbara kunskaper. Funktionen att säkerställa att alla möter centrala delar av utbildningen bevaras, medan enhetliga arbetsformer och fasta ämnesbanor ersätts av flera möjliga vägar. En spänning finns mellan frihet och likvärdighet; för mycket öppenhet kan göra den gemensamma kärnan osynlig. Största risken är därför att valfriheten i praktiken blir beroende av elevens stöd, språk, resurser eller kännedom om vilka vägar som finns.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "stable",
+      "seen_in": [
+        "builder",
+        "systems",
+        "constraints"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T22:38:41.337016"
+    },
+    {
+      "id": "98e85a7a",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Synligt kunnande över tid",
+      "text": "Punkten innebär att varje uppdrag lämnar synliga spår av vad eleven kan, prövar och utvecklar, samlade i en portfölj och en kompetensprofil. Bedömningen kan bygga på texter, modeller, samtal, prototyper, analyser, redovisningar och dokumenterade processer, där det framgår vilka kunskaper och förmågor som beläggs och vad som ännu inte är visat. \r\n\r\nDen kommer ur att inte bli sedd, brist på begriplighet och upplevelse av misslyckande. Den möter önskat läge genom framsteg, självtillit och begriplighet, eftersom utveckling kan synliggöras utan att enstaka prestationer behöver definiera eleven. Funktionen att följa upp, kvalitetssäkra och bedöma kunskaper motsvarande dagens skola bevaras, medan traditionella betyg och standardiserade prov som enda eller huvudsakliga bevis ersätts. Om minimikravet är motsvarande kunskapsnivåer behöver profilen kunna visa tillräcklig bredd och djup, inte bara välgjorda favoritprojekt. Största risken är att portföljer blir svårjämförbara eller bedömningen otydlig, vilket kan försvaga både rättssäkerhet, framtida övergångar och elevens tillit till systemet.",
+      "status": "ACTIVE",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "stable",
+      "seen_in": [
+        "outcome",
+        "builder",
+        "systems",
+        "constraints"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T22:38:41.337053"
+    },
+    {
+      "id": "61aa3079",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Stöd inbyggt i uppdragen",
+      "text": "Punkten innebär att uppdragen inte bara erbjuder val, utan också olika former av stöd, struktur och sociala sammanhang inom själva lärmiljön. Ett och samma uppdrag kan ha tydliga mål, synliga nästa steg, alternativa instruktioner, möjlighet till återhämtning, olika sätt att samarbeta och flera sätt att uttrycka ett resultat. Stödet kan vara tillgängligt utan att eleven först måste misslyckas eller formulera ett formellt behov. \r\n\r\nPunkten kommer ur överbelastning, brist på trygghet, att inte bli sedd och brist på begriplighet. Den möter önskat läge genom trygghet, tillhörighet, individuell anpassning och självbestämmande. Funktionen att skapa social fostran, återkoppling, ansvarstagande och uthållighet bevaras, medan den traditionella klassens, lektionens och närvarokravets monopol på gemenskap och struktur ersätts. En viktig spänning är att stöd kan bli styrning: en karta som är alltför detaljerad kan minska friheten, medan en helt öppen karta kan öka belastningen. Största risken är att modellen antar att intresse automatiskt skapar ork, när trygghet, relationer och tillgänglig miljö kan vara nödvändiga förutsättningar.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "split",
+      "lens": "",
+      "stability": "stable",
+      "seen_in": [
+        "outcome",
+        "builder",
+        "systems",
+        "constraints"
+      ],
+      "edited": true,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-17T22:38:41.337078"
+    },
+    {
+      "id": "b83b2232",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Gemensamt ansvar och framtid",
+      "text": "Punkten innebär att uppdragen också fungerar som sociala och etiska sammanhang där samarbete, ansvar, perspektivtagande, konflikthantering och konsekvenser av beslut blir en del av det synliga kunnandet. Den kommer ur brist på tillhörighet, otrygghet och förlorad framtidstro, men också ur slutmålets krav på en form av fostran motsvarande eller bättre än dagens skola. Det önskade läget möts genom att eleven får en verklig plats i ett sammanhang, kan bidra på olika sätt och ser hur kunskaper och relationella förmågor kan användas i framtida studier, arbete och samhällsliv. Funktionen att föra vidare gemensamma normer, ansvar och samarbetsförmåga bevaras, medan klassrummets och skolans fasta gruppform som enda sociala arena ersätts av varierade gemenskaper kring uppdrag. När det är klart skulle utbildningen visa både individuellt kunnande och förmåga att delta respektfullt i gemensamma processer. Den största risken är att deltagande i grupper åter skapar utsatthet eller social rangordning, särskilt för elever vars trygghet kräver låg exponering eller mycket förutsägbara former.",
+      "status": "CANDIDATE",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "outcome",
+      "stability": "variant",
+      "seen_in": [
+        "outcome"
+      ],
+      "edited": false,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T07:42:57.150845"
+    },
+    {
+      "id": "4e01b8c2",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Oberoende kvalitetsgaranti",
+      "text": "Punkten innebär att utbildningens frihet från traditionella lektioner och betyg balanseras av oberoende former för återkoppling, validering och rättelse. Elevens portfölj visar inte bara vad som har producerats, utan även hur förståelse, ansvar, samarbete och omprövning har utvecklats över tid. Den kommer ur upplevelse av misslyckande, att inte bli sedd, bristande begriplighet och förlorad framtidstro. Den möter framsteg, självtillit, utveckling och trygghet genom att bedömningen blir återkommande, begriplig och mindre knuten till enstaka prestationstillfällen. Funktionen att skydda utbildningens kvalitet, ge erkända kunskaper och motverka godtycke bevaras, medan traditionella prov och betyg ersätts endast där ett annat system kan ge motsvarande tillförlitlighet. Detta är beroende av kompetenta bedömare, tydliga kriterier, möjlighet till omprövning och någon institutionell ansvarsfördelning. Regelverk om dokumentation, likvärdig bedömning, elevrättigheter och behörighet kan göra full ersättning av nuvarande former omöjlig eller kräva särskilda övergångslösningar. Resurskostnaden blir hög om individuella arbeten ska granskas rättvist. Största risken är att systemet antingen blir så standardiserat att friheten försvinner, eller så löst att utbildningsnivån inte kan garanteras.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "deep",
+      "lens": "constraints",
+      "stability": "variant",
+      "seen_in": [
+        "constraints"
+      ],
+      "edited": false,
+      "variant_of": null,
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T07:42:57.150899"
+    },
+    {
+      "id": "c51b5fc2",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Platsbundna expeditioner",
+      "text": "Utbildningen organiseras kring återkommande expeditioner i den fysiska geografidär eleverna befinner sig: till exempel till ett vattendrag, en arbetsplats, ett kulturmiljöområde eller en lokal verksamhet. Eleven väljer inte främst mellan uppdrag, utan deltar i en längre undersökande rörelse där platsens förändringar, människor och problem formar nästa fråga. Lärandet sker växelvis ute på plats, i gemensamma verkstäder och på distans.\n\nPunkten kommer ur överbelastning, brist på begriplighet, förlorad motivation och förlorad framtidstro, eftersom kunskap knyts till en konkret omgivning och till sådant som faktiskt händer där. Den möter önskat läge genom meningsfullhet, nyfikenhet, tillhörighet, utveckling och begriplighet, samtidigt som funktionen att bygga breda kunskaper och fostran bevaras. Lektionen som huvudsaklig tids- och rumsform ersätts av platsens rytm, fältarbete och gemensamma bearbetning. Största risken är att elevernas utbildningsmöjligheter blir beroende av vilken geografi, infrastruktur och vilka lokala sammanhang de råkar ha tillgång till.",
+      "status": "CANDIDATE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": "6dbaf981",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T20:01:37.580547"
+    },
+    {
+      "id": "a9deaeb6",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Beställda samhällsproblem",
+      "text": "Utbildningen bärs av en växlande krets av samhällsaktörer som formulerar verkliga behov och erbjuder resurser, mottagare och begränsningar för elevernas arbete. Eleverna väljer roller i tillfälliga team och förhandlar fram vad som ska räknas som en användbar lösning med den som berörs. Resultatet bedöms genom mottagarens återkoppling, elevens försvar av sina val och hur väl arbetet hanterar motstridiga intressen.\n\nPunkten kommer ur förlorad motivation, brist på meningsfullhet, bristande inflytande och förlorad framtidstro, eftersom kunnandet får en verklig mottagare och en faktisk konsekvens. Den möter önskat läge genom självbestämmande, samarbete, perspektivtagande, utveckling och begriplighet, medan funktionen att förena kunskapsutveckling med fostran bevaras. Lärarens och lärobokens funktion som huvudsaklig källa till frågor ersätts av ett system där samhällsaktörer beställer, begränsar och svarar på arbetet. Största risken är att utbildningen blir styrd av de aktörer som har mest makt eller resurser och att det som är lätt att beställa värderas högre än långsamt, abstrakt eller kritiskt kunnande.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": "6dbaf981",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T20:01:37.580612"
+    },
+    {
+      "id": "b6c70250",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Personliga lärspår",
+      "text": "Varje elev formar ett flerårigt lärspår utifrån en återkommande livsfråga, ett område eller en framtidsbild, och omprövar spåret vid särskilda vägval i stället för att följa en gemensam ordning. En handledare fungerar som navigator och hjälper eleven att upptäcka vilka kunskaper, perspektiv och erfarenheter som saknas för nästa steg, medan andra elever och vuxna kan bidra till olika delar. Framsteg visas genom vägval, förklarade omprövningar och muntliga eller praktiska försvar av den egna utvecklingen.\n\nPunkten kommer ur felaktiga förväntningar, bristande inflytande, upplevelse av misslyckande och förlorad framtidstro, eftersom utbildningens riktning kan byggas kring elevens förutsättningar utan att utveckling upphör. Den möter önskat läge genom individuell anpassning, självbestämmande, självtillit, framtidstro och begriplighet. Funktionen att skapa en progression bevaras, men den gemensamma kursordningen, fasta årskurser och lärarens roll som den som ensam avgör nästa steg ersätts av personliga vägval och navigering. Största risken är att elevens tidiga erfarenheter eller begränsade föreställningar låser spåret, så att självbestämmande i praktiken leder till en smalare utbildning.",
+      "status": "CANDIDATE",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": "6dbaf981",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T20:01:37.580657"
+    },
+    {
+      "id": "c36a4d6a",
+      "goal_id": "51d4ce7f",
+      "parent_id": "80b16ea0",
+      "title": "Lärande som gemensam ekonomi",
+      "text": "Utbildningen organiseras som ett lokalt kunskapskooperativ där elever, familjer, yrkespersoner och andra invånare tillsammans äger lärmiljöer, utrustning och återkommande gemensamma projekt. Deltagare tar olika roller som utforskare, tillverkare, handledare, kritiker eller förvaltare, och den lokala gemenskapen beslutar vilka resurser och frågeområden som ska prioriteras. Utbildningens bärkraft syns i vad gemenskapen kan förstå, skapa, vårda och föra vidare över tid.\n\nPunkten kommer ur brist på tillhörighet, att inte bli sedd, bristande inflytande och förlorad framtidstro, eftersom eleven får en faktisk plats i ett sammanhang där bidrag och kunnande behövs. Den möter önskat läge genom tillhörighet, självbestämmande, meningsfullhet, ansvar och utveckling, samtidigt som funktionen att föra vidare kunskaper och fostran bevaras. Skolan som avskild institution med ensidig resursförsörjning ersätts av ett gemensamt ägande där kostnader och möjligheter bärs av flera parter, och resultat syns i kooperativets långsiktiga förmåga snarare än främst i individuella prestationer. Största risken är att socialt kapital, familjers tid och lokala resurser blir avgörande för utbildningens kvalitet och därmed förstärker ojämlikhet.",
+      "status": "PARKED",
+      "source": "ai",
+      "mode": "vary",
+      "lens": "",
+      "stability": "",
+      "seen_in": [],
+      "edited": false,
+      "variant_of": "6dbaf981",
+      "spec": {},
+      "spiked": false,
+      "draft_text": "",
+      "draft_spec": {},
+      "draft_missing": "",
+      "timestamp": "2026-11-18T20:01:37.580691"
+    }
+  ],
+  "pending_proposals": {},
+  "history": [
+    {
+      "event": "goal_added",
+      "data": {
+        "goal_id": "51d4ce7f",
+        "direction": "Ny skola för hemmasittare"
+      },
+      "timestamp": "2026-11-17T21:52:58.040164"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "6c35e768",
+        "goal_id": "51d4ce7f",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T21:53:13.123226"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "80b16ea0",
+        "goal_id": "51d4ce7f",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T21:53:13.123249"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "be608d26",
+        "goal_id": "51d4ce7f",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T21:53:13.123262"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "cbda7d4e",
+        "goal_id": "51d4ce7f",
+        "parent_id": null,
+        "source": "ai",
+        "mode": "vary",
+        "status": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T21:53:13.123273"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "6c35e768",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-17T22:26:23.555314"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "be608d26",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-17T22:26:29.069848"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "80b16ea0",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-17T22:26:34.441775"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "cbda7d4e",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-17T22:26:37.695170"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "6c35e768",
+        "old": "PARKED",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:35:49.296308"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "80b16ea0",
+        "old": "PARKED",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:35:59.817552"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "be608d26",
+        "old": "PARKED",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:36:06.799260"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "cbda7d4e",
+        "old": "PARKED",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:36:13.064412"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "6dbaf981",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-17T22:38:41.336981"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "a6dea1fc",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-17T22:38:41.337027"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "98e85a7a",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-17T22:38:41.337060"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "61aa3079",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "split",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-17T22:38:41.337084"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "6dbaf981",
+        "old_title": "Uppdragslandskap med mening",
+        "old_text": "Punkten innebär att utbildningen förstås som ett sammanhängande landskap av uppdrag snarare än som en följd av lektioner eller lärobokskapitel. Uppdragen kan vara praktiska, undersökande, skapande, fiktiva eller samhällsinriktade och ge flera vägar in i samma kunskapsområden. Den kommer ur förlorad motivation, brist på begriplighet och förlorad framtidstro, eftersom lärandet knyts till frågor som kan upplevas som verkliga och betydelsefulla. Den möter önskat läge genom meningsfullhet, nyfikenhet och begriplighet: eleven kan se varför ett kunnande behövs, vad det kan användas till och hur olika delar hänger ihop. Funktionen att erbjuda en sammanhållen kunskapsprogression bevaras, medan lektionens och ämnesgränsernas funktion som huvudsaklig organiserande form ersätts. Uppdragen behöver ändå tillsammans kunna bära fostran och kunskaper motsvarande dagens skola eller bättre. Största risken är att uppdragens autenticitet blir ytlig eller att vissa intressen får större utbildningsvärde än andra, så att vägen mot en bred och likvärdig utbildning blir oklar."
+      },
+      "timestamp": "2026-11-17T22:50:57.815471"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "6dbaf981",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:50:57.815483"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "a6dea1fc",
+        "old_title": "Valbara vägar med gemensam kärna",
+        "old_text": "Punkten innebär att samma övergripande utbildningsmål kan nås genom olika uppdrag, uttrycksformer och svårighetsnivåer. Ett uppdrag om exempelvis vatten, spel, historia eller ekonomi kan formas efter elevens frågor, tidigare erfarenheter och sätt att visa kunnande, samtidigt som en gemensam kärna av språk, matematik, naturvetenskap, samhällskunskap och etiska perspektiv finns tillgänglig. Punkten kommer ur felaktiga förväntningar, bristande inflytande och upplevelse av misslyckande. Den möter önskat läge genom individuell anpassning, självbestämmande, utveckling och framsteg: eleven behöver inte börja på samma plats eller arbeta på samma sätt för att nå jämförbara kunskaper. Funktionen att säkerställa att alla möter centrala delar av utbildningen bevaras, medan enhetliga arbetsformer och fasta ämnesbanor ersätts av flera möjliga vägar. En spänning finns mellan frihet och likvärdighet; för mycket öppenhet kan göra den gemensamma kärnan osynlig. Största risken är därför att valfriheten i praktiken blir beroende av elevens stöd, språk, resurser eller kännedom om vilka vägar som finns."
+      },
+      "timestamp": "2026-11-17T22:51:33.576600"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "a6dea1fc",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:51:33.576613"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "6dbaf981",
+        "old_title": "Uppdragslandskap med mening",
+        "old_text": "Punkten innebär att utbildningen förstås som ett sammanhängande landskap av uppdrag snarare än som en följd av lektioner eller lärobokskapitel. Uppdragen kan vara praktiska, undersökande, skapande, fiktiva eller samhällsinriktade och ge flera vägar in i samma kunskapsområden. \r\nDen kommer ur förlorad motivation, brist på begriplighet och förlorad framtidstro, eftersom lärandet knyts till frågor som kan upplevas som verkliga och betydelsefulla. Den möter önskat läge genom meningsfullhet, nyfikenhet och begriplighet: eleven kan se varför ett kunnande behövs, vad det kan användas till och hur olika delar hänger ihop. Funktionen att erbjuda en sammanhållen kunskapsprogression bevaras, medan lektionens och ämnesgränsernas funktion som huvudsaklig organiserande form ersätts. Uppdragen behöver ändå tillsammans kunna bära fostran och kunskaper motsvarande dagens skola eller bättre. Största risken är att uppdragens autenticitet blir ytlig eller att vissa intressen får större utbildningsvärde än andra, så att vägen mot en bred och likvärdig utbildning blir oklar."
+      },
+      "timestamp": "2026-11-17T22:51:44.896268"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "98e85a7a",
+        "old_title": "Synligt kunnande över tid",
+        "old_text": "Punkten innebär att varje uppdrag lämnar synliga spår av vad eleven kan, prövar och utvecklar, samlade i en portfölj och en kompetensprofil. Bedömningen kan bygga på texter, modeller, samtal, prototyper, analyser, redovisningar och dokumenterade processer, där det framgår vilka kunskaper och förmågor som beläggs och vad som ännu inte är visat. Den kommer ur att inte bli sedd, brist på begriplighet och upplevelse av misslyckande. Den möter önskat läge genom framsteg, självtillit och begriplighet, eftersom utveckling kan synliggöras utan att enstaka prestationer behöver definiera eleven. Funktionen att följa upp, kvalitetssäkra och bedöma kunskaper motsvarande dagens skola bevaras, medan traditionella betyg och standardiserade prov som enda eller huvudsakliga bevis ersätts. Om minimikravet är motsvarande kunskapsnivåer behöver profilen kunna visa tillräcklig bredd och djup, inte bara välgjorda favoritprojekt. Största risken är att portföljer blir svårjämförbara eller bedömningen otydlig, vilket kan försvaga både rättssäkerhet, framtida övergångar och elevens tillit till systemet."
+      },
+      "timestamp": "2026-11-17T22:52:01.541251"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "98e85a7a",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:52:01.541260"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "61aa3079",
+        "old_title": "Stöd inbyggt i uppdragen",
+        "old_text": "Punkten innebär att uppdragen inte bara erbjuder val, utan också olika former av stöd, struktur och sociala sammanhang inom själva lärmiljön. Ett och samma uppdrag kan ha tydliga mål, synliga nästa steg, alternativa instruktioner, möjlighet till återhämtning, olika sätt att samarbeta och flera sätt att uttrycka ett resultat. Stödet kan vara tillgängligt utan att eleven först måste misslyckas eller formulera ett formellt behov. Punkten kommer ur överbelastning, brist på trygghet, att inte bli sedd och brist på begriplighet. Den möter önskat läge genom trygghet, tillhörighet, individuell anpassning och självbestämmande. Funktionen att skapa social fostran, återkoppling, ansvarstagande och uthållighet bevaras, medan den traditionella klassens, lektionens och närvarokravets monopol på gemenskap och struktur ersätts. En viktig spänning är att stöd kan bli styrning: en karta som är alltför detaljerad kan minska friheten, medan en helt öppen karta kan öka belastningen. Största risken är att modellen antar att intresse automatiskt skapar ork, när trygghet, relationer och tillgänglig miljö kan vara nödvändiga förutsättningar."
+      },
+      "timestamp": "2026-11-17T22:52:19.019514"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "61aa3079",
+        "old": "CANDIDATE",
+        "new": "ACTIVE"
+      },
+      "timestamp": "2026-11-17T22:52:19.019524"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "80b16ea0",
+        "old_title": "Intressebaserade uppdrag",
+        "old_text": "Utbildningen organiseras som en karta av verkliga och fiktiva uppdrag som eleven kan välja, forma om och kombinera: exempelvis att undersöka vattenkvalitet, skapa ett spel, tolka en historisk konflikt eller bygga en hållbar budget. Varje uppdrag innehåller flera möjliga svårighetsnivåer och kan ge belägg för matematik, språk, naturvetenskap, samhällskunskap och etiska resonemang utan att ämnesgränserna behöver styra upplevelsen. Punkten kommer ur förlorad motivation, brist på begriplighet, felaktiga förväntningar, upplevelse av misslyckande och förlorad framtidstro. Den bevarar funktionen att utveckla och bedöma motsvarande kunskaper, men ersätter lektioner, läroboksstyrning, enhetliga arbetsformer och traditionella betyg med synliga kompetensprofiler och portföljer. Meningsfullhet, nyfikenhet, utveckling, självbestämmande och självtillit kan då byggas kring något som faktiskt väcker intresse. Fostran bevaras genom att uppdragen även rymmer samarbete, ansvar, perspektivtagande och hantering av konflikter. Största risken är att valfriheten förstärker ojämlikhet: den som saknar stöd, språk eller tillgång till intressanta sammanhang kan få en smalare utbildning än andra."
+      },
+      "timestamp": "2026-11-18T07:23:05.717107"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "be608d26",
+        "old_title": "Lärandegemenskaper",
+        "old_text": "En lärandegemenskap består av små, åldersblandade grupper med en stabil vuxenrelation och ett gemensamt lokalt sammanhang, men utan krav på traditionella klasser eller daglig fysisk närvaro. Gruppen kan samlas kring en verkstad, förening, arbetsplats, kulturmiljö eller digital mötesplats och växla mellan enskilt arbete, samarbete och återhämtning. Vuxna fungerar som mentorer, ämneskunniga och konfliktmedlare snarare än som lektionshållare. Punkten kommer ur brist på tillhörighet, otrygghet, att inte bli sedd, liten påverkan och upplevelse av misslyckande. Den bevarar skolans funktion som gemensam social och kunskapsmässig infrastruktur samt dess fostrande roll, men ersätter klassen, lärarrollens ensidiga auktoritet, schemat och standardiserad gruppnärvaro. Det önskade läget möts genom en självklar plats, relationell trygghet, inflytande, social utveckling och konkreta möjligheter att bidra. Motsvarande kunskapsnivåer kan uttryckas genom gemensamma kunskapskartor och återkommande, varierade kunskapsdemonstrationer snarare än prov. Största risken är att gruppens trygghet blir beroende av enskilda vuxna eller att gruppnormer skapar en ny form av exkludering för den som inte passar in."
+      },
+      "timestamp": "2026-11-18T07:23:30.846157"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "cbda7d4e",
+        "old_title": "Framtidsverkstäder",
+        "old_text": "Utbildningens kärna blir personliga framtidsverkstäder där eleven under återkommande perioder får gestalta möjliga liv, samhällen och identiteter genom simulering, rollspel, berättelser, praktiskt skapande och möten med olika generationer. En elev kan exempelvis prova att vara stadsplanerare i en klimatkris, vårdnadshavare i en fiktiv framtid eller konstruktör av ett samhälle med andra regler, och därefter jämföra konsekvenserna med verklig historia och vardag. Punkten kommer ur förlorad framtidstro, men också ur brist på mening, nyfikenhet, inflytande och begriplighet. Den bevarar funktionen att utveckla ämneskunskaper, omdöme, empati och samhällsfostran, men ersätter traditionella lektioner, lärobokens ordningsföljd, skolbyggnaden och betygets roll som huvudsakligt kvitto. Kunskaper kan visas genom resonemang, skapade modeller, källkritik och förmågan att revidera sina ställningstaganden. Trygghet kräver att eleven kan lämna en värld, göra om och välja avstånd utan social bestraffning. Största risken är att den upplevelsebaserade formen blir så fängslande eller symbolisk att den verkliga ämnesbredden, vardagsfärdigheterna och kontakten med andra människor blir otillräckliga."
+      },
+      "timestamp": "2026-11-18T07:23:55.931988"
+    },
+    {
+      "event": "concept_edited",
+      "data": {
+        "concept_id": "6c35e768",
+        "old_title": "Trygga läröar",
+        "old_text": "Skolan ersätts av ett nätverk av små, valbara läröar: tysta rum, digitala miljöer, naturplatser och enskilda möten där samma elev kan röra sig mellan olika sammanhang utan att behöva återvända till en stor skolbyggnad. Varje ö har en tydlig värdrelation, låg sensorisk belastning och begriplig information om mål, nästa steg och valmöjligheter. Punkten kommer ur överbelastning, otrygghet, bristande tillhörighet, osynliggjorda behov och otydliga förväntningar. Den bevarar funktionen att ge kontinuerlig vägledning, social fostran och kunskapsprogression, men ersätter klassrum, fast schema, gemensam skolnärvaro och närvaroplikt med en flexibel närvarostruktur. Det önskade läget stärks genom trygghet, individuell anpassning, självbestämmande, begriplighet och möjlighet att uppleva framsteg utan att först klara skolans vanliga miljö. Kunskapsnivåer motsvarande eller bättre än dagens kan säkras genom att varje lärö synliggör vilka förmågor och ämnesområden som täcks, medan fostran sker genom gemensamma överenskommelser och ansvar mellan människor. Största risken är att flexibiliteten blir isolering: eleven kan få lugn men för lite tillhörighet, motstånd och gemensam värld."
+      },
+      "timestamp": "2026-11-18T07:25:21.175915"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "b83b2232",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T07:42:57.150862"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "4e01b8c2",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "deep",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T07:42:57.150907"
+    },
+    {
+      "event": "concept_seen",
+      "data": {
+        "concept_id": "6dbaf981",
+        "seen_in": [
+          "outcome",
+          "builder",
+          "systems"
+        ],
+        "stability": "stable"
+      },
+      "timestamp": "2026-11-18T07:42:57.150925"
+    },
+    {
+      "event": "concept_seen",
+      "data": {
+        "concept_id": "98e85a7a",
+        "seen_in": [
+          "outcome",
+          "builder",
+          "systems",
+          "constraints"
+        ],
+        "stability": "stable"
+      },
+      "timestamp": "2026-11-18T07:42:57.150941"
+    },
+    {
+      "event": "concept_seen",
+      "data": {
+        "concept_id": "61aa3079",
+        "seen_in": [
+          "outcome",
+          "builder",
+          "systems",
+          "constraints"
+        ],
+        "stability": "stable"
+      },
+      "timestamp": "2026-11-18T07:42:57.150950"
+    },
+    {
+      "event": "concept_seen",
+      "data": {
+        "concept_id": "a6dea1fc",
+        "seen_in": [
+          "builder",
+          "systems",
+          "constraints"
+        ],
+        "stability": "stable"
+      },
+      "timestamp": "2026-11-18T07:42:57.150959"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "a6dea1fc",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-18T18:07:53.579043"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "4e01b8c2",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-18T19:59:26.711682"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "61aa3079",
+        "old": "ACTIVE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-18T19:59:34.794763"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "c51b5fc2",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T20:01:37.580567"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "a9deaeb6",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T20:01:37.580626"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "b6c70250",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T20:01:37.580666"
+    },
+    {
+      "event": "concept_added",
+      "data": {
+        "concept_id": "c36a4d6a",
+        "goal_id": "51d4ce7f",
+        "parent_id": "80b16ea0",
+        "source": "ai",
+        "mode": "vary",
+        "status": "CANDIDATE"
+      },
+      "timestamp": "2026-11-18T20:01:37.580699"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "c36a4d6a",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-18T20:02:16.884850"
+    },
+    {
+      "event": "concept_status",
+      "data": {
+        "concept_id": "a9deaeb6",
+        "old": "CANDIDATE",
+        "new": "PARKED"
+      },
+      "timestamp": "2026-11-18T20:04:46.418896"
+    }
+  ],
+  "created": "2026-11-17T21:50:28.083069",
+  "updated": "2026-11-18T20:04:46.418896"
+}
